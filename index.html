@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Menu · a healthy week built around supermarket deals</title>
+<meta name="description" content="Pick your supermarkets and loyalty cards. The Menu plans a healthy week of meals around this week's promotions and writes your shopping list.">
+<meta property="og:title" content="The Menu">
+<meta property="og:description" content="A healthy weekly menu and shopping list, built around your supermarkets' deals.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧾</text></svg>">
+<meta name="theme-color" content="#002fa7">
+<link rel="preload" href="/fonts/pixelify-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/courier-prime.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="card receipt hero">
+    <p class="store-line"><span class="star">★</span> The Menu Co. <span class="star">★</span> Est. 2026 <span class="star">★</span></p>
+    <h1>The Menu</h1>
+    <p class="intro">From supermarket deals to a healthy week. A fresh menu and shopping list, printed for you.</p>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button id="tab-menu" class="on">My menu</button>
+    <button id="tab-settings">My settings</button>
+    <button id="tab-deals">Deals</button>
+  </nav>
+
+  <!-- MENU -->
+  <section id="view-menu">
+    <div id="menuEmpty" class="card receipt empty">
+      <h2>No menu yet</h2>
+      <p class="intro" id="emptyText">Set your supermarkets and preferences first, then make your week.</p>
+      <hr>
+      <div class="actions center">
+        <button class="btn makeBtn" id="makeBtn1">Print my menu</button>
+      </div>
+    </div>
+    <div id="progress" class="card receipt hidden">
+      <p class="printing"><span class="blink">▮</span> <span id="progressText">Printing your week…</span></p>
+    </div>
+    <div id="menuOut" class="hidden"></div>
+  </section>
+
+  <!-- SETTINGS -->
+  <section id="view-settings" class="hidden">
+    <div class="card receipt">
+      <h2>Where you shop</h2>
+      <div class="field"><span>Country</span>
+        <div class="chips" id="countryChips"></div>
+      </div>
+      <hr>
+      <div class="field"><span>Supermarkets</span>
+        <p class="hint">Pick the ones you actually go to.</p>
+        <div class="chips" id="storeChips"></div>
+      </div>
+      <hr>
+      <div class="field"><span>Loyalty cards</span>
+        <p class="hint">Tap the ones you have. Add any others below.</p>
+        <div class="chips" id="cardChips"></div>
+        <input type="text" id="otherCards" placeholder="Any other loyalty cards" style="margin-top:12px">
+      </div>
+      <div id="cardNumbersBox" class="hidden">
+        <hr>
+        <div class="field"><span>Card barcodes (optional)</span>
+          <p class="hint">Add a card's number and its barcode is printed at the bottom of that shop on your shopping list, so the cashier can scan it from your phone. Leave it empty and no barcode is shown. Numbers stay on this device and are never sent anywhere. Cards that only live in an app, like Lidl Plus, are best scanned from that app.</p>
+          <div id="cardNumbers"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card receipt">
+      <h2>Your week</h2>
+      <div class="field"><span>Prioritise</span>
+        <div class="choices" id="priorityChoices">
+          <button type="button" class="choice" data-priority="budget"><b>Budget</b><small>Built from this week's promotions. Bulk deals are skipped when you cook for one.</small></button>
+          <button type="button" class="choice" data-priority="quality"><b>Quality</b><small>Promotions included, but organic and good produce come first.</small></button>
+        </div>
+      </div>
+      <div class="row">
+        <label class="field"><span>People</span><input type="number" id="people" min="1" max="8" value="1"></label>
+        <label class="field"><span id="budgetLabel">Weekly budget</span><input type="number" id="budget" min="10" step="5" value="50"></label>
+      </div>
+      <div class="field"><span>Meals to plan</span>
+        <div class="chips" id="mealChips"></div>
+      </div>
+      <label class="field"><span>Weekday cooking time</span>
+        <select id="cookTime">
+          <option value="quick">Quick — 20 minutes or less</option>
+          <option value="normal" selected>Normal — up to 40 minutes</option>
+          <option value="long">I enjoy cooking</option>
+        </select>
+      </label>
+      <div class="field"><span>Diet</span>
+        <div class="chips" id="dietChips"></div>
+      </div>
+      <label class="field"><span>Foods you don't like</span>
+        <input type="text" id="dislikes" placeholder="e.g. peanut butter, coriander">
+      </label>
+      <label class="field"><span>Already in your kitchen</span>
+        <p class="hint">Things to use up this week.</p>
+        <input type="text" id="fridge" placeholder="e.g. 3 zucchinis, half a bag of rice">
+      </label>
+      <hr>
+      <div class="actions">
+        <button class="btn" id="saveBtn">Save settings</button>
+        <span class="note" id="saveMsg"></span>
+      </div>
+      <p class="fine">Your settings and menu stay in this browser. Nothing is stored about you on our side.</p>
+    </div>
+  </section>
+
+  <!-- DEALS -->
+  <section id="view-deals" class="hidden">
+    <div class="card receipt">
+      <h2>Deals</h2>
+      <p class="intro" id="dealsIntro">Loading…</p>
+      <div id="dealsOut"></div>
+    </div>
+  </section>
+
+  <footer>
+    Made by Alix · menus written by Claude ·
+    <a href="https://github.com/" id="srcLink" target="_blank" rel="noopener">source on GitHub</a>
+  </footer>
+</div>
+<script src="/vendor/JsBarcode.all.min.js"></script>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

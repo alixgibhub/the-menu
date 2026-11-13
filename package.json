@@ -1,0 +1,13 @@
+{
+  "name": "the-menu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A healthy weekly menu and shopping list, built around your supermarkets' deals.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

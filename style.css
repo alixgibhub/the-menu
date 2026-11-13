@@ -1,0 +1,211 @@
+/* The Menu — receipts on Klein blue.
+   Crumpled thermal-receipt paper, Brick Sans titles,
+   uppercase serifed-monospace receipt lines with dashed rules. */
+/* Titles: NT Brick Sans (add /fonts/brick-sans.woff2 once licensed); Pixelify Sans stands in until then */
+@font-face{font-family:"Brick Sans";src:url(/fonts/brick-sans.woff2) format("woff2");font-weight:400 900;font-display:swap}
+@font-face{font-family:"Pixelify Sans";src:url(/fonts/pixelify-sans.woff2) format("woff2");font-weight:400 900;font-display:swap}
+/* Text: Courier Prime, a serifed monospace like a till printer */
+@font-face{font-family:"Courier Prime";src:url(/fonts/courier-prime.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Courier Prime";src:url(/fonts/courier-prime-bold.woff2) format("woff2");font-weight:700;font-display:swap}
+
+:root{
+  color-scheme: light;
+  --blue:#002fa7; /* International Klein Blue */
+  --yellow:#ffd058; /* the exact opposite of Klein blue: 255 − (0, 47, 167) */ --paper:#fbfaf6; --ink:#151515; --muted:#5d5d5a; --red:#e2412b;
+  --title:"Brick Sans", "Pixelify Sans", "Arial Black", sans-serif;
+  --text:"Courier Prime", "Courier New", Courier, monospace;
+  --dash:1.5px dashed var(--yellow);
+  /* crumpled paper: noise lit from the side */
+  --crumple:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.008 .016' numOctaves='5' seed='3'/%3E%3CfeDiffuseLighting lighting-color='%23fff' surfaceScale='2.4'%3E%3CfeDistantLight azimuth='40' elevation='58'/%3E%3C/feDiffuseLighting%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='.46' intercept='.6'/%3E%3CfeFuncG type='linear' slope='.46' intercept='.6'/%3E%3CfeFuncB type='linear' slope='.46' intercept='.6'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E");
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.02 .6' numOctaves='3' seed='8'/%3E%3CfeDiffuseLighting lighting-color='%23fff' surfaceScale='1.2'%3E%3CfeDistantLight azimuth='90' elevation='65'/%3E%3C/feDiffuseLighting%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='.25' intercept='.8'/%3E%3CfeFuncG type='linear' slope='.25' intercept='.8'/%3E%3CfeFuncB type='linear' slope='.25' intercept='.8'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{overflow-x:clip}
+body{
+  margin:0;overflow-x:clip;color:var(--ink);font:15px/1.5 var(--text);-webkit-font-smoothing:antialiased;text-transform:uppercase;
+  background:var(--grain) var(--blue);background-blend-mode:multiply;
+}
+a{color:inherit}
+.wrap{position:relative;max-width:620px;margin:0 auto;padding:34px 18px 48px}
+
+/* ---------- receipts ---------- */
+.card{
+  position:relative;isolation:isolate;padding:30px 26px 32px;margin:0 auto 30px;
+  filter:drop-shadow(0 10px 12px rgba(10,30,70,.28)) drop-shadow(0 2px 2px rgba(10,30,70,.2));
+  text-transform:uppercase;letter-spacing:.02em;
+}
+.card::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:var(--crumple) var(--paper);background-blend-mode:multiply;background-size:700px;
+  /* torn zig-zag top and bottom */
+  --z:12px;
+  -webkit-mask:
+    conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/var(--z) 51% repeat-x,
+    conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/var(--z) 51% repeat-x;
+          mask:
+    conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/var(--z) 51% repeat-x,
+    conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/var(--z) 51% repeat-x;
+}
+.card:nth-of-type(odd){transform:rotate(-.8deg)}
+.card:nth-of-type(even){transform:rotate(.7deg)}
+
+hr{border:0;border-top:var(--dash);margin:16px 0}
+h1,h2{font-family:var(--title);font-weight:700;text-transform:uppercase;letter-spacing:.01em;margin:0 auto 14px;text-align:center;line-height:.95}
+h1{font-size:84px}
+h2{font-size:46px}
+.hero{padding-bottom:26px}
+.store-line{text-align:center;font-size:12px;letter-spacing:.18em;margin:0 0 12px}
+.intro{text-align:center;font-size:14px;max-width:420px;margin:0 auto}
+.note{font-size:13px;color:var(--muted)}
+.fine{font-size:11px;line-height:1.45;text-align:center;letter-spacing:.03em;margin:14px auto 0;max-width:420px}
+.center{justify-content:center}
+
+/* ---------- tabs: printed tickets ---------- */
+.tabs{display:flex;justify-content:center;gap:10px;margin:-6px 0 28px;flex-wrap:wrap}
+.tabs button{
+  border:0;cursor:pointer;font:700 14px/1 var(--text);text-transform:uppercase;letter-spacing:.04em;
+  color:#fff;background:transparent;padding:11px 16px;border:2px solid rgba(255,255,255,.8)
+}
+.tabs button:hover{background:rgba(255,255,255,.15)}
+.tabs button.on{background:var(--paper);color:var(--ink);border-color:var(--paper);box-shadow:0 6px 10px rgba(10,30,70,.25)}
+
+/* ---------- forms ---------- */
+.field{display:block;margin-bottom:18px}
+.field > span{display:block;font-weight:700;font-size:13px;letter-spacing:.08em;margin-bottom:6px}
+.hint{color:var(--muted);font-size:13px;margin:-2px 0 10px}
+input[type=text],input[type=number],textarea,select{
+  width:100%;font:15px var(--text);text-transform:uppercase;color:var(--ink);background:rgba(255,255,255,.6);
+  border:0;border-bottom:2px solid var(--ink);border-radius:0;padding:9px 4px
+}
+input::placeholder{color:#8a8a86;text-transform:uppercase}
+input:focus,select:focus{outline:2px solid var(--blue);outline-offset:2px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{
+  border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;
+  font:700 13px var(--text);text-transform:uppercase;letter-spacing:0;padding:6px 10px;border-radius:0
+}
+.chip::before{content:"[ ] ";font-family:ui-monospace,Menlo,monospace;letter-spacing:0}
+.chip.on{background:var(--ink);color:var(--paper)}
+.chip.on::before{content:"[×] "}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* ---------- buttons ---------- */
+.btn{
+  border:0;cursor:pointer;background:var(--ink);color:var(--paper);
+  font:700 15px/1 var(--text);text-transform:uppercase;letter-spacing:.04em;padding:14px 22px
+}
+.btn:hover{background:var(--red)}
+.btn:active{transform:translateY(1px)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink);font-size:13px;padding:11px 16px}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.btn:disabled{opacity:.45;cursor:default}
+.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+
+/* ---------- empty / printing ---------- */
+.empty{text-align:center}
+.printing{font:700 15px/1.4 var(--text);text-align:center;margin:8px 0}
+.blink{animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* ---------- receipt lines ---------- */
+.line{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start;padding:9px 0}
+.line .sub{display:block;color:var(--muted)}
+.line .amt{font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+.total-row{display:flex;justify-content:space-between;align-items:baseline;font:700 34px/1.1 var(--title);margin:6px 0}
+.stamp{
+  display:inline-block;font:700 11px/1 var(--text);letter-spacing:.06em;color:var(--red);border:1.5px solid var(--red);
+  padding:3px 5px;transform:rotate(-6deg);margin-left:6px;vertical-align:1px;opacity:.9
+}
+
+/* ---------- chef's picks ---------- */
+.pick{padding:12px 0;border-bottom:var(--dash)}
+.pick:last-of-type{border-bottom:0}
+.pick b{display:block;font-size:15px}
+.pick .days{font-weight:400;color:var(--muted)}
+.pick .why,.pick .tip{font-size:14px;margin-top:4px}
+.pick .tip::before{content:"TIP → ";font-weight:700;letter-spacing:.06em}
+
+/* ---------- the week: one receipt per day ---------- */
+.week-head{color:#fff;text-align:center;font:700 34px/1 var(--title);text-transform:uppercase;margin:6px 0 4px}
+.week-hint{color:rgba(255,255,255,.85);text-align:center;font-size:13px;margin:0 0 4px}
+.week{
+  display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:22px max(18px, calc(50vw - 292px)) 34px;margin:0 calc(50% - 50vw) 6px;scrollbar-width:none
+}
+.week::-webkit-scrollbar{display:none}
+.week .card{flex:0 0 260px;margin:0;scroll-snap-align:center;padding:26px 20px 26px}
+.week .card:nth-child(odd){transform:rotate(-1.5deg)}
+.week .card:nth-child(even){transform:rotate(1.2deg) translateY(10px)}
+.week h2{font-size:34px}
+.week .date{text-align:center;font-size:12px;letter-spacing:.2em;margin:-4px 0 6px}
+.meal{padding:9px 0;border-bottom:var(--dash)}
+.meal:last-of-type{border-bottom:0}
+.meal .what{display:block;font-size:14px;line-height:1.35}
+.meal .when{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.meal.din .what{font-weight:700}
+
+/* ---------- shopping list ---------- */
+.store-name{text-align:center;font:700 22px/1 var(--title);text-transform:uppercase;margin:22px 0 6px}
+.item{display:grid;grid-template-columns:24px 1fr auto;gap:10px;align-items:start;padding:8px 0;cursor:pointer}
+.item input{
+  appearance:none;-webkit-appearance:none;width:18px;height:18px;margin:2px 0 0;border:1.5px solid var(--ink);
+  background:transparent;cursor:pointer;display:grid;place-items:center
+}
+.item input:checked::after{content:"×";font:700 16px/1 var(--text);margin-top:-2px}
+.item .t .q{color:var(--muted)}
+.item.done .t{text-decoration:line-through;text-decoration-thickness:1.5px;color:var(--muted)}
+.item .p{font-variant-numeric:tabular-nums;white-space:nowrap}
+.sub-row{display:flex;justify-content:space-between;font-size:13px;padding-top:6px;border-top:var(--dash);margin-top:4px}
+
+/* ---------- deals table ---------- */
+table.deals{width:100%;border-collapse:collapse;font-size:14px}
+table.deals td,table.deals th{text-align:left;padding:8px 2px;border-bottom:var(--dash);vertical-align:top}
+table.deals th{font-size:11px;letter-spacing:.12em;color:var(--muted)}
+table.deals td:nth-child(2),table.deals th:nth-child(2){text-align:right;white-space:nowrap}
+table.deals td:nth-child(3),table.deals th:nth-child(3){text-align:right;white-space:nowrap}
+
+footer{text-align:center;font-size:13px;color:rgba(255,255,255,.9);margin-top:10px}
+.hidden{display:none!important}
+
+@media (max-width:560px){
+  .wrap{padding-top:26px}
+  .card{padding:28px 18px 30px}
+  h1{font-size:54px}
+  h2{font-size:36px}
+  .row{grid-template-columns:1fr}
+  .tabs button{font-size:13px;padding:10px 12px}
+}
+@media print{
+  body{background:#fff} .tabs,footer,.actions,#view-settings,#view-deals{display:none!important}
+  .card{filter:none;transform:none!important}
+}
+.total-row span:last-child{font:700 24px/1 var(--text)}
+
+/* stars: the exact inverse of Klein blue */
+.star{color:var(--yellow)}
+
+/* loyalty card numbers in settings */
+.card-no{margin:10px 0 0}
+.card-no > span{font-size:12px}
+
+/* a real loyalty-card barcode under a shop on the shopping list */
+.loyalty{margin:14px 0 6px;text-align:center}
+.loyalty-name{font-size:12px;margin:0 0 6px}
+.card-code{display:block;max-width:100%;height:auto;margin:0 auto;background:#fff}
+
+/* groceries ticket: plain white paper, so loyalty barcodes sit on it without a box */
+.card.shop::before{background:#fff}
+
+/* budget / quality choice */
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.choice{
+  text-align:left;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;
+  font:400 12px/1.4 var(--text);text-transform:uppercase;padding:10px 12px
+}
+.choice b{display:block;font:700 15px/1.2 var(--text);margin-bottom:4px}
+.choice b::before{content:"( ) "}
+.choice.on{background:var(--ink);color:var(--paper)}
+.choice.on b::before{content:"(•) "}
+.choice small{font-size:12px}
+.stamp.bio{color:#1d7a3e;border-color:#1d7a3e;transform:rotate(4deg)}
+@media (max-width:560px){ .choices{grid-template-columns:1fr} }

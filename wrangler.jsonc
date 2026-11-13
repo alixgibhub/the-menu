@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "the-menu",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*", "/admin"]
+  },
+  "kv_namespaces": [
+    { "binding": "MENU_KV", "id": "18b8cbaeb7014fc29c1118b63369386b" }
+  ],
+  "vars": {
+    "MODEL": "claude-sonnet-5-5",
+    "MENUS_PER_VISITOR_PER_DAY": "3",
+    "MENUS_PER_DAY_TOTAL": "100"
+  }
+  // Secrets (set in the Cloudflare dashboard or with `wrangler secret put`):
+  //   ANTHROPIC_API_KEY  – your Claude API key
+  //   ADMIN_TOKEN        – password for the /admin deals page
+}
