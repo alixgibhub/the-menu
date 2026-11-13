@@ -91,12 +91,21 @@ async function makeMenu(request, env, ctx) {
   const days = body.days.slice(0, 7).map((d) => String(d).slice(0, 12));
   if (days.length !== 7) return json({ error: "bad_request" }, 400);
 
+  // Optional: the person's current menu plus the changes they want.
+  let change = null;
+  if (body.edits) {
+    const edits = String(body.edits).replace(/[\r\n]+/g, " ").replace(/"/g, "'").trim().slice(0, 300);
+    const previous = JSON.stringify(body.previous ?? null);
+    if (!edits || previous.length > 20000 || !body.previous || typeof body.previous !== "object") return json({ error: "bad_request" }, 400);
+    change = { edits, previous };
+  }
+
   // Spending guard: per visitor and overall, per day.
   const limited = await checkLimits(request, env);
   if (limited) return json({ error: limited }, 429);
 
   const deals = await getDeals(env);
-  const prompt = buildPrompt(profile, days, deals);
+  const prompt = buildPrompt(profile, days, deals, change);
 
   const upstream = await fetch(env.ANTHROPIC_URL || "https://api.anthropic.com/v1/messages", {
     method: "POST",

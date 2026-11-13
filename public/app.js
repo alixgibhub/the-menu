@@ -206,20 +206,23 @@ import { COUNTRIES, DEFAULT_COUNTRY } from "/countries.js";
   };
 
   let busy = false;
-  async function makeMenu(){
+  // edits: optional text with what the person wants changed in the current menu
+  async function makeMenu(edits){
+    if (typeof edits !== "string") edits = "";
     if (busy) return;
     if (!profile.stores.length){ show("settings"); return; }
     busy = true;
     const days = weekDays();
     show("menu");
     $("menuEmpty").classList.add("hidden"); $("menuOut").classList.add("hidden");
-    $("progress").classList.remove("hidden"); $("progressText").textContent = "Printing your week…";
+    $("progress").classList.remove("hidden"); $("progressText").textContent = edits ? "Reprinting with your changes…" : "Printing your week…";
+    const previous = edits && menu && menu.plan ? menu.plan : null;
     document.querySelectorAll(".makeBtn").forEach(b => b.disabled = true);
     try {
       const res = await fetch("/api/menu", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ profile, days: days.map(lab) }),
+        body: JSON.stringify(previous ? { profile, days: days.map(lab), previous, edits } : { profile, days: days.map(lab) }),
       });
       if (!res.ok){
         const err = await res.json().catch(() => ({}));
@@ -248,7 +251,7 @@ import { COUNTRIES, DEFAULT_COUNTRY } from "/countries.js";
       document.querySelectorAll(".makeBtn").forEach(b => b.disabled = false);
     }
   }
-  $("makeBtn1").onclick = makeMenu;
+  $("makeBtn1").onclick = () => makeMenu();
 
   // ---------- render menu ----------
   const FULL = {Mon:"Monday",Tue:"Tuesday",Wed:"Wednesday",Thu:"Thursday",Fri:"Friday",Sat:"Saturday",Sun:"Sunday"};
@@ -290,6 +293,11 @@ import { COUNTRIES, DEFAULT_COUNTRY } from "/countries.js";
     return { name: FULL[d] || d || "", date: n ? `${n} ${MONTH[base ? base.getMonth() : 0]}` : "" };
   }
 
+  // Chef's picks show three key words; older saved menus had a sentence instead.
+  function threeWords(v){
+    if (Array.isArray(v)) return v.slice(0, 3).join(" · ");
+    return String(v || "").replace(/[.,;:!]/g, "").split(/\s+/).filter(Boolean).slice(0, 3).join(" · ");
+  }
   function renderMenu(){
     $("progress").classList.add("hidden");
     if (!menu || !menu.plan){ $("menuEmpty").classList.remove("hidden"); $("menuOut").classList.add("hidden"); return; }
@@ -304,12 +312,11 @@ import { COUNTRIES, DEFAULT_COUNTRY } from "/countries.js";
       <div class="card receipt">
         <p class="store-line">Week of ${esc(menu.weekLabel)}</p>
         <h2>Chef's picks</h2>
-        <p class="intro">${esc(p.mood)}</p>
+        <p class="intro keywords">${esc(threeWords(p.mood))}</p>
         <hr>
         ${(p.highlights||[]).map(h => `
           <div class="pick"><b>${esc(h.name)} <span class="days">(${esc(h.days)})</span></b>
-            <div class="why">${esc(h.benefit)}</div>
-            <div class="tip">${esc(h.tip)}</div></div>`).join("")}
+            <div class="keywords">${esc(threeWords(h.keywords || h.benefit))}</div></div>`).join("")}
       </div>
 
       <p class="week-head">Your week</p>
@@ -345,7 +352,19 @@ import { COUNTRIES, DEFAULT_COUNTRY } from "/countries.js";
         <div class="total-row"><span>Total</span><span>≈ ${money(total)}</span></div>
         <div class="line"><span>${under >= 0 ? "Under budget" : "Over budget"}</span><span class="amt">${under >= 0 ? "" : "−"}${money(Math.abs(under))}</span></div>
         <hr>
-        <p class="fine">Promo prices come from this week's deals. ≈ prices are estimates. Assumes oil, salt and spices are in the cupboard.${p.notes?" "+esc(p.notes):""} Thank you for cooking with The Menu.</p>
+        <p class="fine">Promo prices come from this week's deals. ≈ prices are estimates. Pantry basics (oil, vinegar, salt, pepper, herbs, spices, stock, sauces) are left off the list.${p.notes?" "+esc(p.notes):""} Thank you for cooking with The Menu.</p>
+        <div class="change">
+          <button class="btn ghost" id="changeBtn" type="button">Change something</button>
+          <div id="changeBox" class="hidden">
+            <label class="field"><span>What would you like changed?</span>
+              <textarea id="changeText" maxlength="300" rows="3" placeholder="e.g. no mackerel, something quicker on Wednesday, swap the rice for potatoes"></textarea>
+            </label>
+            <div class="actions center">
+              <button class="btn makeBtn" id="applyChangeBtn" type="button">Reprint with changes</button>
+              <button class="btn ghost" id="cancelChangeBtn" type="button">Cancel</button>
+            </div>
+          </div>
+        </div>
         <div class="actions center" style="margin-top:16px">
           <button class="btn ghost" id="copyBtn">Copy list</button>
           <button class="btn ghost" id="printBtn">Print</button>
@@ -361,7 +380,14 @@ import { COUNTRIES, DEFAULT_COUNTRY } from "/countries.js";
       cb.closest(".item").classList.toggle("done", cb.checked);
       LS.set("menu", menu);
     });
-    $("remakeBtn").onclick = makeMenu;
+    $("remakeBtn").onclick = () => makeMenu();
+    $("changeBtn").onclick = () => { $("changeBox").classList.remove("hidden"); $("changeBtn").classList.add("hidden"); $("changeText").focus(); };
+    $("cancelChangeBtn").onclick = () => { $("changeBox").classList.add("hidden"); $("changeBtn").classList.remove("hidden"); };
+    $("applyChangeBtn").onclick = () => {
+      const t = $("changeText").value.trim();
+      if (!t){ $("changeText").focus(); return; }
+      makeMenu(t);
+    };
     $("printBtn").onclick = () => window.print();
     $("copyBtn").onclick = async () => {
       const txt = stores.map(s => `${s.store}\n` + (s.items||[]).map(i => `- ${i.item} — ${i.qty} · ${money(i.price)}`).join("\n")).join("\n\n");

@@ -209,3 +209,12 @@ footer{text-align:center;font-size:13px;color:rgba(255,255,255,.9);margin-top:10
 .choice small{font-size:12px}
 .stamp.bio{color:#1d7a3e;border-color:#1d7a3e;transform:rotate(4deg)}
 @media (max-width:560px){ .choices{grid-template-columns:1fr} }
+
+/* chef's picks: three key words */
+.keywords{font-size:13px;letter-spacing:.06em;margin-top:3px}
+.intro.keywords{font-size:15px;font-weight:700}
+
+/* change something */
+.change{text-align:center;margin-top:14px}
+.change textarea{width:100%;font:15px var(--text);text-transform:uppercase;color:var(--ink);background:rgba(255,255,255,.6);border:0;border-bottom:2px solid var(--ink);padding:9px 4px;resize:vertical}
+.change .field{text-align:left;margin-top:6px}
