@@ -107,7 +107,11 @@ async function makeMenu(request, env, ctx) {
     },
     body: JSON.stringify({
       model: env.MODEL || "claude-sonnet-5-5",
-      max_tokens: 8000,
+      max_tokens: 12000,
+      // Writing a menu doesn't need long up-front reasoning: skip it so menus are
+      // faster and cheaper, and the whole token budget goes to the menu itself.
+      thinking: { type: "between_tools" },
+      output_config: { effort: "medium" },
       stream: true,
       messages: [{ role: "user", content: prompt }],
     }),
