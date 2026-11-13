@@ -1,1 +1,1253 @@
-{"updated":null,"countries":{},"stores":{}}
+{
+ "updated": "2026-11-13",
+ "countries": {
+  "FR": {
+   "at": "2026-11-13T22:50:34.579Z",
+   "found": 50,
+   "stores": 7
+  },
+  "CH": {
+   "at": "2026-11-13T22:50:34.579Z",
+   "found": 37,
+   "stores": 4
+  },
+  "MX": {
+   "at": "2026-11-13T22:50:34.579Z",
+   "found": 10,
+   "stores": 1
+  },
+  "DE": {
+   "at": "2026-11-13T22:50:34.579Z",
+   "found": 31,
+   "stores": 9
+  },
+  "ES": {
+   "at": "2026-11-13T22:50:34.579Z",
+   "found": 10,
+   "stores": 1
+  },
+  "PT": {
+   "at": "2026-11-13T22:50:34.579Z",
+   "found": 15,
+   "stores": 3
+  },
+  "UK": {
+   "at": "2026-11-13T22:50:34.579Z",
+   "found": 2,
+   "stores": 1
+  }
+ },
+ "stores": {
+  "FR/Lidl": [
+   {
+    "item": "Barilla Pennette Rigate",
+    "price": 1.19,
+    "was": 3.58,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-lidl-3901958"
+   },
+   {
+    "item": "Mangue",
+    "price": 0.98,
+    "was": 1.49,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://www.tiendeo.fr/ajaccio/lidl"
+   },
+   {
+    "item": "Clémentine feuille",
+    "price": 1.99,
+    "was": 2.99,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://www.tiendeo.fr/ajaccio/lidl"
+   },
+   {
+    "item": "Avocat",
+    "price": 0.65,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-lidl-3901958"
+   },
+   {
+    "item": "Patate douce",
+    "price": 1.29,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-lidl-3901958"
+   },
+   {
+    "item": "Carotte",
+    "price": 1.11,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-lidl-3901958"
+   },
+   {
+    "item": "Zespri Kiwi Gold",
+    "price": 1.99,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-lidl-3901958"
+   },
+   {
+    "item": "Paupiettes de porc (Le Porc Français)",
+    "price": 4.49,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-lidl-3901958"
+   },
+   {
+    "item": "Osso bucco de dinde (L'Étal du Volailler)",
+    "price": 5.19,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-lidl-3901958"
+   },
+   {
+    "item": "Crevettes ASC",
+    "price": 7.99,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-lidl-3901958"
+   }
+  ],
+  "FR/Aldi": [
+   {
+    "item": "Golden Seafood 2 pavés de truite",
+    "price": 4.79,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3883002"
+   },
+   {
+    "item": "Le Porc Français 4 saucisses de Toulouse",
+    "price": 2.65,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3883002"
+   },
+   {
+    "item": "Haché au bœuf (viande bovine française)",
+    "price": 7.39,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3883002"
+   },
+   {
+    "item": "St-Clément Le Volailler pilons de poulet",
+    "price": 6.99,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3883002"
+   },
+   {
+    "item": "Bon-Ri riz jasmin",
+    "price": 6.99,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3883002"
+   },
+   {
+    "item": "Yaos yaourt à la grecque nature",
+    "price": 3.45,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3883002"
+   },
+   {
+    "item": "Golden Seafood filet de saumon",
+    "price": 8.59,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3896583"
+   },
+   {
+    "item": "Golden Seafood crevettes entières cuites",
+    "price": 7.75,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3896583"
+   },
+   {
+    "item": "St-Clément Le Volailler escalopes de dinde",
+    "price": 9.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3896583"
+   },
+   {
+    "item": "Petite France crème fraîche épaisse",
+    "price": 1.89,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3896583"
+   }
+  ],
+  "FR/E.Leclerc": [
+   {
+    "item": "Pommes bicolores",
+    "price": 2.25,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-21",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-e-leclerc-3893762"
+   },
+   {
+    "item": "Clémentine de Corse IGP",
+    "price": 3.19,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-21",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-e-leclerc-3893762"
+   },
+   {
+    "item": "Kiwi vert",
+    "price": 1.8,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-21",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-e-leclerc-3893762"
+   },
+   {
+    "item": "Haricots verts extra-fins Cassegrain",
+    "price": 5.7,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-21",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-e-leclerc-3893762"
+   },
+   {
+    "item": "Filets de poulet fermier d'Auvergne",
+    "price": 4.92,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-21",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-e-leclerc-3893762"
+   },
+   {
+    "item": "Poulet Label Rouge",
+    "price": 5.97,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-21",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-e-leclerc-3893762"
+   },
+   {
+    "item": "Viande de veau française",
+    "price": 12.89,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-21",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-e-leclerc-3893762"
+   },
+   {
+    "item": "Yaourt grec YAOS",
+    "price": 2.09,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-21",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-e-leclerc-3893762"
+   },
+   {
+    "item": "Crème d'Isigny",
+    "price": 2.39,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-21",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-e-leclerc-3893762"
+   }
+  ],
+  "FR/Carrefour": [
+   {
+    "item": "Le Vieux Chêne haricots cuisinés",
+    "price": 3.84,
+    "was": 5.49,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-22",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-carrefour-3863685"
+   },
+   {
+    "item": "Saumon entier ASC 1 à 3 kg",
+    "price": 7.95,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-30",
+    "source": "https://www.promocatalogues.fr/magasins/carrefour-catalogues.html"
+   },
+   {
+    "item": "Côte de porc avec os à griller (Le Porc Français)",
+    "price": 3.89,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-30",
+    "source": "https://www.promocatalogues.fr/magasins/carrefour-catalogues.html"
+   },
+   {
+    "item": "Simpl saumon fumé 200 g",
+    "price": 4.69,
+    "validFrom": "2026-11-03",
+    "validTo": "2026-11-22",
+    "source": "https://www.promocatalogues.fr/magasins/carrefour-catalogues.html"
+   },
+   {
+    "item": "Comté AOP 100 g",
+    "price": 1.79,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-15",
+    "source": "https://www.promocatalogues.fr/magasins/carrefour-catalogues.html"
+   }
+  ],
+  "FR/Intermarché": [
+   {
+    "item": "Zespri kiwi jaune",
+    "price": 2.99,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-22",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-intermarchy-3885242"
+   },
+   {
+    "item": "Poires de France",
+    "price": 1.99,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-22",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-intermarchy-3885242"
+   },
+   {
+    "item": "Endive",
+    "price": 1.99,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-22",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-intermarchy-3885242"
+   },
+   {
+    "item": "Saint Eloi lentilles vertes",
+    "price": 1.68,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-22",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-intermarchy-3885242"
+   },
+   {
+    "item": "Raynal et Roquelaure lentilles",
+    "price": 2.95,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-22",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-intermarchy-3885242"
+   },
+   {
+    "item": "D'Aucy petits pois & carottes",
+    "price": 4.62,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-22",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-intermarchy-3885242"
+   },
+   {
+    "item": "Loué poulet fermier",
+    "price": 7.49,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-22",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-intermarchy-3885242"
+   },
+   {
+    "item": "Gambas cuites ASC Intermarché",
+    "price": 4.79,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-22",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-intermarchy-3885242"
+   },
+   {
+    "item": "Labeyrie saumon fumé",
+    "price": 5.99,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-22",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-intermarchy-3885242"
+   },
+   {
+    "item": "Jean Rozé longe de porc 1 kg",
+    "price": 2.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-22",
+    "source": "https://www.promocatalogues.fr/magasins/intermarche/catalogues-promotions"
+   }
+  ],
+  "FR/Auchan": [
+   {
+    "item": "Pommes Jazz 1 kg",
+    "price": 2.59,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-15",
+    "source": "https://www.promocatalogues.fr/magasins/auchan/catalogues-promotions"
+   },
+   {
+    "item": "Pommes de terre bio blondes 2 kg",
+    "price": 3.59,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-15",
+    "source": "https://www.promocatalogues.fr/magasins/auchan/catalogues-promotions"
+   },
+   {
+    "item": "Lactel lait demi-écrémé bio 1 L",
+    "price": 1.06,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-15",
+    "source": "https://www.promocatalogues.fr/magasins/auchan/catalogues-promotions"
+   },
+   {
+    "item": "Rana pâtes à lasagnes aux œufs frais",
+    "price": 2,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-29",
+    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-auchan-3892814"
+   }
+  ],
+  "FR/Super U": [
+   {
+    "item": "Panzani pâtes 1,5 kg (2+1 offert)",
+    "price": 1.94,
+    "validFrom": "2026-11-03",
+    "validTo": "2026-11-15",
+    "source": "https://www.promocatalogues.fr/magasins/super-u/catalogues-promotions"
+   },
+   {
+    "item": "Lactel Matin léger 8 L",
+    "price": 9.8,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-22",
+    "source": "https://www.promocatalogues.fr/magasins/super-u/catalogues-promotions"
+   }
+  ],
+  "CH/Migros": [
+   {
+    "item": "Isländischer Rauchlachs 250 g",
+    "price": 9.95,
+    "was": 17.35,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/migros"
+   },
+   {
+    "item": "Snack-Datterini-Tomaten 250 g",
+    "price": 1.75,
+    "was": 2.95,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/migros-deals-next-week-switzerland"
+   },
+   {
+    "item": "Migros Bio Blondorangen 1 kg",
+    "price": 2.6,
+    "was": 3.75,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/migros"
+   },
+   {
+    "item": "Migros Süsskartoffeln 1 kg",
+    "price": 1.25,
+    "was": 1.8,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/migros"
+   },
+   {
+    "item": "Migros Bio Zitronen 750 g",
+    "price": 1.95,
+    "was": 2.8,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/migros"
+   },
+   {
+    "item": "Migros Bio Lauch 1 kg",
+    "price": 6.95,
+    "was": 9.95,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/migros"
+   },
+   {
+    "item": "XL Vital-Toastbrot 2 x 730 g",
+    "price": 5.1,
+    "was": 6.8,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/migros"
+   },
+   {
+    "item": "Gruyère gerieben 3 x 130 g",
+    "price": 6.95,
+    "was": 8.85,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/migros"
+   },
+   {
+    "item": "Anna's Best Hummus Nature 200 g (ab 2 Stück)",
+    "price": 2.36,
+    "was": 2.95,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/migros"
+   }
+  ],
+  "CH/Coop": [
+   {
+    "item": "Tom's Best Basmati-Reis 2 kg",
+    "price": 4.95,
+    "was": 9.95,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/coop"
+   },
+   {
+    "item": "Rindshackfleisch 2 x 500 g",
+    "price": 9.75,
+    "was": 19.5,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/meat-deals-switzerland"
+   },
+   {
+    "item": "Naturafarm Schweinshalssteaks 4 Stück, 1 kg",
+    "price": 11.25,
+    "was": 22.5,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/meat-deals-switzerland"
+   },
+   {
+    "item": "Norske ASC Rauchlachs 250 g",
+    "price": 8.5,
+    "was": 17,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/coop"
+   },
+   {
+    "item": "Tom's Best Fairtrade Jasmin-Reis 2 kg",
+    "price": 3.7,
+    "was": 7.4,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/coop"
+   },
+   {
+    "item": "Poulet-Duo ca. 2 kg",
+    "price": 11.9,
+    "was": 19.9,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/meat-deals-switzerland"
+   },
+   {
+    "item": "Poulet-Schenkelsteaks 2 kg",
+    "price": 14.95,
+    "was": 25,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/meat-deals-switzerland"
+   },
+   {
+    "item": "Coop Blondorangen 2 kg",
+    "price": 2.2,
+    "was": 3.2,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/coop"
+   },
+   {
+    "item": "Dona weisse Bohnen 1 kg",
+    "price": 2.75,
+    "was": 3.95,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/coop"
+   },
+   {
+    "item": "Coop Nüsslisalat 150 g",
+    "price": 2.75,
+    "was": 3.95,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/coop"
+   }
+  ],
+  "CH/Denner": [
+   {
+    "item": "Denner Schweinsnierstück 100 g",
+    "price": 0.89,
+    "was": 1.85,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/denner"
+   },
+   {
+    "item": "Black Angus Rindshuft 100 g",
+    "price": 2.99,
+    "was": 5.9,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/denner"
+   },
+   {
+    "item": "Denner Doradenfilets 380 g",
+    "price": 8.6,
+    "was": 14.5,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/denner"
+   },
+   {
+    "item": "Le Dragon Jasmin-Reis 1 kg (ab 3 Stück)",
+    "price": 1.75,
+    "was": 2.65,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/denner"
+   },
+   {
+    "item": "Pain Le Tradition IP-SUISSE 360 g",
+    "price": 1.95,
+    "was": 2.95,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/denner"
+   },
+   {
+    "item": "Butternut-Kürbis IP-SUISSE 1 kg",
+    "price": 1.95,
+    "was": 2.85,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/denner"
+   },
+   {
+    "item": "Natura rote Linsen 2 kg",
+    "price": 5.2,
+    "was": 7.6,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/denner"
+   },
+   {
+    "item": "Pouletbrust 100 g",
+    "price": 1.09,
+    "was": 1.56,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/meat-deals-switzerland"
+   },
+   {
+    "item": "Pak Choi 2 Stück",
+    "price": 1.49,
+    "was": 1.95,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/denner"
+   },
+   {
+    "item": "Rüebli IP-SUISSE 2 kg",
+    "price": 2.99,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/denner"
+   }
+  ],
+  "CH/Lidl": [
+   {
+    "item": "Pak Choi Qualité Suisse",
+    "price": 0.99,
+    "was": 1.49,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/lidl-switzerland"
+   },
+   {
+    "item": "Mango",
+    "price": 0.99,
+    "was": 1.49,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/lidl-switzerland"
+   },
+   {
+    "item": "Granatapfel",
+    "price": 0.99,
+    "was": 1.49,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/lidl-switzerland"
+   },
+   {
+    "item": "Bio Rüebli-Mix Schweiz 500 g",
+    "price": 1.59,
+    "was": 2.39,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/lidl-switzerland"
+   },
+   {
+    "item": "Milbona Mozzarella gerieben 250 g",
+    "price": 1.99,
+    "was": 2.99,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/lidl-switzerland"
+   },
+   {
+    "item": "Zitronen 750 g",
+    "price": 1.29,
+    "was": 1.79,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/lidl-switzerland"
+   },
+   {
+    "item": "Fisher's Choice MSC Thunfischsteak 200 g",
+    "price": 4.99,
+    "was": 6.55,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/lidl-switzerland"
+   },
+   {
+    "item": "Saurer Halbrahm 200 g",
+    "price": 1.35,
+    "was": 1.69,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://rappn.ch/en/offers/lidl-switzerland"
+   }
+  ],
+  "MX/Soriana": [
+   {
+    "item": "Pierna y muslo de pollo fresca por kg",
+    "price": 31.9,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-16",
+    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+   },
+   {
+    "item": "Piña Gota Miel por kg",
+    "price": 29.8,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-16",
+    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+   },
+   {
+    "item": "Jícama por kg",
+    "price": 26.8,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-16",
+    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+   },
+   {
+    "item": "Manzana Golden por kg (bolsa)",
+    "price": 38.8,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-16",
+    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+   },
+   {
+    "item": "Guayaba por kg",
+    "price": 42.8,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-16",
+    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+   },
+   {
+    "item": "Elote blanco por pieza",
+    "price": 9.8,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-16",
+    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+   },
+   {
+    "item": "Huevo blanco Bachoco 30 piezas (con 100 puntos Soriana Ya)",
+    "price": 56.9,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-16",
+    "card": "Soriana Ya",
+    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+   },
+   {
+    "item": "Mojarra tilapia entera congelada por kg",
+    "price": 68,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-16",
+    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+   },
+   {
+    "item": "Filete de mojarra por kg",
+    "price": 97,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-16",
+    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+   },
+   {
+    "item": "Carne molida de cerdo por kg",
+    "price": 99,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-16",
+    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+   }
+  ],
+  "DE/Penny": [
+   {
+    "item": "Kerrygold Original Irische Butter 250 g",
+    "price": 1.59,
+    "was": 3.29,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.discounto.de/Discounter/penny_markt/Angebot-Datum:naechste-woche/"
+   },
+   {
+    "item": "Weihenstephan Haltbare Milch",
+    "price": 0.99,
+    "was": 1.49,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.discounto.de/Discounter/penny_markt/Angebot-Datum:naechste-woche/"
+   },
+   {
+    "item": "Mühlenhof Frische Hähnchen-Schenkel 2000 g",
+    "price": 6.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.prospektangebote.de/angebote/frische-hahnchen"
+   },
+   {
+    "item": "Mühlenhof Frische Hähnchen-Schenkel 2000 g",
+    "price": 6.49,
+    "validFrom": "2026-11-09",
+    "validTo": "2026-11-14",
+    "source": "https://www.prospektangebote.de/angebote/frische-hahnchen"
+   },
+   {
+    "item": "Mühlenhof Frische Hähnchen-Innenbrustfilets 1000 g",
+    "price": 8.49,
+    "validFrom": "2026-11-09",
+    "validTo": "2026-11-14",
+    "source": "https://www.prospektangebote.de/angebote/frische-hahnchen"
+   },
+   {
+    "item": "Deutsche rote Äpfel",
+    "price": 1.29,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "card": "PENNY App",
+    "source": "https://www.discounto.de/Discounter/penny_markt/Angebot-Datum:naechste-woche/"
+   },
+   {
+    "item": "Zespri SunGold Kiwi",
+    "price": 0.59,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.discounto.de/Discounter/penny_markt/Angebot-Datum:naechste-woche/"
+   },
+   {
+    "item": "Clementinen",
+    "price": 1.49,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.discounto.de/Discounter/penny_markt/Angebot-Datum:naechste-woche/"
+   },
+   {
+    "item": "Paprika-Mix",
+    "price": 1.79,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.discounto.de/Discounter/penny_markt/Angebot-Datum:naechste-woche/"
+   },
+   {
+    "item": "Eisbergsalat",
+    "price": 0.88,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.discounto.de/Discounter/penny_markt/Angebot-Datum:naechste-woche/"
+   }
+  ],
+  "DE/Lidl": [
+   {
+    "item": "Kerrygold Original Irische Butter 250 g",
+    "price": 1.69,
+    "was": 3.29,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.discounto.de/Discounter/lidl/Angebot-Datum:naechste-woche/"
+   },
+   {
+    "item": "Metzgerfrisch Hackfleisch gemischt 1,2 kg",
+    "price": 5.99,
+    "was": 6.99,
+    "validFrom": "2026-11-08",
+    "validTo": "2026-11-14",
+    "source": "https://www.prospektangebote.de/angebote/hackfleisch"
+   },
+   {
+    "item": "Metzgerfrisch Frische Hähnchen-Unterkeulen 1,5 kg",
+    "price": 5.99,
+    "was": 6.66,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-21",
+    "source": "https://www.prospektangebote.de/angebote/frische-hahnchen"
+   },
+   {
+    "item": "Metzgerfrisch Frische Hähnchen-Oberkeulen 2 kg",
+    "price": 6.29,
+    "was": 6.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.prospektangebote.de/angebote/frische-hahnchen"
+   },
+   {
+    "item": "Metzgerfrisch Frische Hähnchen-Minutenschnitzel 1 kg",
+    "price": 8.99,
+    "was": 9.49,
+    "validFrom": "2026-11-08",
+    "validTo": "2026-11-14",
+    "source": "https://www.prospektangebote.de/angebote/frische-hahnchen"
+   }
+  ],
+  "DE/Aldi Nord": [
+   {
+    "item": "Landliebe Butter",
+    "price": 1.39,
+    "was": 2.79,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.discounto.de/Discounter/aldi/Angebot-Datum:naechste-woche/"
+   },
+   {
+    "item": "Gemischtes Hackfleisch XXL 800 g",
+    "price": 4.99,
+    "was": 6.49,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.prospektangebote.de/angebote/hackfleisch"
+   },
+   {
+    "item": "Clementinen",
+    "price": 3.99,
+    "was": 4.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.discounto.de/Discounter/aldi/Angebot-Datum:naechste-woche/"
+   },
+   {
+    "item": "Golden Seafood Lachsfilet 500 g",
+    "price": 7.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.prospektangebote.de/angebote/lachsfilet"
+   },
+   {
+    "item": "Bio Orangen",
+    "price": 1.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.discounto.de/Discounter/aldi/Angebot-Datum:naechste-woche/"
+   },
+   {
+    "item": "Chicorée",
+    "price": 1.39,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.discounto.de/Discounter/aldi/Angebot-Datum:naechste-woche/"
+   },
+   {
+    "item": "Lyttos Kritharaki",
+    "price": 0.89,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.discounto.de/Discounter/aldi/Angebot-Datum:naechste-woche/"
+   }
+  ],
+  "DE/Aldi Süd": [
+   {
+    "item": "Bärenmarke Frische Milch 3,8 % 1 l",
+    "price": 0.88,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-21",
+    "source": "https://www.discounto.de/Discounter/aldi_sued/Angebot-Datum:naechste-woche/"
+   }
+  ],
+  "DE/Rewe": [
+   {
+    "item": "Frische Hähnchen-Schenkel 2000 g",
+    "price": 6.66,
+    "validFrom": "2026-11-08",
+    "validTo": "2026-11-15",
+    "source": "https://www.prospektangebote.de/angebote/frische-hahnchen"
+   },
+   {
+    "item": "Rinder-Hackfleisch 250 g",
+    "price": 3.49,
+    "validFrom": "2026-11-08",
+    "validTo": "2026-11-15",
+    "source": "https://www.prospektangebote.de/angebote/hackfleisch"
+   },
+   {
+    "item": "Kerrygold extra 400 g",
+    "price": 2.49,
+    "validFrom": "2026-11-09",
+    "validTo": "2026-11-14",
+    "source": "https://www.discounto.de/Prospekte/REWE-2026-11-09_2026-11-14_50709/"
+   }
+  ],
+  "DE/Edeka": [
+   {
+    "item": "Bayerisches Hackfleisch 400 g (E center)",
+    "price": 3.99,
+    "was": 4.75,
+    "validFrom": "2026-11-09",
+    "validTo": "2026-11-14",
+    "source": "https://www.prospektangebote.de/angebote/hackfleisch"
+   },
+   {
+    "item": "Frisches Lachsfilet 100 g (E center)",
+    "price": 2.29,
+    "validFrom": "2026-11-09",
+    "validTo": "2026-11-14",
+    "source": "https://www.prospektangebote.de/angebote/lachsfilet"
+   }
+  ],
+  "DE/Netto": [
+   {
+    "item": "Meine Fleischerei Fettreduziertes Hackfleisch 400 g",
+    "price": 3.99,
+    "validFrom": "2026-11-09",
+    "validTo": "2026-11-14",
+    "source": "https://www.prospektangebote.de/angebote/hackfleisch"
+   }
+  ],
+  "DE/Kaufland": [
+   {
+    "item": "Kudos Roter Tafelapfel 1 kg",
+    "price": 1.49,
+    "was": 1.99,
+    "validFrom": "2026-11-09",
+    "validTo": "2026-11-14",
+    "source": "https://www.prospektangebote.de/angebote/obst-und-gemuse"
+   }
+  ],
+  "DE/Norma": [
+   {
+    "item": "Finest Gourmet Länderspezialitäten-Käse",
+    "price": 3.79,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.discounto.de/Discounter/norma/Angebot-Datum:naechste-woche/"
+   }
+  ],
+  "ES/Lidl": [
+   {
+    "item": "Aguacate a granel (1 kg)",
+    "price": 3.59,
+    "was": 5.19,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "Lidl Plus",
+    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
+   },
+   {
+    "item": "Mejillón fresco 1 kg",
+    "price": 2.45,
+    "was": 2.89,
+    "validFrom": "2026-11-09",
+    "validTo": "2026-11-15",
+    "source": "https://radarsuper.com/folletos/lidl/provincia/madrid"
+   },
+   {
+    "item": "Naranjas 3 kg",
+    "price": 4.47,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
+   },
+   {
+    "item": "Naranja a granel (1 kg)",
+    "price": 0.75,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-22",
+    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
+   },
+   {
+    "item": "Cebolla 2 kg",
+    "price": 1.5,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-22",
+    "card": "Lidl Plus",
+    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
+   },
+   {
+    "item": "Filete de pechuga de pollo aprox. 500 g",
+    "price": 3.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
+   },
+   {
+    "item": "Filetes de merluza argentina Ocean Sea 970 g",
+    "price": 7.59,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
+   },
+   {
+    "item": "Dorada limpia aprox. 500 g",
+    "price": 6.25,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
+   },
+   {
+    "item": "Patatas para freír 2,5 kg",
+    "price": 2.62,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
+   },
+   {
+    "item": "Campo Largo Alubia blanca 1 kg",
+    "price": 1.99,
+    "validFrom": "2026-11-09",
+    "validTo": "2026-11-15",
+    "source": "https://radarsuper.com/folletos/lidl/provincia/madrid"
+   }
+  ],
+  "PT/Lidl": [
+   {
+    "item": "Pimento mini (Mix)",
+    "price": 1.19,
+    "was": 1.99,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-15",
+    "source": "https://www.tiendeo.pt/vendas-novas/lidl"
+   },
+   {
+    "item": "Cebola nacional",
+    "price": 0.99,
+    "was": 1.49,
+    "validFrom": "2026-11-09",
+    "validTo": "2026-11-15",
+    "source": "https://www.tiendeo.pt/vendas-novas/lidl"
+   },
+   {
+    "item": "Maçã Golden nacional",
+    "price": 1.49,
+    "was": 1.99,
+    "validFrom": "2026-11-09",
+    "validTo": "2026-11-15",
+    "source": "https://www.tiendeo.pt/vendas-novas/lidl"
+   },
+   {
+    "item": "Queijo flamengo em fatias Milbona",
+    "price": 1.99,
+    "was": 2.49,
+    "validFrom": "2026-11-09",
+    "validTo": "2026-11-15",
+    "source": "https://www.tiendeo.pt/vendas-novas/lidl"
+   },
+   {
+    "item": "Leite de pastagem Terra Nostra",
+    "price": 0.89,
+    "was": 1.07,
+    "validFrom": "2026-11-09",
+    "validTo": "2026-11-15",
+    "source": "https://www.tiendeo.pt/vendas-novas/lidl"
+   },
+   {
+    "item": "Atum natural",
+    "price": 0.69,
+    "was": 0.79,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-15",
+    "source": "https://www.tiendeo.pt/vendas-novas/lidl"
+   }
+  ],
+  "PT/Continente": [
+   {
+    "item": "Bife de novilho Continente",
+    "price": 12.99,
+    "was": 19.99,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.tiendeo.pt/promocoes-folhetos/continente-bom-dia"
+   },
+   {
+    "item": "Cebola nova",
+    "price": 1.35,
+    "was": 1.69,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.tiendeo.pt/promocoes-folhetos/continente-bom-dia"
+   },
+   {
+    "item": "Maminha de bovino Continente",
+    "price": 15.99,
+    "was": 16.99,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.tiendeo.pt/promocoes-folhetos/continente-bom-dia"
+   },
+   {
+    "item": "Cachaço de porco Continente",
+    "price": 5.29,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.tiendeo.pt/promocoes-folhetos/continente-bom-dia"
+   },
+   {
+    "item": "Lombos de bacalhau Continente",
+    "price": 20.99,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.tiendeo.pt/promocoes-folhetos/continente-bom-dia"
+   },
+   {
+    "item": "Bacalhau Continente",
+    "price": 23.99,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.tiendeo.pt/promocoes-folhetos/continente-bom-dia"
+   }
+  ],
+  "PT/Pingo Doce": [
+   {
+    "item": "Leite UHT de pastagem Terra Nostra",
+    "price": 0.89,
+    "was": 1.07,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.tiendeo.pt/ofertas-catalogos/pingo-doce"
+   },
+   {
+    "item": "Queijo flamengo Limiano",
+    "price": 2.35,
+    "was": 2.79,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.tiendeo.pt/ofertas-catalogos/pingo-doce"
+   },
+   {
+    "item": "Polvo limpo",
+    "price": 13.49,
+    "was": 15.49,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.tiendeo.pt/ofertas-catalogos/pingo-doce"
+   }
+  ],
+  "UK/Tesco": [
+   {
+    "item": "Oatly No Sugars Fibre Low Cal Edition Oat Drink 1L",
+    "price": 1.75,
+    "was": 2.4,
+    "validFrom": "2026-10-07",
+    "validTo": "2026-11-17",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/shop/en-GB/promotions/all"
+   },
+   {
+    "item": "Oatly Fibre Barista Edition Oat Drink 1L",
+    "price": 1.75,
+    "was": 2.4,
+    "validFrom": "2026-10-07",
+    "validTo": "2026-11-17",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/shop/en-GB/promotions/all"
+   }
+  ]
+ }
+}
