@@ -43,7 +43,7 @@ export function menuText(menu, profile, money, { markdown = false } = {}) {
   if (p.mood) out.push(markdown ? `*${words(p.mood)}*` : words(p.mood));
 
   out.push(h2("Chef's picks"));
-  (p.highlights || []).forEach(x => out.push(`${bullet} ${x.name} (${x.days}): ${x.tip || words(x.keywords || x.benefit)}`));
+  (p.highlights || []).forEach(x => out.push(`${bullet} ${x.name} (${x.days})${x.tip ? `: ${x.tip}` : ""}`));
 
   out.push(h2("Your week"));
   (p.days || []).forEach((d, i) => {

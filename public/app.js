@@ -323,7 +323,8 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
         <hr>
         ${(p.highlights||[]).map(h => `
           <div class="pick"><b>${esc(h.name)} <span class="days">(${esc(h.days)})</span></b>
-            <div class="tip">${esc(h.tip || threeWords(h.keywords || h.benefit))}</div></div>`).join("")}
+            ${h.tip ? `<div class="tip">${esc(h.tip)}</div>` : ""}</div>`).join("")}
+        ${(p.highlights||[]).some(h => !h.tip) ? `<p class="note" style="text-align:center;margin:10px 0 0">This menu was printed before chef's tips existed. Print a new menu to get them.</p>` : ""}
       </div>
 
       <p class="week-head">Your week</p>
