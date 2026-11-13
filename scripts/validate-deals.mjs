@@ -24,30 +24,28 @@ const now = new Date().toISOString();
 const today = now.slice(0, 10);
 
 const db = { updated: today, countries: {}, stores: {} };
-let total = 0;
 const summary = [];
 
 for (const cc of Object.keys(COUNTRIES)) {
-  const fresh = research[cc] ? cleanDeals(research[cc], cc, today) : null;
-  const count = fresh ? Object.values(fresh).reduce((a, l) => a + l.length, 0) : 0;
-  if (fresh && count > 0) {
+  const fresh = cleanDeals(research[cc], cc, today);
+  const found = Object.values(fresh).reduce((a, l) => a + l.length, 0);
+  if (found) {
     for (const [store, list] of Object.entries(fresh)) db.stores[`${cc}/${store}`] = list;
-    db.countries[cc] = { at: now, found: count, stores: Object.keys(fresh).length };
-    summary.push(`${cc}: ${count} deals in ${Object.keys(fresh).length} stores`);
-  } else {
-    // keep last time's deals that are still valid
-    let kept = 0;
-    for (const [key, list] of Object.entries(previous.stores || {})) {
-      if (!key.startsWith(cc + "/")) continue;
-      const live = list.filter((d) => !d.validTo || d.validTo >= today);
-      if (live.length) { db.stores[key] = live; kept += live.length; }
-    }
-    if (previous.countries?.[cc]) db.countries[cc] = { ...previous.countries[cc], found: kept };
-    summary.push(`${cc}: nothing new, kept ${kept} still-valid deals from last time`);
+    db.countries[cc] = { at: now, found, stores: Object.keys(fresh).length };
+    summary.push(`${cc}: ${found} deals in ${Object.keys(fresh).length} stores`);
+    continue;
   }
-  total += Object.entries(db.stores).filter(([k]) => k.startsWith(cc + "/")).reduce((a, [, l]) => a + l.length, 0);
+  // nothing new: keep last time's deals that are still valid
+  let kept = 0;
+  for (const [key, list] of Object.entries(previous.stores || {})) {
+    const live = key.startsWith(cc + "/") ? list.filter((d) => !d.validTo || d.validTo >= today) : [];
+    if (live.length) { db.stores[key] = live; kept += live.length; }
+  }
+  if (previous.countries?.[cc]) db.countries[cc] = { ...previous.countries[cc], found: kept };
+  summary.push(`${cc}: nothing new, kept ${kept} still-valid deals from last time`);
 }
 
+const total = Object.values(db.stores).reduce((a, l) => a + l.length, 0);
 writeFileSync(OUT, JSON.stringify(db, null, 1) + "\n");
 console.log(summary.join("\n"));
 console.log(`total: ${total} deals → public/data/deals.json`);

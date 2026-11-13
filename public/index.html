@@ -16,12 +16,12 @@
 <body>
 <div class="wrap">
 
-  <header class="card receipt hero">
-    <h1><span>The Menu</span><span class="cutlery"><svg class="fork" viewBox="0 0 10 20" aria-hidden="true" shape-rendering="crispEdges"><path d="M0 0h2v6h2V0h2v6h2V0h2v8H9v1H8v1H6v10H4V10H2V9H1V8H0z"/></svg><svg class="fork" viewBox="0 0 10 20" aria-hidden="true" shape-rendering="crispEdges"><path d="M4 0H7V1H8V2H9V11H6V20H4Z"/></svg></span></h1>
+  <header class="card hero">
+    <h1><span>The Menu</span><span class="cutlery"><svg viewBox="0 0 10 20" aria-hidden="true" shape-rendering="crispEdges"><path d="M0 0h2v6h2V0h2v6h2V0h2v8H9v1H8v1H6v10H4V10H2V9H1V8H0z"/></svg><svg viewBox="0 0 10 20" aria-hidden="true" shape-rendering="crispEdges"><path d="M4 0H7V1H8V2H9V11H6V20H4Z"/></svg></span></h1>
     <p class="intro">From supermarket deals to a healthy week. A fresh menu and shopping list, printed for you.</p>
   </header>
 
-  <nav class="tabs" role="tablist">
+  <nav class="tabs">
     <button id="tab-menu" class="on">My menu</button>
     <button id="tab-settings">My settings</button>
     <button id="tab-deals">Deals</button>
@@ -29,7 +29,7 @@
 
   <!-- MENU -->
   <section id="view-menu">
-    <div id="menuEmpty" class="card receipt empty">
+    <div id="menuEmpty" class="card empty">
       <h2>No menu yet</h2>
       <p class="intro" id="emptyText">Set your supermarkets and preferences first, then make your week.</p>
       <hr>
@@ -37,7 +37,7 @@
         <button class="btn makeBtn" id="makeBtn1">Print my menu</button>
       </div>
     </div>
-    <div id="progress" class="card receipt hidden">
+    <div id="progress" class="card hidden">
       <p class="printing"><span class="blink">▮</span> <span id="progressText">Printing your week…</span></p>
     </div>
     <div id="menuOut" class="hidden"></div>
@@ -45,7 +45,7 @@
 
   <!-- SETTINGS -->
   <section id="view-settings" class="hidden">
-    <div class="card receipt">
+    <div class="card">
       <h2>Where you shop</h2>
       <div class="field"><span>Country</span>
         <div class="chips" id="countryChips"></div>
@@ -70,7 +70,7 @@
       </div>
     </div>
 
-    <div class="card receipt">
+    <div class="card">
       <h2>Your week</h2>
       <div class="field"><span>Prioritise</span>
         <div class="choices" id="priorityChoices">
@@ -117,7 +117,7 @@
 
   <!-- DEALS -->
   <section id="view-deals" class="hidden">
-    <div class="card receipt">
+    <div class="card">
       <h2>Deals</h2>
       <p class="intro" id="dealsIntro">Loading…</p>
       <div id="dealsOut"></div>
@@ -126,10 +126,9 @@
 
   <footer>
     Made by Alix · menus written by Claude ·
-    <a href="https://github.com/alixgibhub/the-menu" id="srcLink" target="_blank" rel="noopener">source on GitHub</a>
+    <a href="https://github.com/alixgibhub/the-menu" target="_blank" rel="noopener">source on GitHub</a>
   </footer>
 </div>
-<script src="/vendor/JsBarcode.all.min.js"></script>
 <script type="module" src="/app.js"></script>
 </body>
 </html>

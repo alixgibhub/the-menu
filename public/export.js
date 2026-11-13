@@ -15,17 +15,10 @@ const MEALS = [
   ["Dinner", "dinner", [19, 0], 60],
 ];
 
-// The dates of the menu's seven days.
-export function menuDates(menu) {
-  if (Array.isArray(menu.dates)) return menu.dates.map(d => new Date(d + "T00:00:00"));
-  const start = menu.start ? new Date(menu.start + "T00:00:00") : null;
-  return [...Array(7)].map((_, i) => {
-    if (!start) return null;
-    const d = new Date(start); d.setDate(start.getDate() + i); return d;
-  });
-}
+// The dates of the menu's days.
+export const menuDates = (menu) => menu.dates.map((d) => new Date(d + "T00:00:00"));
 
-const fullDay = d => d ? d.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "short" }) : "";
+const fullDay = d => d.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "short" });
 
 // ---------- text for notes apps (plain) and Notion (Markdown) ----------
 export function menuText(menu, profile, money, { markdown = false } = {}) {
@@ -125,12 +118,10 @@ export function googleDayLinks(menu, profile) {
 export async function openICS(ics) {
   try {
     const res = await fetch("/api/calendar", { method: "POST", headers: { "content-type": "text/calendar" }, body: ics });
-    if (!res.ok) return false;
-    const { url } = await res.json();
-    if (!url) return false;
-    window.location.href = url;
-    return true;
-  } catch (e) { return false; }
+    const { url } = res.ok ? await res.json() : {};
+    if (url) location.href = url;
+    return !!url;
+  } catch { return false; }
 }
 
 export function download(name, text, type) {

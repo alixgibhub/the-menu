@@ -1,13 +1,15 @@
 // The Menu — Cloudflare Worker
 // Serves the static app from /public and a small API:
-//   GET  /api/deals          current supermarket promotions (public)
-//   POST /api/menu           writes a weekly menu with Claude (streams back text)
-//   POST /api/deals          replaces the promotions (needs ADMIN_TOKEN)
-//   GET  /admin              deals admin page
+//   GET  /api/deals              this week's supermarket promotions
+//   POST /api/deals              replaces the hand-posted deals (needs ADMIN_TOKEN)
+//   POST /api/menu               writes a weekly menu with Claude, streamed back as text
+//   POST /api/calendar           keeps a menu's .ics for an hour, returns a short link
+//   GET  /api/calendar/<id>.ics  that link
+//   GET  /admin                  deals admin page
 
 import { buildPrompt, cleanProfile } from "./prompt.js";
-import { readDeals, readManualDeals } from "./deals.js";
-import { COUNTRIES, DEFAULT_COUNTRY } from "../public/countries.js";
+import { readDeals } from "./deals.js";
+import { COUNTRIES } from "../public/countries.js";
 import { ADMIN_HTML } from "./admin.js";
 
 const json = (data, status = 200) =>
@@ -25,7 +27,7 @@ export default {
       if (pathname === "/admin") {
         return new Response(ADMIN_HTML, { headers: { "content-type": "text/html; charset=utf-8" } });
       }
-      if (pathname === "/api/deals" && request.method === "GET") return json(publicDeals(await readDeals(env, request)));
+      if (pathname === "/api/deals" && request.method === "GET") return json(await readDeals(env, request));
       if (pathname === "/api/deals" && request.method === "POST") return saveDeals(request, env);
       if (pathname === "/api/menu" && request.method === "POST") return makeMenu(request, env, ctx);
       if (pathname === "/api/calendar" && request.method === "POST") return saveCalendar(request, env);
@@ -40,11 +42,6 @@ export default {
 };
 
 // ---------- deals ----------
-// What the app sees: the deals, plus when each country was last researched.
-function publicDeals(deals) {
-  return { updated: deals.updated || null, countries: deals.countries || {}, stores: deals.stores || {} };
-}
-
 function validDealKey(key) {
   const [cc, store] = String(key).split("/");
   return !!(COUNTRIES[cc] && store && store in COUNTRIES[cc].stores);
@@ -75,7 +72,7 @@ async function saveDeals(request, env) {
   // Hand-posted deals live in KV; the researched deals file is left alone.
   const deals = { updated: new Date().toISOString().slice(0, 10), stores };
   await env.MENU_KV.put("deals", JSON.stringify(deals));
-  return json({ ok: true, deals: publicDeals(await readDeals(env, request)) });
+  return json({ ok: true });
 }
 
 // ---------- calendar export ----------
@@ -83,11 +80,11 @@ async function saveDeals(request, env) {
 // hand back a short link. Opening that link with a normal GET is what makes
 // iPhone and iPad offer "Add All" in Calendar.
 async function saveCalendar(request, env) {
-  const ics = await request.text().catch(() => "");
+  const ics = await request.text();
   if (!ics || ics.length > 200000 || !ics.startsWith("BEGIN:VCALENDAR") || !ics.trimEnd().endsWith("END:VCALENDAR")) {
     return json({ error: "bad_request" }, 400);
   }
-  const id = [...crypto.getRandomValues(new Uint8Array(12))].map((b) => b.toString(16).padStart(2, "0")).join("");
+  const id = hex(crypto.getRandomValues(new Uint8Array(12)));
   await env.MENU_KV.put(`ics:${id}`, ics, { expirationTtl: 3600 });
   return json({ url: `/api/calendar/${id}.ics` });
 }
@@ -144,8 +141,8 @@ async function makeMenu(request, env, ctx) {
     body: JSON.stringify({
       model: env.MODEL || "claude-sonnet-5-5",
       max_tokens: 12000,
-      // Writing a menu doesn't need long up-front reasoning: skip it so menus are
-      // faster and cheaper, and the whole token budget goes to the menu itself.
+      // A menu needs little reasoning: thinking only between tool calls (there are
+      // none) and medium effort keep it fast, cheap, and leave the tokens for the menu.
       thinking: { type: "between_tools" },
       output_config: { effort: "medium" },
       stream: true,
@@ -208,22 +205,17 @@ async function checkLimits(request, env) {
   const ip = request.headers.get("cf-connecting-ip") || "unknown";
   const ipKey = `count:${day}:${await hash(ip)}`;
   const allKey = `count:${day}:all`;
-  const perIp = Number(env.MENUS_PER_VISITOR_PER_DAY || 10);
-  const total = Number(env.MENUS_PER_DAY_TOTAL || 100);
-
-  const [ipCount, allCount] = await Promise.all([env.MENU_KV.get(ipKey), env.MENU_KV.get(allKey)]);
-  if (Number(allCount || 0) >= total) return "daily_limit_all";
-  if (Number(ipCount || 0) >= perIp) return "daily_limit";
+  const [ipCount, allCount] = (await Promise.all([env.MENU_KV.get(ipKey), env.MENU_KV.get(allKey)])).map(Number);
+  if (allCount >= Number(env.MENUS_PER_DAY_TOTAL || 100)) return "daily_limit_all";
+  if (ipCount >= Number(env.MENUS_PER_VISITOR_PER_DAY || 10)) return "daily_limit";
 
   const ttl = { expirationTtl: 60 * 60 * 48 };
-  await Promise.all([
-    env.MENU_KV.put(ipKey, String(Number(ipCount || 0) + 1), ttl),
-    env.MENU_KV.put(allKey, String(Number(allCount || 0) + 1), ttl),
-  ]);
+  await Promise.all([env.MENU_KV.put(ipKey, String(ipCount + 1), ttl), env.MENU_KV.put(allKey, String(allCount + 1), ttl)]);
   return null;
 }
 
 async function hash(s) {
-  const d = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
-  return [...new Uint8Array(d)].slice(0, 12).map((b) => b.toString(16).padStart(2, "0")).join("");
+  return hex(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s))).slice(0, 12));
 }
+
+const hex = (bytes) => [...bytes].map((b) => b.toString(16).padStart(2, "0")).join("");

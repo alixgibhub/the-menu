@@ -33,7 +33,7 @@ export const ADMIN_HTML = `<!DOCTYPE html>
 
   <div class="card" id="auto" hidden>
     <b>Researched deals</b>
-    <p class="note" style="margin-top:4px">A scheduled Claude task researches every country's promotions twice a week and saves them to <code>public/data/deals.json</code> on GitHub.</p>
+    <p class="note" style="margin-top:4px">Every Sunday a scheduled Claude task researches every country's promotions for the coming week and saves them to <code>public/data/deals.json</code> on GitHub.</p>
     <div id="status" class="note" style="margin-top:10px"></div>
   </div>
 
@@ -55,10 +55,9 @@ let token = sessionStorage.getItem("menu-admin") || "";
 
 function toText(deals){
   const s = {};
-  for (const [k, l] of Object.entries(deals.stores || {})) { const m = l.filter(d => !d.auto); if (m.length) s[k] = m; }
-  const blocks = Object.keys(s).map(key => "# " + key.replace("/", " ") + "\\n" +
-    s[key].map(d => [d.item, d.price, d.validTo || "", d.card || ""].join("; ").replace(/;\\s*$/,"").replace(/;\\s*$/,"")).join("\\n"));
-  return blocks.join("\\n\\n");
+  for (const [k, l] of Object.entries(deals.stores)) { const m = l.filter(d => !d.auto); if (m.length) s[k] = m; }
+  return Object.keys(s).map(key => "# " + key.replace("/", " ") + "\\n" +
+    s[key].map(d => [d.item, d.price, d.validTo || "", d.card || ""].join("; ").replace(/(; )+$/, "")).join("\\n")).join("\\n\\n");
 }
 function fromText(t){
   const stores = {}; let cur = null; const errors = [];

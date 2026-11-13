@@ -1,53 +1,44 @@
 // This week's supermarket deals.
 //
-// The deals database is public/data/deals.json in this repo. A scheduled Claude
-// task researches each country's promotions twice a week, checks the file with
-// scripts/validate-deals.mjs and commits it; Cloudflare redeploys on every push.
-// Deals you post by hand on /admin live in KV and are added on top.
+// The deals database is public/data/deals.json in this repo. Every Sunday a
+// scheduled Claude task researches each country's promotions for the coming week,
+// checks the file with scripts/validate-deals.mjs and commits it; Cloudflare
+// redeploys on every push. Deals posted by hand on /admin live in KV, on top.
 
 import { COUNTRIES } from "../public/countries.js";
 
 const iso = (d) => d.toISOString().slice(0, 10);
 const isDate = (v) => typeof v === "string" && /^\d{4}-\d{2}-\d{2}$/.test(v);
 
-// Hand-posted deals (KV). Older deals were saved without a country: they are Belgian.
-export async function readManualDeals(env) {
+// Hand-posted deals (KV), keyed "CC/Store".
+async function readManualDeals(env) {
   const raw = await env.MENU_KV.get("deals");
-  const deals = raw ? JSON.parse(raw) : {};
-  const stores = {};
-  for (const [key, list] of Object.entries(deals.stores || {})) {
-    const k = key.includes("/") ? key : `BE/${key}`;
-    const manual = (list || []).filter((d) => !d.auto);
-    if (manual.length) stores[k] = manual;
-  }
-  return { updated: deals.updated || null, stores };
+  return raw ? JSON.parse(raw) : { stores: {} };
 }
 
 // The researched deals file, served with the app's static files.
-export async function readResearchedDeals(env, request) {
+async function readResearchedDeals(env, request) {
   try {
-    const res = await env.ASSETS.fetch(new Request(new URL("/data/deals.json", request.url)));
-    if (!res.ok) return { stores: {}, countries: {} };
-    const data = await res.json();
-    return { updated: data.updated || null, countries: data.countries || {}, stores: data.stores || {} };
-  } catch {
-    return { stores: {}, countries: {} };
-  }
+    const res = await env.ASSETS.fetch(new URL("/data/deals.json", request.url));
+    if (res.ok) return await res.json();
+  } catch {}
+  return { stores: {}, countries: {} };
 }
 
-// Everything the app and the menu prompt use: researched deals plus hand-posted ones.
+// Everything the app and the menu prompt use: researched plus hand-posted deals,
+// expired ones dropped. Researched deals are tagged "auto", so the admin editor
+// only shows the hand-posted ones.
 export async function readDeals(env, request) {
   const [auto, manual] = await Promise.all([readResearchedDeals(env, request), readManualDeals(env)]);
   const today = iso(new Date());
   const stores = {};
   for (const [src, researched] of [[manual.stores, false], [auto.stores, true]]) {
-    for (const [key, list] of Object.entries(src)) {
-      // "auto" marks researched deals, so the admin editor only shows hand-posted ones.
-      const live = list.filter((d) => !d.validTo || d.validTo >= today).map((d) => (researched ? { ...d, auto: true } : d));
+    for (const [key, list] of Object.entries(src || {})) {
+      const live = (list || []).filter((d) => !d.validTo || d.validTo >= today).map((d) => (researched ? { ...d, auto: true } : d));
       if (live.length) stores[key] = [...(stores[key] || []), ...live];
     }
   }
-  return { updated: auto.updated || manual.updated, countries: auto.countries, stores };
+  return { updated: auto.updated || manual.updated || null, countries: auto.countries || {}, stores };
 }
 
 // Keep only well-formed deals for known stores, still valid, with a real source.
