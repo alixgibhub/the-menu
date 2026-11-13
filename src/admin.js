@@ -32,14 +32,13 @@ export const ADMIN_HTML = `<!DOCTYPE html>
   </div>
 
   <div class="card" id="auto" hidden>
-    <b>Automatic deals</b>
-    <p class="note" style="margin-top:4px">The Menu looks up each country's promotions by itself about once a week. To fetch a country now (takes 1–3 minutes):</p>
-    <div class="row"><select id="cc"></select><button class="btn" id="fetch">Fetch deals now</button><span id="fetchMsg" class="note"></span></div>
+    <b>Researched deals</b>
+    <p class="note" style="margin-top:4px">A scheduled Claude task researches every country's promotions twice a week and saves them to <code>public/data/deals.json</code> on GitHub.</p>
     <div id="status" class="note" style="margin-top:10px"></div>
   </div>
 
   <div class="card" id="editor" hidden>
-    <p class="note" style="margin-top:0"><b>Your own deals</b> (optional). These are added on top of the automatic ones and never overwritten.</p>
+    <p class="note" style="margin-top:0"><b>Your own deals</b> (optional). These are added on top of the researched ones.</p>
     <p class="note" style="margin-top:0">One heading per store, starting with the country code: <code># FR Carrefour</code>.<br>
       Then one deal per line, price in that country's currency:<br>
       <code>product; price; valid until (YYYY-MM-DD); loyalty card (optional)</code></p>
@@ -93,23 +92,12 @@ async function open(){
   if (chk.status === 401){ $("loginMsg").textContent = "Wrong password."; $("loginMsg").className = "err"; return; }
   sessionStorage.setItem("menu-admin", token);
   $("login").hidden = true; $("editor").hidden = false; $("auto").hidden = false;
-  $("cc").innerHTML = Object.keys(STORES).map(cc => "<option>" + cc + "</option>").join("");
   const st = deals.countries || {};
-  $("status").innerHTML = Object.keys(STORES).map(cc => "<div><b>" + cc + "</b> " + (st[cc] ? (st[cc].found + " deals · checked " + (st[cc].at || st[cc].checked).slice(0,16).replace("T"," ")) : "not checked yet") + "</div>").join("");
+  $("status").innerHTML = Object.keys(STORES).map(cc => "<div><b>" + cc + "</b> " + (st[cc] ? (st[cc].found + " deals · researched " + (st[cc].at || "").slice(0,16).replace("T"," ")) : "not checked yet") + "</div>").join("");
   $("msg").textContent = deals.updated ? "Last published " + deals.updated : "";
 }
 $("go").onclick = open;
-$("fetch").onclick = async () => {
-  const cc = $("cc").value; $("fetch").disabled = true; $("fetchMsg").textContent = "Searching " + cc + " supermarkets…"; $("fetchMsg").className = "note";
-  try {
-    const r = await fetch("/api/deals/refresh", { method:"POST", headers:{ "content-type":"application/json", authorization:"Bearer " + token }, body: JSON.stringify({ country: cc }) });
-    const out = await r.json();
-    if (out.error) { $("fetchMsg").textContent = "Couldn't fetch: " + out.error; $("fetchMsg").className = "err"; }
-    else if (out.skipped) { $("fetchMsg").textContent = cc + ": " + out.skipped; }
-    else { $("fetchMsg").textContent = "Found " + out.found + " deals for " + cc + " ✓"; $("fetchMsg").className = "ok"; }
-  } catch (e) { $("fetchMsg").textContent = "Couldn't fetch. Try again."; $("fetchMsg").className = "err"; }
-  $("fetch").disabled = false;
-};
+
 $("token").onkeydown = e => { if (e.key === "Enter") open(); };
 if (token) open();
 

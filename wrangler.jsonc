@@ -12,10 +12,7 @@
   "kv_namespaces": [
     { "binding": "MENU_KV", "id": "18b8cbaeb7014fc29c1118b63369386b" }
   ],
-  "triggers": { "crons": ["17 * * * *"] },
   "vars": {
-    "DEALS_REFRESH_DAYS": "7",
-    "DEALS_MAX_SEARCHES": "6",
     "MODEL": "claude-sonnet-5-5",
     "MENUS_PER_VISITOR_PER_DAY": "10",
     "MENUS_PER_DAY_TOTAL": "100"
