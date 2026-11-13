@@ -6,6 +6,7 @@
 //   GET  /admin              deals admin page
 
 import { buildPrompt, cleanProfile } from "./prompt.js";
+import { readDeals, refreshNext, refreshCountry } from "./deals.js";
 import { COUNTRIES, DEFAULT_COUNTRY } from "../public/countries.js";
 import { ADMIN_HTML } from "./admin.js";
 
@@ -24,7 +25,8 @@ export default {
       if (pathname === "/admin") {
         return new Response(ADMIN_HTML, { headers: { "content-type": "text/html; charset=utf-8" } });
       }
-      if (pathname === "/api/deals" && request.method === "GET") return json(await getDeals(env));
+      if (pathname === "/api/deals" && request.method === "GET") return json(publicDeals(await readDeals(env)));
+      if (pathname === "/api/deals/refresh" && request.method === "POST") return refreshNow(request, env);
       if (pathname === "/api/deals" && request.method === "POST") return saveDeals(request, env);
       if (pathname === "/api/menu" && request.method === "POST") return makeMenu(request, env, ctx);
       if (pathname === "/api/calendar" && request.method === "POST") return saveCalendar(request, env);
@@ -36,17 +38,31 @@ export default {
     }
     return env.ASSETS.fetch(request);
   },
+
+  // Every hour: refresh the country whose deals are most overdue (one per run,
+  // so each run stays short). Each country is refreshed about once a week.
+  async scheduled(controller, env, ctx) {
+    ctx.waitUntil(refreshNext(env).then((r) => console.log("scheduled deals", JSON.stringify(r))));
+  }
 };
 
 // ---------- deals ----------
 async function getDeals(env) {
-  const raw = await env.MENU_KV.get("deals");
-  const deals = raw ? JSON.parse(raw) : { updated: null, stores: {} };
-  // Older deals were saved without a country: they are Belgian.
-  for (const key of Object.keys(deals.stores || {})) {
-    if (!key.includes("/")) { deals.stores[`${DEFAULT_COUNTRY}/${key}`] = deals.stores[key]; delete deals.stores[key]; }
-  }
-  return deals;
+  return readDeals(env);
+}
+
+// What the app sees: the deals, plus when each country was last checked.
+function publicDeals(deals) {
+  return { updated: deals.updated || null, countries: deals.countries || {}, stores: deals.stores || {} };
+}
+
+// Admin: fetch a country's deals right now (waits for the result).
+async function refreshNow(request, env) {
+  if (!isAdmin(request, env)) return json({ error: "unauthorized" }, 401);
+  const body = await request.json().catch(() => ({}));
+  const cc = String(body.country || "").toUpperCase();
+  if (!COUNTRIES[cc]) return json({ error: "bad_request" }, 400);
+  return json(await refreshCountry(env, cc));
 }
 
 function validDealKey(key) {
@@ -76,9 +92,16 @@ async function saveDeals(request, env) {
       card: d.card ? String(d.card).slice(0, 60) : undefined,
     })).filter((d) => d.item);
   }
-  const deals = { updated: new Date().toISOString().slice(0, 10), stores };
+  // Hand-posted deals replace the previous hand-posted ones; automatic deals stay.
+  const deals = await readDeals(env);
+  for (const key of Object.keys(deals.stores)) {
+    const auto = deals.stores[key].filter((d) => d.auto);
+    if (auto.length) deals.stores[key] = auto; else delete deals.stores[key];
+  }
+  for (const [key, list] of Object.entries(stores)) deals.stores[key] = [...list, ...(deals.stores[key] || [])];
+  deals.updated = new Date().toISOString().slice(0, 10);
   await env.MENU_KV.put("deals", JSON.stringify(deals));
-  return json({ ok: true, deals });
+  return json({ ok: true, deals: publicDeals(deals) });
 }
 
 // ---------- calendar export ----------

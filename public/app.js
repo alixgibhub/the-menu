@@ -172,16 +172,26 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
   }
   function renderDeals(){
     const v = validDeals(); const stores = Object.keys(v);
+    const info = deals && deals.countries ? deals.countries[profile.country] : null;
     if (!stores.length){
-      $("dealsIntro").textContent = `No current deals posted for ${country().name} yet. Menus use typical local prices, marked ≈.`;
+      $("dealsIntro").textContent = info
+        ? `No promotions found for ${country().name} this week yet. Menus use typical local prices, marked ≈.`
+        : `The Menu is looking up this week's promotions for ${country().name}. Check back soon. Meanwhile menus use typical local prices, marked ≈.`;
       $("dealsOut").innerHTML = ""; return;
     }
-    $("dealsIntro").textContent = "Promo prices your menu can use" + (deals.updated ? ` · updated ${deals.updated}` : "") + ".";
-    $("dealsOut").innerHTML = stores.map(s => `
+    const checked = info && (info.at || info.checked) ? new Date(info.at || info.checked).toLocaleDateString("en-GB", { day:"numeric", month:"short" }) : deals.updated;
+    $("dealsIntro").textContent = `This week's best promotions, found automatically in the supermarkets' leaflets${checked ? ` · checked ${checked}` : ""}. Your menu is built around them.`;
+    const saving = x => x.was && x.was > x.price ? Math.round((1 - x.price / x.was) * 100) : 0;
+    $("dealsOut").innerHTML = stores.map(s => {
+      const list = v[s].slice().sort((a, b) => saving(b) - saving(a));
+      const sources = [...new Set(list.map(x => x.source).filter(Boolean))].slice(0, 3);
+      return `
       <p class="store-name">*** ${esc(s)} ***</p>
       <table class="deals"><tr><th>Product</th><th>Price</th><th>Until</th></tr>
-      ${v[s].map(x => `<tr><td>${esc(x.item)}${x.card?`<span class="stamp">${esc(x.card)}</span>`:""}</td><td>${money(x.price)}</td><td>${x.validTo?esc(x.validTo.slice(8)+"/"+x.validTo.slice(5,7)):"—"}</td></tr>`).join("")}
-      </table>`).join("");
+      ${list.map(x => `<tr><td>${esc(x.item)}${x.card?`<span class="stamp">${esc(x.card)}</span>`:""}${saving(x)?`<span class="stamp bio">−${saving(x)}%</span>`:""}</td><td>${money(x.price)}${x.was?`<br><s class="was">${money(x.was)}</s>`:""}</td><td>${x.validTo?esc(x.validTo.slice(8)+"/"+x.validTo.slice(5,7)):"—"}</td></tr>`).join("")}
+      </table>
+      ${sources.length ? `<p class="sources">Source: ${sources.map((u,i) => `<a href="${esc(u)}" target="_blank" rel="noopener nofollow">${esc((() => { try { return new URL(u).hostname.replace(/^www\./,""); } catch(e){ return "link " + (i+1); } })())}</a>`).join(", ")}</p>` : ""}`;
+    }).join("");
   }
   async function loadDeals(){
     try { const r = await fetch("/api/deals"); deals = await r.json(); }

@@ -31,11 +31,19 @@ export const ADMIN_HTML = `<!DOCTYPE html>
     <div class="row"><button class="btn" id="go">Open</button><span id="loginMsg" class="note"></span></div>
   </div>
 
+  <div class="card" id="auto" hidden>
+    <b>Automatic deals</b>
+    <p class="note" style="margin-top:4px">The Menu looks up each country's promotions by itself about once a week. To fetch a country now (takes 1–3 minutes):</p>
+    <div class="row"><select id="cc"></select><button class="btn" id="fetch">Fetch deals now</button><span id="fetchMsg" class="note"></span></div>
+    <div id="status" class="note" style="margin-top:10px"></div>
+  </div>
+
   <div class="card" id="editor" hidden>
+    <p class="note" style="margin-top:0"><b>Your own deals</b> (optional). These are added on top of the automatic ones and never overwritten.</p>
     <p class="note" style="margin-top:0">One heading per store, starting with the country code: <code># FR Carrefour</code>.<br>
       Then one deal per line, price in that country's currency:<br>
       <code>product; price; valid until (YYYY-MM-DD); loyalty card (optional)</code></p>
-    <textarea id="text" spellcheck="false"></textarea>
+    <textarea id="text" spellcheck="false" placeholder="# BE Lidl&#10;Salmon fillet 400 g; 4.99; 2026-11-26; Lidl Plus"></textarea>
     <div class="row"><button class="btn" id="save">Publish deals</button><span id="msg" class="note"></span></div>
     <div class="note">Stores the app knows:<div id="stores"></div></div>
   </div>
@@ -47,10 +55,11 @@ $("stores").innerHTML = Object.entries(STORES).map(([cc, list]) => "<div><b>" + 
 let token = sessionStorage.getItem("menu-admin") || "";
 
 function toText(deals){
-  const s = deals.stores || {};
+  const s = {};
+  for (const [k, l] of Object.entries(deals.stores || {})) { const m = l.filter(d => !d.auto); if (m.length) s[k] = m; }
   const blocks = Object.keys(s).map(key => "# " + key.replace("/", " ") + "\\n" +
-    s[store].map(d => [d.item, d.price, d.validTo || "", d.card || ""].join("; ").replace(/;\\s*$/,"").replace(/;\\s*$/,"")).join("\\n"));
-  return blocks.join("\\n\\n") || "# BE Lidl\\nSalmon fillet 400 g; 4.99; 2026-11-19; Lidl Plus\\n\\n# FR Carrefour\\nBrocoli 500 g; 1.29; 2026-11-19";
+    s[key].map(d => [d.item, d.price, d.validTo || "", d.card || ""].join("; ").replace(/;\\s*$/,"").replace(/;\\s*$/,"")).join("\\n"));
+  return blocks.join("\\n\\n");
 }
 function fromText(t){
   const stores = {}; let cur = null; const errors = [];
@@ -83,10 +92,24 @@ async function open(){
   const chk = await fetch("/api/deals", { method:"POST", headers:{ "content-type":"application/json", authorization:"Bearer " + token }, body: JSON.stringify({ check: true }) });
   if (chk.status === 401){ $("loginMsg").textContent = "Wrong password."; $("loginMsg").className = "err"; return; }
   sessionStorage.setItem("menu-admin", token);
-  $("login").hidden = true; $("editor").hidden = false;
+  $("login").hidden = true; $("editor").hidden = false; $("auto").hidden = false;
+  $("cc").innerHTML = Object.keys(STORES).map(cc => "<option>" + cc + "</option>").join("");
+  const st = deals.countries || {};
+  $("status").innerHTML = Object.keys(STORES).map(cc => "<div><b>" + cc + "</b> " + (st[cc] ? (st[cc].found + " deals · checked " + (st[cc].at || st[cc].checked).slice(0,16).replace("T"," ")) : "not checked yet") + "</div>").join("");
   $("msg").textContent = deals.updated ? "Last published " + deals.updated : "";
 }
 $("go").onclick = open;
+$("fetch").onclick = async () => {
+  const cc = $("cc").value; $("fetch").disabled = true; $("fetchMsg").textContent = "Searching " + cc + " supermarkets…"; $("fetchMsg").className = "note";
+  try {
+    const r = await fetch("/api/deals/refresh", { method:"POST", headers:{ "content-type":"application/json", authorization:"Bearer " + token }, body: JSON.stringify({ country: cc }) });
+    const out = await r.json();
+    if (out.error) { $("fetchMsg").textContent = "Couldn't fetch: " + out.error; $("fetchMsg").className = "err"; }
+    else if (out.skipped) { $("fetchMsg").textContent = cc + ": " + out.skipped; }
+    else { $("fetchMsg").textContent = "Found " + out.found + " deals for " + cc + " ✓"; $("fetchMsg").className = "ok"; }
+  } catch (e) { $("fetchMsg").textContent = "Couldn't fetch. Try again."; $("fetchMsg").className = "err"; }
+  $("fetch").disabled = false;
+};
 $("token").onkeydown = e => { if (e.key === "Enter") open(); };
 if (token) open();
 

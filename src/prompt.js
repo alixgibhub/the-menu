@@ -32,7 +32,10 @@ function validDeals(deals, country, stores) {
   const today = new Date().toISOString().slice(0, 10);
   const out = {};
   for (const s of stores) {
-    const list = (deals?.stores?.[dealKey(country, s)] || []).filter((x) => !x.validTo || x.validTo >= today);
+    const list = (deals?.stores?.[dealKey(country, s)] || [])
+      .filter((x) => !x.validTo || x.validTo >= today)
+      // only what the chef needs: no source links or bookkeeping
+      .map(({ item, price, was, validTo, card }) => ({ item, price, ...(was ? { was } : {}), ...(validTo ? { validTo } : {}), ...(card ? { card } : {}) }));
     if (list.length) out[s] = list;
   }
   return out;
@@ -91,7 +94,7 @@ ${priorityRules}
 
 - Plan exactly these ${days.length} day${days.length > 1 ? "s" : ""}, and only these: ${days.join(", ")}. Shop only for them.
 - Cook the way people in ${c.name} actually shop and eat: use ingredients easy to find in these supermarkets and in season now.
-- Build the week around the promotions above where it's healthy to do so. Only use a card-only deal if they have that card.
+- Build the week around the promotions above where it's healthy to do so, starting with the biggest savings ("was" is the regular price). Only use a card-only deal if they have that card.
 - Batch-cook to keep cost and effort down (e.g. a soup or curry that covers several meals).
 - Quantities in grams or ml, scaled for ${ppl}.
 - Stay under the budget. Assign each item to the cheapest of THEIR supermarkets that makes sense; keep it to at most 2 stores.
