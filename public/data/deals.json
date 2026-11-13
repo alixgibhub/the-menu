@@ -1,6 +1,11 @@
 {
  "updated": "2026-11-13",
  "countries": {
+  "BE": {
+   "at": "2026-11-13T22:57:18.228Z",
+   "found": 35,
+   "stores": 4
+  },
   "FR": {
    "at": "2026-11-13T22:50:34.579Z",
    "found": 50,
@@ -38,6 +43,276 @@
   }
  },
  "stores": {
+  "BE/Lidl": [
+   {
+    "item": "Vastkokende aardappelen XXL",
+    "price": 5.99,
+    "was": 8.98,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/lidl-folder-3896723"
+   },
+   {
+    "item": "Clementijnen",
+    "price": 1.75,
+    "was": 2.62,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/lidl-folder-3896723"
+   },
+   {
+    "item": "Paprikamix",
+    "price": 1.59,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/lidl-folder-3896723"
+   },
+   {
+    "item": "Uien XXL",
+    "price": 2.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/lidl-folder-3896723"
+   },
+   {
+    "item": "Granaatappel",
+    "price": 1.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/lidl-folder-3896723"
+   },
+   {
+    "item": "Varken & rund bereid gehakt",
+    "price": 2.49,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/lidl-folder-3896723"
+   },
+   {
+    "item": "Kalkoenbout",
+    "price": 4.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/lidl-folder-3896723"
+   },
+   {
+    "item": "Pangasiusfilet XXL",
+    "price": 6.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/lidl-folder-3896723"
+   },
+   {
+    "item": "Gerookte Noorse zalm",
+    "price": 1.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/lidl-folder-3896723"
+   },
+   {
+    "item": "Boerenbrood XXL",
+    "price": 1.79,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/lidl-folder-3896723"
+   },
+   {
+    "item": "Geitenkaas",
+    "price": 1.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/lidl-folder-3896723"
+   }
+  ],
+  "BE/Aldi": [
+   {
+    "item": "Bananen",
+    "price": 0.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/aldi-folder-week-47-3887904"
+   },
+   {
+    "item": "Clementines",
+    "price": 2.98,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/aldi-folder-week-47-3887904"
+   },
+   {
+    "item": "Snoeptomaatjes",
+    "price": 2.23,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/aldi-folder-week-47-3887904"
+   },
+   {
+    "item": "Boskoopappels",
+    "price": 2.09,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/aldi-folder-week-47-3887904"
+   },
+   {
+    "item": "Daylicious soepgroenten",
+    "price": 1.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/aldi-folder-week-47-3887904"
+   },
+   {
+    "item": "Daylicious gesneden champignonmengeling",
+    "price": 2.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/aldi-folder-week-47-3887904"
+   },
+   {
+    "item": "Kippenwokreepjes",
+    "price": 6.18,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/aldi-folder-week-47-3887904"
+   },
+   {
+    "item": "Varkenshaasje Flandrien",
+    "price": 7.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/aldi-folder-week-47-3887904"
+   },
+   {
+    "item": "Délifin kipfilet 150 g",
+    "price": 2.89,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/winkels/aldi/folders-promoties"
+   },
+   {
+    "item": "Meergranenbrood",
+    "price": 2.1,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/aldi-folder-week-47-3887904"
+   }
+  ],
+  "BE/Delhaize": [
+   {
+    "item": "Penne rigate Soubry",
+    "price": 4.65,
+    "was": 9.3,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/winkels/delhaize/promoties"
+   },
+   {
+    "item": "Iglo Veggie Love of Garden Love (diepvriesgroenten)",
+    "price": 3.25,
+    "was": 6.5,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/winkels/delhaize/promoties"
+   },
+   {
+    "item": "Geraspte mozzarella & scamorza",
+    "price": 2.09,
+    "was": 2.99,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/winkels/delhaize/promoties"
+   },
+   {
+    "item": "Noedels voor de Aziatische keuken",
+    "price": 2.79,
+    "was": 3.99,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/winkels/delhaize/promoties"
+   },
+   {
+    "item": "Mifroma emmentaler",
+    "price": 4.12,
+    "was": 5.89,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/winkels/delhaize/promoties"
+   },
+   {
+    "item": "Groenten voor de oven of de airfryer (2de tegen -50%)",
+    "price": 5.99,
+    "was": 7.98,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/winkels/delhaize/promoties"
+   },
+   {
+    "item": "Haspengouwse wortelen",
+    "price": 1.49,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3898398"
+   },
+   {
+    "item": "Delhaize bio gerookte Noorse zalm",
+    "price": 2.99,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3898398"
+   }
+  ],
+  "BE/Colruyt": [
+   {
+    "item": "Danone op Griekse wijze",
+    "price": 2.39,
+    "was": 4.78,
+    "validFrom": "2026-11-04",
+    "validTo": "2026-11-17",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/colruyt-folder-3878685"
+   },
+   {
+    "item": "Spruitjes",
+    "price": 2.29,
+    "validFrom": "2026-11-04",
+    "validTo": "2026-11-17",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/colruyt-folder-3878685"
+   },
+   {
+    "item": "Rode bieten bio",
+    "price": 2.39,
+    "validFrom": "2026-11-04",
+    "validTo": "2026-11-17",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/colruyt-folder-3878685"
+   },
+   {
+    "item": "Boni Selection bio kastanjechampignons",
+    "price": 2.06,
+    "validFrom": "2026-11-04",
+    "validTo": "2026-11-17",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/colruyt-folder-3878685"
+   },
+   {
+    "item": "Boni Selection witloof",
+    "price": 4,
+    "validFrom": "2026-11-04",
+    "validTo": "2026-11-17",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/colruyt-folder-3878685"
+   },
+   {
+    "item": "Appelen Kanzi",
+    "price": 3.99,
+    "validFrom": "2026-11-04",
+    "validTo": "2026-11-17",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/colruyt-folder-3878685"
+   }
+  ],
   "FR/Lidl": [
    {
     "item": "Barilla Pennette Rigate",
