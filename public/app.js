@@ -146,8 +146,9 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
   function weekDays(){
     const t = new Date(); t.setHours(0,0,0,0);
     const dow = t.getDay(); // 0 Sun
-    // Mon–Thu: this week. Fri–Sun: next week.
-    const offset = (dow >= 1 && dow <= 4) ? 1 - dow : (dow === 0 ? 1 : 8 - dow);
+    // A menu covers one fixed week, Monday to Sunday. Deals refresh on Sunday,
+    // so on Sunday we plan the coming week; any other day, this week.
+    const offset = dow === 0 ? 1 : 1 - dow;
     const mon = new Date(t); mon.setDate(t.getDate() + offset);
     return [...Array(7)].map((_,i) => { const d = new Date(mon); d.setDate(mon.getDate()+i); return d; });
   }
@@ -180,7 +181,7 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
       $("dealsOut").innerHTML = ""; return;
     }
     const checked = info && (info.at || info.checked) ? new Date(info.at || info.checked).toLocaleDateString("en-GB", { day:"numeric", month:"short" }) : deals.updated;
-    $("dealsIntro").textContent = `This week's best promotions, found automatically in the supermarkets' leaflets${checked ? ` · checked ${checked}` : ""}. Your menu is built around them.`;
+    $("dealsIntro").textContent = `This week's best promotions from the supermarkets' leaflets${checked ? `, checked ${checked}` : ""}. New deals arrive every Sunday, and your menu is built around them.`;
     const saving = x => x.was && x.was > x.price ? Math.round((1 - x.price / x.was) * 100) : 0;
     $("dealsOut").innerHTML = stores.map(s => {
       const list = v[s].slice().sort((a, b) => saving(b) - saving(a));
@@ -315,6 +316,31 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
     if (Array.isArray(v)) return v.slice(0, 3).join(" · ");
     return String(v || "").replace(/[.,;:!]/g, "").split(/\s+/).filter(Boolean).slice(0, 3).join(" · ");
   }
+  // Small highlighted notes about when this menu's deals end.
+  const shortDate = d => d.toLocaleDateString("en-GB", { weekday:"short", day:"numeric", month:"short" });
+  function weekNotes(p){
+    const dates = (menu.dates && menu.dates.length ? menu.dates : [menu.start || iso(weekDays()[0])]).filter(Boolean).map(d => new Date(d + "T00:00:00"));
+    const today = new Date(); today.setHours(0,0,0,0);
+    const sunday = new Date((menu.start || iso(weekDays()[0])) + "T00:00:00"); sunday.setDate(sunday.getDate() + 6);
+    if (dates.length && dates[dates.length - 1] < today){
+      const msg = "This menu was for a past week. Print a new one for this week's deals.";
+      return { picks: msg, shop: msg, stale: true };
+    }
+    // earliest end date among the promo items on the list
+    const ends = [];
+    (p.shopping || []).forEach(s => (s.items || []).forEach(i => { if (i.promo && /^\d{4}-\d{2}-\d{2}$/.test(i.until || "")) ends.push(i.until); }));
+    ends.sort();
+    const early = ends.length && ends[0] < iso(sunday) ? new Date(ends[0] + "T00:00:00") : null;
+    const next = shortDate(sunday);
+    return {
+      picks: `This menu is set for the week. New deals arrive ${next}.`,
+      shop: early
+        ? `Shop by ${shortDate(early)}: some promo prices end then. New deals arrive ${next}.`
+        : `Promo prices are valid all week. New deals arrive ${next}.`,
+      stale: false,
+    };
+  }
+
   function renderMenu(){
     $("progress").classList.add("hidden");
     if (!menu || !menu.plan){ $("menuEmpty").classList.remove("hidden"); $("menuOut").classList.add("hidden"); return; }
@@ -325,6 +351,7 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
     const under = profile.budget - total;
     const meals = [["Breakfast","breakfast",""],["Lunch","lunch",""],["Dinner","dinner","din"]].filter(m => profile.meals.includes(m[0]));
 
+    const notes = weekNotes(p);
     $("menuOut").innerHTML = `
       <div class="card receipt">
         <p class="store-line">Week of ${esc(menu.weekLabel)}</p>
@@ -335,6 +362,7 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
           <div class="pick"><b>${esc(h.name)} <span class="days">(${esc(h.days)})</span></b>
             ${h.tip ? `<div class="tip">${esc(h.tip)}</div>` : ""}</div>`).join("")}
         ${(p.highlights||[]).some(h => !h.tip) ? `<p class="note" style="text-align:center;margin:10px 0 0">This menu was printed before chef's tips existed. Print a new menu to get them.</p>` : ""}
+        <p class="week-banner${notes.stale ? " stale" : ""}">${esc(notes.picks)}</p>
       </div>
 
       <p class="week-head">Your week</p>
@@ -363,6 +391,7 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
       <div class="card receipt shop">
         <p class="store-line">Shopping list · ${esc(menu.weekLabel)}</p>
         <h2>Groceries</h2>
+        <p class="week-banner${notes.stale ? " stale" : ""}">${esc(notes.shop)}</p>
         ${stores.map((s,si) => {
           const sub = (s.items||[]).reduce((a,i)=>a+(+i.price||0),0);
           return `<p class="store-name">*** ${esc(s.store)} ***</p>

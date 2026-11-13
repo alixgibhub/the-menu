@@ -245,3 +245,12 @@ h1 .cutlery{display:inline-flex;align-items:center;gap:.04em;margin-left:.06em}
 .was{color:var(--muted);font-weight:400;font-size:12px}
 .sources{font-size:11px;color:var(--muted);margin:6px 0 0;text-align:right}
 .sources a{color:var(--blue)}
+
+/* small highlighted note about this week's deals */
+.week-banner{
+  background:var(--yellow);color:var(--ink);font-size:12px;font-weight:700;line-height:1.4;
+  text-align:center;padding:7px 10px;margin:16px 0 0;
+}
+.shop .week-banner{margin:0 0 6px}
+.week-banner::before{content:"→ "}
+.week-banner.stale{background:var(--red);color:#fff}
