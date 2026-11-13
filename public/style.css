@@ -220,7 +220,9 @@ footer{text-align:center;font-size:13px;color:rgba(255,255,255,.9);margin-top:10
 .change .field{text-align:left;margin-top:6px}
 
 /* big title framed by the yellow stars */
-h1 .star{font-size:.42em;vertical-align:.55em;margin:0 .12em}
+/* pixel-art forks either side of the title, drawn on the same pixel grid */
+h1{display:flex;align-items:center;justify-content:center;gap:.22em}
+h1 .fork{height:.74em;width:auto;flex:none;fill:currentColor}
 
 /* change one day */
 .day-change{margin-top:12px;text-align:center}
@@ -231,3 +233,7 @@ h1 .star{font-size:.42em;vertical-align:.55em;margin:0 .12em}
 .export .actions .btn{min-width:120px}
 .gcal{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:12px}
 .gcal a{text-decoration:none}
+
+/* chef's tip under each key ingredient, in Klein blue */
+.pick .tip{color:var(--blue);font-size:14px;margin-top:4px}
+.pick .tip::before{content:none}

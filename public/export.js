@@ -17,6 +17,7 @@ const MEALS = [
 
 // The dates of the menu's seven days.
 export function menuDates(menu) {
+  if (Array.isArray(menu.dates)) return menu.dates.map(d => new Date(d + "T00:00:00"));
   const start = menu.start ? new Date(menu.start + "T00:00:00") : null;
   return [...Array(7)].map((_, i) => {
     if (!start) return null;
@@ -42,7 +43,7 @@ export function menuText(menu, profile, money, { markdown = false } = {}) {
   if (p.mood) out.push(markdown ? `*${words(p.mood)}*` : words(p.mood));
 
   out.push(h2("Chef's picks"));
-  (p.highlights || []).forEach(x => out.push(`${bullet} ${x.name} (${x.days}): ${words(x.keywords || x.benefit)}`));
+  (p.highlights || []).forEach(x => out.push(`${bullet} ${x.name} (${x.days}): ${x.tip || words(x.keywords || x.benefit)}`));
 
   out.push(h2("Your week"));
   (p.days || []).forEach((d, i) => {
@@ -118,15 +119,18 @@ export function googleDayLinks(menu, profile) {
   }).filter(Boolean);
 }
 
-// Send the .ics through the server so every browser treats it as a real
-// calendar file: iPhone and iPad show "Add All", computers download it for
-// Apple Calendar or Outlook, Android opens it in the calendar app if it can.
-export function openICS(ics) {
-  const form = document.createElement("form");
-  form.method = "POST"; form.action = "/api/calendar.ics"; form.style.display = "none";
-  const field = document.createElement("textarea"); field.name = "ics"; field.value = ics;
-  form.appendChild(field); document.body.appendChild(form);
-  form.submit(); form.remove();
+// The server keeps the .ics for an hour behind a short link, and the browser
+// simply opens that link. That's what iPhone and iPad need to show "Add All";
+// computers download it for Apple Calendar or Outlook.
+export async function openICS(ics) {
+  try {
+    const res = await fetch("/api/calendar", { method: "POST", headers: { "content-type": "text/calendar" }, body: ics });
+    if (!res.ok) return false;
+    const { url } = await res.json();
+    if (!url) return false;
+    window.location.href = url;
+    return true;
+  } catch (e) { return false; }
 }
 
 export function download(name, text, type) {

@@ -17,7 +17,7 @@
 <div class="wrap">
 
   <header class="card receipt hero">
-    <h1><span class="star" aria-hidden="true">★</span> The Menu <span class="star" aria-hidden="true">★</span></h1>
+    <h1><svg class="fork" viewBox="0 0 10 20" aria-hidden="true" shape-rendering="crispEdges"><path d="M0 0h2v6h2V0h2v6h2V0h2v8H9v1H8v1H6v10H4V10H2V9H1V8H0z"/></svg><span>The Menu</span><svg class="fork" viewBox="0 0 10 20" aria-hidden="true" shape-rendering="crispEdges"><path d="M0 0h2v6h2V0h2v6h2V0h2v8H9v1H8v1H6v10H4V10H2V9H1V8H0z"/></svg></h1>
     <p class="intro">From supermarket deals to a healthy week. A fresh menu and shopping list, printed for you.</p>
   </header>
 
@@ -81,6 +81,10 @@
       <div class="row">
         <label class="field"><span>People</span><input type="number" id="people" min="1" max="8" value="1"></label>
         <label class="field"><span id="budgetLabel">Weekly budget</span><input type="number" id="budget" min="10" step="5" value="50"></label>
+      </div>
+      <div class="field"><span>Days to plan</span>
+        <p class="hint">Untick the days you won't cook, like evenings out or weekends away.</p>
+        <div class="chips" id="dayChips"></div>
       </div>
       <div class="field"><span>Meals to plan</span>
         <div class="chips" id="mealChips"></div>

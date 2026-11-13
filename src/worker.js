@@ -27,7 +27,8 @@ export default {
       if (pathname === "/api/deals" && request.method === "GET") return json(await getDeals(env));
       if (pathname === "/api/deals" && request.method === "POST") return saveDeals(request, env);
       if (pathname === "/api/menu" && request.method === "POST") return makeMenu(request, env, ctx);
-      if (pathname === "/api/calendar.ics" && request.method === "POST") return calendarFile(request);
+      if (pathname === "/api/calendar" && request.method === "POST") return saveCalendar(request, env);
+      if (pathname.startsWith("/api/calendar/") && request.method === "GET") return getCalendar(pathname, env);
       if (pathname.startsWith("/api/")) return json({ error: "not_found" }, 404);
     } catch (err) {
       console.error(err);
@@ -81,18 +82,27 @@ async function saveDeals(request, env) {
 }
 
 // ---------- calendar export ----------
-// The browser builds the .ics; this only hands it back as a real calendar file,
-// which is what makes iPhone and iPad offer "Add All" to Calendar.
-async function calendarFile(request) {
-  const form = await request.formData().catch(() => null);
-  const ics = form && String(form.get("ics") || "");
+// The browser builds the .ics and posts it here; we keep it for an hour and
+// hand back a short link. Opening that link with a normal GET is what makes
+// iPhone and iPad offer "Add All" in Calendar.
+async function saveCalendar(request, env) {
+  const ics = await request.text().catch(() => "");
   if (!ics || ics.length > 200000 || !ics.startsWith("BEGIN:VCALENDAR") || !ics.trimEnd().endsWith("END:VCALENDAR")) {
     return json({ error: "bad_request" }, 400);
   }
+  const id = [...crypto.getRandomValues(new Uint8Array(12))].map((b) => b.toString(16).padStart(2, "0")).join("");
+  await env.MENU_KV.put(`ics:${id}`, ics, { expirationTtl: 3600 });
+  return json({ url: `/api/calendar/${id}.ics` });
+}
+
+async function getCalendar(pathname, env) {
+  const id = (pathname.match(/^\/api\/calendar\/([a-f0-9]{24})\.ics$/) || [])[1];
+  const ics = id && (await env.MENU_KV.get(`ics:${id}`));
+  if (!ics) return new Response("This calendar link has expired. Go back to The Menu and tap Calendar again.", { status: 404, headers: { "content-type": "text/plain; charset=utf-8" } });
   return new Response(ics, {
     headers: {
       "content-type": "text/calendar; charset=utf-8",
-      "content-disposition": 'attachment; filename="the-menu.ics"',
+      "content-disposition": 'inline; filename="the-menu.ics"',
       "cache-control": "no-store",
       "x-content-type-options": "nosniff",
     },
@@ -109,7 +119,7 @@ async function makeMenu(request, env, ctx) {
   const profile = cleanProfile(body.profile);
   if (!profile.stores.length) return json({ error: "no_stores" }, 400);
   const days = body.days.slice(0, 7).map((d) => String(d).slice(0, 12));
-  if (days.length !== 7) return json({ error: "bad_request" }, 400);
+  if (days.length < 1) return json({ error: "bad_request" }, 400);
 
   // Optional: the person's current menu plus the changes they want.
   let change = null;

@@ -22,7 +22,7 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
     return DEFAULT_COUNTRY;
   }
   const startFor = cc => ({ country: cc, stores: storesFor(cc).slice(0, 2), cards: [], budget: COUNTRIES[cc].budget });
-  const defaults = { ...startFor(guessCountry()), otherCards:"", people:1, meals:["Breakfast","Lunch","Dinner","Snack"], cookTime:"normal", priority:"budget", diet:[], dislikes:"", fridge:"" };
+  const defaults = { ...startFor(guessCountry()), otherCards:"", people:1, meals:["Breakfast","Lunch","Dinner","Snack"], weekdays:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"], cookTime:"normal", priority:"budget", diet:[], dislikes:"", fridge:"" };
   let profile = {...defaults};
   let menu = null;   // {weekLabel, made, plan, checked:{}}
   let deals = null;  // {updated, stores:{Store:[{item,price,validFrom,validTo,card}]}}
@@ -112,6 +112,10 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
     $("budgetLabel").textContent = `Weekly budget (${symbol()})`;
     renderCardChips();
     chipGroup($("mealChips"), MEALS, () => profile.meals, s => profile.meals = s);
+    // which days of the week to plan (kept in Monday-to-Sunday order)
+    const WEEK = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+    if (!Array.isArray(profile.weekdays)) profile.weekdays = WEEK.slice();
+    chipGroup($("dayChips"), WEEK, () => profile.weekdays, s => profile.weekdays = WEEK.filter(d => s.includes(d)));
     chipGroup($("dietChips"), DIETS, () => profile.diet, s => profile.diet = s);
     $("otherCards").value = profile.otherCards || "";
     $("people").value = profile.people; $("budget").value = profile.budget;
@@ -129,6 +133,7 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
   $("saveBtn").onclick = () => {
     readSettings(); readCardNumbers();
     if (!profile.stores.length){ $("saveMsg").textContent = "Pick at least one supermarket."; return; }
+    if (!profile.weekdays || !profile.weekdays.length){ $("saveMsg").textContent = "Pick at least one day."; return; }
     LS.set("profile", profile);
     $("saveMsg").textContent = "Saved ✓";
     renderEmptyText();
@@ -213,7 +218,8 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
     if (busy) return;
     if (!profile.stores.length){ show("settings"); return; }
     busy = true;
-    const days = weekDays();
+    const wanted = Array.isArray(profile.weekdays) && profile.weekdays.length ? profile.weekdays : ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+    const days = weekDays().filter(d => wanted.includes(DN[d.getDay()]));
     show("menu");
     $("menuEmpty").classList.add("hidden"); $("menuOut").classList.add("hidden");
     $("progress").classList.remove("hidden"); $("progressText").textContent = edits ? "Reprinting with your changes…" : "Printing your week…";
@@ -240,7 +246,7 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
       const broke = text.match(/<<STREAM_ERROR:([a-z_]+)>>/);
       if (broke) throw Object.assign(new Error(broke[1]), { code: broke[1] === "max_tokens" ? "too_long" : "busy" });
       const plan = parseJSON(text);
-      menu = { weekLabel: weekLabel(days), start: iso(days[0]), made: iso(new Date()), plan, checked: {} };
+      menu = { weekLabel: weekLabel(weekDays()), start: iso(weekDays()[0]), dates: days.map(iso), made: iso(new Date()), plan, checked: {} };
       LS.set("menu", menu);
       renderMenu();
     } catch(e){
@@ -290,7 +296,7 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
   }
   function dayParts(label, i){
     const [d, n] = String(label).split(" ");
-    const base = weekDays()[i];
+    const base = menu && menu.dates && menu.dates[i] ? new Date(menu.dates[i] + "T00:00:00") : weekDays()[i];
     return { name: FULL[d] || d || "", date: n ? `${n} ${MONTH[base ? base.getMonth() : 0]}` : "" };
   }
 
@@ -317,7 +323,7 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
         <hr>
         ${(p.highlights||[]).map(h => `
           <div class="pick"><b>${esc(h.name)} <span class="days">(${esc(h.days)})</span></b>
-            <div class="keywords">${esc(threeWords(h.keywords || h.benefit))}</div></div>`).join("")}
+            <div class="tip">${esc(h.tip || threeWords(h.keywords || h.benefit))}</div></div>`).join("")}
       </div>
 
       <p class="week-head">Your week</p>
@@ -361,7 +367,6 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
         <div class="total-row"><span>Total</span><span>≈ ${money(total)}</span></div>
         <div class="line"><span>${under >= 0 ? "Under budget" : "Over budget"}</span><span class="amt">${under >= 0 ? "" : "−"}${money(Math.abs(under))}</span></div>
         <hr>
-        <p class="fine">Promo prices come from this week's deals. ≈ prices are estimates. Pantry basics (oil, vinegar, salt, pepper, herbs, spices, stock, sauces) are left off the list.${p.notes?" "+esc(p.notes):""} Thank you for cooking with The Menu.</p>
         <div class="change">
           <button class="btn ghost" id="changeBtn" type="button">Change something</button>
           <div id="changeBox" class="hidden">
@@ -436,17 +441,18 @@ import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/e
       try { await navigator.clipboard.writeText(text); say("Copied. Paste it into a new note."); }
       catch(e){ download("the-menu.txt", text, "text/plain"); say("Downloaded as a text file."); }
     };
-    $("exportCalendar").onclick = () => {
+    $("exportCalendar").onclick = async () => {
       const links = googleDayLinks(menu, profile);
       if (dev.android){
         // Google Calendar can't import a file from the web, so add it day by day.
         say("Tap each day to add it to Google Calendar.");
         $("exportLinks").innerHTML = `<div class="gcal">${links.map(l => `<a class="btn ghost small" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("")}</div>
           <p class="note" style="text-align:center">Using another calendar app? <a href="#" id="icsAnyway">Get the calendar file</a></p>`;
-        $("icsAnyway").onclick = e => { e.preventDefault(); openICS(menuICS(menu, profile)); };
+        $("icsAnyway").onclick = async e => { e.preventDefault(); if (!(await openICS(menuICS(menu, profile)))) say("Couldn't make the calendar file. Try again in a moment."); };
         return;
       }
-      openICS(menuICS(menu, profile));
+      say("Preparing your calendar…");
+      if (!(await openICS(menuICS(menu, profile)))){ say("Couldn't make the calendar file. Try again in a moment."); return; }
       $("exportLinks").innerHTML = dev.iOS ? "" : `<p class="note" style="text-align:center">Use Google Calendar? <a href="#" id="gcalLinks">Add day by day instead</a></p>`;
       say(dev.iOS ? "Tap “Add All” to put your meals in Calendar." : "Calendar file downloaded. Open it to add your meals to Calendar or Outlook.");
       const g = $("gcalLinks");

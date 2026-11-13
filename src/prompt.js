@@ -89,7 +89,7 @@ ${Object.keys(myDeals).length ? JSON.stringify(myDeals) : `None available. Use t
 RULES
 ${priorityRules}
 
-- Plan these 7 days exactly: ${days.join(", ")}.
+- Plan exactly these ${days.length} day${days.length > 1 ? "s" : ""}, and only these: ${days.join(", ")}. Shop only for them.
 - Cook the way people in ${c.name} actually shop and eat: use ingredients easy to find in these supermarkets and in season now.
 - Build the week around the promotions above where it's healthy to do so. Only use a card-only deal if they have that card.
 - Batch-cook to keep cost and effort down (e.g. a soup or curry that covers several meals).
@@ -103,11 +103,11 @@ ${priorityRules}
 Reply with ONLY a JSON object, no markdown, in this exact shape:
 {
  "mood": ["cosy", "frugal", "seasonal"],
- "highlights": [ {"emoji":"🐟","name":"Salmon","days":"Mon & Fri","keywords":["rich","zesty","quick"]} ],
+ "highlights": [ {"emoji":"🐟","name":"Salmon","days":"Mon & Fri","tip":"Pat dry, salt 10 minutes ahead, then sear skin-side down until crisp."} ],
  "days": [ {"day":"${days[0]}","breakfast":"…","lunch":"…","dinner":"…"} ],
  "snack": "daily snack line or —",
  "shopping": [ {"store":"${profile.stores[0]}","items":[ {"item":"Red lentils","qty":"500 g","price":1.80,"promo":false,"organic":false} ]} ],
  "notes": "one short practical note (e.g. which loyalty-card app to check for coupons)"
 }
-"mood" is exactly three single-word adjectives that describe the week. Each highlight has exactly three single-word adjectives describing that dish or ingredient (e.g. "hearty", "zesty", "filling"): adjectives only, no nouns, no sentences. Give 4–7 highlights (dinners first). Sort shopping items within each store from most to least expensive.${changeBlock}`;
+"mood" is exactly three single-word adjectives that describe the week. Each highlight is a key ingredient of the week, and its "tip" is one short chef’s tip (at most 15 words) on how to prepare that ingredient for the most flavour. Give 4–7 highlights (dinners first). Sort shopping items within each store from most to least expensive.${changeBlock}`;
 }
