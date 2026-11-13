@@ -14,7 +14,7 @@
   ],
   "vars": {
     "MODEL": "claude-sonnet-5-5",
-    "MENUS_PER_VISITOR_PER_DAY": "3",
+    "MENUS_PER_VISITOR_PER_DAY": "10",
     "MENUS_PER_DAY_TOTAL": "100"
   }
   // Secrets (set in the Cloudflare dashboard or with `wrangler secret put`):

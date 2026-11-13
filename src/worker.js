@@ -168,7 +168,7 @@ async function checkLimits(request, env) {
   const ip = request.headers.get("cf-connecting-ip") || "unknown";
   const ipKey = `count:${day}:${await hash(ip)}`;
   const allKey = `count:${day}:all`;
-  const perIp = Number(env.MENUS_PER_VISITOR_PER_DAY || 3);
+  const perIp = Number(env.MENUS_PER_VISITOR_PER_DAY || 10);
   const total = Number(env.MENUS_PER_DAY_TOTAL || 100);
 
   const [ipCount, allCount] = await Promise.all([env.MENU_KV.get(ipKey), env.MENU_KV.get(allKey)]);
