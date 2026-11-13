@@ -1,4 +1,5 @@
 import { COUNTRIES, DEFAULT_COUNTRY } from "/countries.js";
+import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/export.js";
 
 (() => {
   const country = () => COUNTRIES[profile.country] || COUNTRIES[DEFAULT_COUNTRY];
@@ -239,7 +240,7 @@ import { COUNTRIES, DEFAULT_COUNTRY } from "/countries.js";
       const broke = text.match(/<<STREAM_ERROR:([a-z_]+)>>/);
       if (broke) throw Object.assign(new Error(broke[1]), { code: broke[1] === "max_tokens" ? "too_long" : "busy" });
       const plan = parseJSON(text);
-      menu = { weekLabel: weekLabel(days), made: iso(new Date()), plan, checked: {} };
+      menu = { weekLabel: weekLabel(days), start: iso(days[0]), made: iso(new Date()), plan, checked: {} };
       LS.set("menu", menu);
       renderMenu();
     } catch(e){
@@ -329,8 +330,16 @@ import { COUNTRIES, DEFAULT_COUNTRY } from "/countries.js";
             <hr>
             ${meals.map(([lbl,key,cls]) => `<div class="meal ${cls}"><span class="what">${esc(d[key])}</span><span class="when">(${lbl})</span></div>`).join("")}
             ${p.snack && p.snack !== "—" ? `<div class="meal"><span class="what">${esc(p.snack)}</span><span class="when">(Snack)</span></div>` : ""}
-            <hr>
-            <div class="line"><span>Total meals</span><span class="amt">${meals.length}</span></div>
+            <div class="day-change">
+              <button class="btn ghost small" type="button" data-day="${i}">Change this day</button>
+              <div class="hidden day-box" data-box="${i}">
+                <textarea maxlength="200" rows="3" placeholder="e.g. lighter lunch, no fish"></textarea>
+                <div class="actions center">
+                  <button class="btn small makeBtn" type="button" data-apply="${i}">Reprint</button>
+                  <button class="btn ghost small" type="button" data-cancel="${i}">Cancel</button>
+                </div>
+              </div>
+            </div>
           </div>`; }).join("")}
       </div>
 
@@ -371,6 +380,19 @@ import { COUNTRIES, DEFAULT_COUNTRY } from "/countries.js";
           <button class="btn makeBtn" id="remakeBtn">New menu</button>
         </div>
         <p class="note" id="copyMsg" style="text-align:center;margin:8px 0 0"></p>
+      </div>
+
+      <div class="card receipt export">
+        <h2>Take it with you</h2>
+        <p class="intro">Send this week to your phone or computer.</p>
+        <hr>
+        <div class="actions center">
+          <button class="btn ghost" type="button" id="exportNotes">Notes</button>
+          <button class="btn ghost" type="button" id="exportCalendar">Calendar</button>
+          <button class="btn ghost" type="button" id="exportNotion">Notion</button>
+        </div>
+        <p class="note" id="exportMsg" style="text-align:center;margin:10px 0 0"></p>
+        <div id="exportLinks"></div>
       </div>`;
     $("menuEmpty").classList.add("hidden"); $("menuOut").classList.remove("hidden");
     drawCardBarcodes();
@@ -381,6 +403,69 @@ import { COUNTRIES, DEFAULT_COUNTRY } from "/countries.js";
       LS.set("menu", menu);
     });
     $("remakeBtn").onclick = () => makeMenu();
+
+    // change one day
+    const dayName = i => { const d = (p.days || [])[i]; const dp = d ? dayParts(d.day, i) : null; return dp ? `${dp.name} ${dp.date}` : `day ${i + 1}`; };
+    $("menuOut").querySelectorAll("[data-day]").forEach(b => b.onclick = () => {
+      const box = $("menuOut").querySelector(`[data-box="${b.dataset.day}"]`);
+      box.classList.remove("hidden"); b.classList.add("hidden"); box.querySelector("textarea").focus();
+    });
+    $("menuOut").querySelectorAll("[data-cancel]").forEach(b => b.onclick = () => {
+      const i = b.dataset.cancel;
+      $("menuOut").querySelector(`[data-box="${i}"]`).classList.add("hidden");
+      $("menuOut").querySelector(`[data-day="${i}"]`).classList.remove("hidden");
+    });
+    $("menuOut").querySelectorAll("[data-apply]").forEach(b => b.onclick = () => {
+      const i = +b.dataset.apply, ta = $("menuOut").querySelector(`[data-box="${i}"] textarea`), t = ta.value.trim();
+      if (!t){ ta.focus(); return; }
+      makeMenu(`Only change ${dayName(i)}: ${t}. Keep the other days the same.`);
+    });
+
+    // exports
+    const dev = device();
+    const say = t => { $("exportMsg").textContent = t; };
+    if (!menu.start) menu.start = iso(weekDays()[0]);
+    $("exportNotes").onclick = async () => {
+      const text = menuText(menu, profile, money);
+      $("exportLinks").innerHTML = "";
+      if (dev.canShare){
+        // Share sheet: Apple Notes on iPhone, iPad and Mac; Google Keep or Samsung Notes on Android.
+        try { await navigator.share({ title: `The Menu · ${menu.weekLabel}`, text }); say("Sent ✓"); return; }
+        catch(e){ if (e && e.name === "AbortError") return; }
+      }
+      try { await navigator.clipboard.writeText(text); say("Copied. Paste it into a new note."); }
+      catch(e){ download("the-menu.txt", text, "text/plain"); say("Downloaded as a text file."); }
+    };
+    $("exportCalendar").onclick = () => {
+      const links = googleDayLinks(menu, profile);
+      if (dev.android){
+        // Google Calendar can't import a file from the web, so add it day by day.
+        say("Tap each day to add it to Google Calendar.");
+        $("exportLinks").innerHTML = `<div class="gcal">${links.map(l => `<a class="btn ghost small" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("")}</div>
+          <p class="note" style="text-align:center">Using another calendar app? <a href="#" id="icsAnyway">Get the calendar file</a></p>`;
+        $("icsAnyway").onclick = e => { e.preventDefault(); openICS(menuICS(menu, profile)); };
+        return;
+      }
+      openICS(menuICS(menu, profile));
+      $("exportLinks").innerHTML = dev.iOS ? "" : `<p class="note" style="text-align:center">Use Google Calendar? <a href="#" id="gcalLinks">Add day by day instead</a></p>`;
+      say(dev.iOS ? "Tap “Add All” to put your meals in Calendar." : "Calendar file downloaded. Open it to add your meals to Calendar or Outlook.");
+      const g = $("gcalLinks");
+      if (g) g.onclick = e => { e.preventDefault(); $("exportLinks").innerHTML = `<div class="gcal">${links.map(l => `<a class="btn ghost small" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("")}</div>`; };
+    };
+    $("exportNotion").onclick = async () => {
+      const md = menuText(menu, profile, money, { markdown: true });
+      $("exportLinks").innerHTML = "";
+      let copied = false;
+      try { await navigator.clipboard.writeText(md); copied = true; } catch(e){}
+      if (copied){
+        // Notion turns pasted Markdown into headings, bullets and to-do checkboxes.
+        say(`Copied. Open a new Notion page and paste (${dev.mobile ? "tap and hold, then Paste" : dev.mac ? "⌘V" : "Ctrl+V"}).`);
+        $("exportLinks").innerHTML = `<div class="gcal"><a class="btn small" href="https://www.notion.so/new" target="_blank" rel="noopener">Open Notion</a></div>`;
+      } else {
+        download("the-menu.md", md, "text/markdown");
+        say("Downloaded. In Notion, use Import → Markdown.");
+      }
+    };
     $("changeBtn").onclick = () => { $("changeBox").classList.remove("hidden"); $("changeBtn").classList.add("hidden"); $("changeText").focus(); };
     $("cancelChangeBtn").onclick = () => { $("changeBox").classList.add("hidden"); $("changeBtn").classList.remove("hidden"); };
     $("applyChangeBtn").onclick = () => {

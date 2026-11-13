@@ -15,6 +15,8 @@ It started as my own weekly menu in Notion. I turned it into an app so friends c
 - **Fits your week.** People, budget, which meals to plan, cooking time, diet, dislikes, and what's already in your fridge.
 - **Chef's suggestion.** The week's key ingredients, why they're good for you, and a tip for making them taste great.
 - **Shopping list.** Grouped by store and ticked off as you shop. Promo prices are exact; other prices are marked ≈. You can copy or print it.
+- **Change anything.** Every day receipt has its own *Change this day* box, and the groceries list has *Change something* for the whole week. The menu is reprinted with only those changes.
+- **Take it with you.** Export to Notes (the phone's share sheet: Apple Notes, Google Keep, Samsung Notes), Calendar (an .ics file with every meal; on Android, one Google Calendar link per day) or Notion (copied as Markdown, so headings and to-do checkboxes paste straight in).
 - **No account needed.** Your settings and menu stay in your own browser.
 
 ## How it's built
@@ -36,6 +38,7 @@ src/worker.js    API: /api/menu, /api/deals, /admin
 src/prompt.js    settings validation and the menu prompt
 public/countries.js  countries, their supermarkets, loyalty cards and currency (shared by app and server)
 src/admin.js     password-protected page for posting weekly deals
+public/export.js     Notes, Calendar and Notion exports
 wrangler.jsonc   Cloudflare configuration
 ```
 

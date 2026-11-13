@@ -27,6 +27,7 @@ export default {
       if (pathname === "/api/deals" && request.method === "GET") return json(await getDeals(env));
       if (pathname === "/api/deals" && request.method === "POST") return saveDeals(request, env);
       if (pathname === "/api/menu" && request.method === "POST") return makeMenu(request, env, ctx);
+      if (pathname === "/api/calendar.ics" && request.method === "POST") return calendarFile(request);
       if (pathname.startsWith("/api/")) return json({ error: "not_found" }, 404);
     } catch (err) {
       console.error(err);
@@ -77,6 +78,25 @@ async function saveDeals(request, env) {
   const deals = { updated: new Date().toISOString().slice(0, 10), stores };
   await env.MENU_KV.put("deals", JSON.stringify(deals));
   return json({ ok: true, deals });
+}
+
+// ---------- calendar export ----------
+// The browser builds the .ics; this only hands it back as a real calendar file,
+// which is what makes iPhone and iPad offer "Add All" to Calendar.
+async function calendarFile(request) {
+  const form = await request.formData().catch(() => null);
+  const ics = form && String(form.get("ics") || "");
+  if (!ics || ics.length > 200000 || !ics.startsWith("BEGIN:VCALENDAR") || !ics.trimEnd().endsWith("END:VCALENDAR")) {
+    return json({ error: "bad_request" }, 400);
+  }
+  return new Response(ics, {
+    headers: {
+      "content-type": "text/calendar; charset=utf-8",
+      "content-disposition": 'attachment; filename="the-menu.ics"',
+      "cache-control": "no-store",
+      "x-content-type-options": "nosniff",
+    },
+  });
 }
 
 // ---------- menu ----------

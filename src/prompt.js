@@ -102,12 +102,12 @@ ${priorityRules}
 
 Reply with ONLY a JSON object, no markdown, in this exact shape:
 {
- "mood": ["three", "key", "words"],
- "highlights": [ {"emoji":"🐟","name":"Salmon","days":"Mon & Fri","keywords":["omega-3","protein","quick"]} ],
+ "mood": ["cosy", "frugal", "seasonal"],
+ "highlights": [ {"emoji":"🐟","name":"Salmon","days":"Mon & Fri","keywords":["rich","zesty","quick"]} ],
  "days": [ {"day":"${days[0]}","breakfast":"…","lunch":"…","dinner":"…"} ],
  "snack": "daily snack line or —",
  "shopping": [ {"store":"${profile.stores[0]}","items":[ {"item":"Red lentils","qty":"500 g","price":1.80,"promo":false,"organic":false} ]} ],
  "notes": "one short practical note (e.g. which loyalty-card app to check for coupons)"
 }
-"mood" is exactly three single words that sum up the week. Each highlight has exactly three short key words (one or two words each), no sentences. Give 4–7 highlights (dinners first). Sort shopping items within each store from most to least expensive.${changeBlock}`;
+"mood" is exactly three single-word adjectives that describe the week. Each highlight has exactly three single-word adjectives describing that dish or ingredient (e.g. "hearty", "zesty", "filling"): adjectives only, no nouns, no sentences. Give 4–7 highlights (dinners first). Sort shopping items within each store from most to least expensive.${changeBlock}`;
 }

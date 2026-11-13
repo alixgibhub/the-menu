@@ -218,3 +218,16 @@ footer{text-align:center;font-size:13px;color:rgba(255,255,255,.9);margin-top:10
 .change{text-align:center;margin-top:14px}
 .change textarea{width:100%;font:15px var(--text);text-transform:uppercase;color:var(--ink);background:rgba(255,255,255,.6);border:0;border-bottom:2px solid var(--ink);padding:9px 4px;resize:vertical}
 .change .field{text-align:left;margin-top:6px}
+
+/* big title framed by the yellow stars */
+h1 .star{font-size:.42em;vertical-align:.55em;margin:0 .12em}
+
+/* change one day */
+.day-change{margin-top:12px;text-align:center}
+.day-box textarea{width:100%;font:13px var(--text);text-transform:uppercase;color:var(--ink);background:rgba(255,255,255,.6);border:0;border-bottom:2px solid var(--ink);padding:8px 4px;resize:vertical;margin-bottom:8px}
+.btn.small{font-size:12px;padding:8px 12px}
+
+/* exports */
+.export .actions .btn{min-width:120px}
+.gcal{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:12px}
+.gcal a{text-decoration:none}
