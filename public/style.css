@@ -237,3 +237,6 @@ h1 .fork{height:.74em;width:auto;flex:none;fill:currentColor}
 /* chef's tip under each key ingredient, in Klein blue */
 .pick .tip{color:var(--blue);font-size:14px;margin-top:4px}
 .pick .tip::before{content:none}
+
+/* knife and fork after the title */
+h1 .cutlery{display:inline-flex;align-items:center;gap:.04em;margin-left:.06em}
