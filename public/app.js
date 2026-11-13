@@ -200,6 +200,7 @@ import { COUNTRIES, DEFAULT_COUNTRY } from "/countries.js";
     daily_limit: "You've made today's menus. Come back tomorrow for a fresh one.",
     daily_limit_all: "The Menu is very popular today and has reached its daily limit. Try again tomorrow.",
     busy: "The chef is busy right now. Try again in a minute.",
+    too_long: "That menu came out too long to print. Try again, or plan fewer meals.",
     not_configured: "Menu writing isn't switched on yet.",
     no_stores: "Pick at least one supermarket in your settings first.",
   };
@@ -232,6 +233,8 @@ import { COUNTRIES, DEFAULT_COUNTRY } from "/countries.js";
         text += value;
         $("progressText").textContent = `Printing your menu… ${Math.min(99, Math.round(text.length/45))}%`;
       }
+      const broke = text.match(/<<STREAM_ERROR:([a-z_]+)>>/);
+      if (broke) throw Object.assign(new Error(broke[1]), { code: broke[1] === "max_tokens" ? "too_long" : "busy" });
       const plan = parseJSON(text);
       menu = { weekLabel: weekLabel(days), made: iso(new Date()), plan, checked: {} };
       LS.set("menu", menu);

@@ -16,7 +16,7 @@ const json = (data, status = 200) =>
   });
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const { pathname } = url;
 
@@ -26,7 +26,7 @@ export default {
       }
       if (pathname === "/api/deals" && request.method === "GET") return json(await getDeals(env));
       if (pathname === "/api/deals" && request.method === "POST") return saveDeals(request, env);
-      if (pathname === "/api/menu" && request.method === "POST") return makeMenu(request, env);
+      if (pathname === "/api/menu" && request.method === "POST") return makeMenu(request, env, ctx);
       if (pathname.startsWith("/api/")) return json({ error: "not_found" }, 404);
     } catch (err) {
       console.error(err);
@@ -80,7 +80,7 @@ async function saveDeals(request, env) {
 }
 
 // ---------- menu ----------
-async function makeMenu(request, env) {
+async function makeMenu(request, env, ctx) {
   if (!env.ANTHROPIC_API_KEY) return json({ error: "not_configured" }, 503);
 
   const body = await request.json().catch(() => null);
@@ -107,7 +107,7 @@ async function makeMenu(request, env) {
     },
     body: JSON.stringify({
       model: env.MODEL || "claude-sonnet-5-5",
-      max_tokens: 4000,
+      max_tokens: 8000,
       stream: true,
       messages: [{ role: "user", content: prompt }],
     }),
@@ -120,7 +120,8 @@ async function makeMenu(request, env) {
 
   // Turn Claude's event stream into a plain text stream for the browser.
   const { readable, writable } = new TransformStream();
-  pipeText(upstream.body, writable);
+  // Keep the Worker alive until the whole menu has streamed through.
+  ctx.waitUntil(pipeText(upstream.body, writable));
   return new Response(readable, {
     headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "no-store" },
   });
@@ -141,9 +142,17 @@ async function pipeText(body, writable) {
         const line = buf.slice(0, i).trim();
         buf = buf.slice(i + 1);
         if (!line.startsWith("data:")) continue;
-        const evt = JSON.parse(line.slice(5));
+        let evt;
+        try { evt = JSON.parse(line.slice(5)); } catch { continue; }
         if (evt.type === "content_block_delta" && evt.delta?.type === "text_delta") {
           await writer.write(enc.encode(evt.delta.text));
+        } else if (evt.type === "error") {
+          // Tell the browser the stream broke, so it can say so instead of failing silently.
+          console.error("Claude stream error", JSON.stringify(evt.error));
+          await writer.write(enc.encode(`\n<<STREAM_ERROR:${evt.error?.type || "unknown"}>>`));
+        } else if (evt.type === "message_delta" && evt.delta?.stop_reason && evt.delta.stop_reason !== "end_turn") {
+          console.error("Claude stopped early", evt.delta.stop_reason);
+          await writer.write(enc.encode(`\n<<STREAM_ERROR:${evt.delta.stop_reason}>>`));
         }
       }
     }

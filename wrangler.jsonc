@@ -8,6 +8,7 @@
     "binding": "ASSETS",
     "run_worker_first": ["/api/*", "/admin"]
   },
+  "observability": { "enabled": true },
   "kv_namespaces": [
     { "binding": "MENU_KV", "id": "18b8cbaeb7014fc29c1118b63369386b" }
   ],
