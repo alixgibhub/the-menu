@@ -127,6 +127,17 @@ test("promo items get their end date from the real deal; invented promos lose th
   ok(!b.promo && !b.until, "invented promo kept");
   ok(!c.promo, "regular item changed");
 });
+test("savings come only from deals with a regular price, times the packs bought", () => {
+  const d = { stores: { "BE/Lidl": [{ item: "Zalmfilet", price: 3.99, was: 5.49 }, { item: "Paprika", price: 0.59 }] } };
+  const plan = { shopping: [{ store: "Lidl", items: [
+    { item: "Salmon", deal: "Zalmfilet", price: 7.98, promo: true },
+    { item: "Peppers", deal: "Paprika", price: 0.59, promo: true },
+  ] }] };
+  reconcile(plan, d, "BE");
+  const [a, b] = plan.shopping[0].items;
+  ok(a.saved === 3, `two packs should save 3.00, got ${a.saved}`);
+  ok(!b.saved, "saving invented without a regular price");
+});
 test("deals match by name even without the deal field", () => {
   ok(findDeal({ item: "Paprikamix 3 stuks" }, [{ item: "Paprikamix" }]), "no match");
   ok(!findDeal({ item: "Chicken" }, [{ item: "Kippenwokreepjes" }]), "false match");

@@ -131,6 +131,7 @@ input:focus,select:focus{outline:2px solid var(--blue);outline-offset:2px}
 /* ---------- receipt lines ---------- */
 .line{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start;padding:9px 0}
 .line .amt{font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+.line.good{color:var(--green);font-weight:700}
 .total-row{display:flex;justify-content:space-between;align-items:baseline;font:700 34px/1.1 var(--title);margin:6px 0}
 .total-row span:last-child{font:700 24px/1 var(--text)}
 .stamp{

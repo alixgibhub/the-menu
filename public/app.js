@@ -288,6 +288,7 @@ function renderMenu() {
   const total = shopping.reduce((a, s) => a + sumPrices(s.items), 0);
   const count = shopping.reduce((a, s) => a + (s.items || []).length, 0);
   const under = profile.budget - total;
+  const saved = shopping.reduce((a, s) => a + (s.items || []).reduce((b, i) => b + (i.promo && i.saved > 0 ? i.saved : 0), 0), 0);
   const meals = [["Breakfast", "breakfast"], ["Lunch", "lunch"], ["Dinner", "dinner"]].filter(([m]) => profile.meals.includes(m));
   const dates = menu.dates.map(fromIso);
   const notes = weekNotes(p);
@@ -348,7 +349,8 @@ function renderMenu() {
       <div class="line"><span>Items</span><span class="amt">${count}</span></div>
       <div class="line"><span>Budget</span><span class="amt">${money(profile.budget)}</span></div>
       <div class="total-row"><span>Total</span><span>≈ ${money(total)}</span></div>
-      <div class="line"><span>${under >= 0 ? "Under budget" : "Over budget"}</span><span class="amt">${under >= 0 ? "" : "−"}${money(Math.abs(under))}</span></div>
+      <div class="line${under >= 0 ? " good" : ""}"><span>${under >= 0 ? "Under budget" : "Over budget"}</span><span class="amt">${under >= 0 ? "" : "−"}${money(Math.abs(under))}</span></div>
+      ${saved > 0 ? `<div class="line good"><span>Saved with promos</span><span class="amt">${money(saved)}</span></div>` : ""}
       <hr>
       <div class="actions center" style="margin-top:16px">
         <button class="btn ghost" id="copyBtn">Copy list</button>

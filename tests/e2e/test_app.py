@@ -66,6 +66,10 @@ with sync_playwright() as p:
     check("real deals keep Promo with the database's end date", all(i.get("until") != "2099-01-01" for i in real), real)
     check("shopping list has its banner", pg.locator(".shop .week-banner").count() == 1)
     check("this week's deals sit under the list", pg.locator("#view-list #dealsCard").is_visible())
+    good = pg.locator("#listOut .line.good")
+    check("under budget is green", "under budget" in good.first.inner_text().lower()
+          and pg.eval_on_selector("#listOut .line.good", "e => getComputedStyle(e).color") == "rgb(29, 122, 62)")
+    check("money saved with promos is shown", any("saved with promos" in t.lower() for t in good.all_inner_texts()), good.all_inner_texts())
 
     items.first.locator("input").check(); pg.reload(); pg.wait_for_timeout(600); pg.click("#tab-list")
     check("ticks survive a reload", pg.locator(".shop .item input").first.is_checked())
