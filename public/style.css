@@ -48,7 +48,7 @@ a{color:inherit}
 }
 .card:nth-of-type(odd){transform:rotate(-.8deg)}
 .card:nth-of-type(even){transform:rotate(.7deg)}
-/* groceries: plain white paper, so loyalty barcodes sit on it without a box */
+/* groceries: plain white paper */
 .card.shop::before{background:#fff}
 
 hr{border:0;border-top:var(--dash);margin:16px 0}
@@ -190,10 +190,6 @@ input:focus,select:focus{outline:2px solid var(--blue);outline-offset:2px}
 .item.done .t{text-decoration:line-through;text-decoration-thickness:1.5px;color:var(--muted)}
 .item .p{font-variant-numeric:tabular-nums;white-space:nowrap}
 .sub-row{display:flex;justify-content:space-between;font-size:13px;padding-top:6px;border-top:var(--dash);margin-top:4px}
-/* a real loyalty-card barcode under a shop */
-.loyalty{margin:14px 0 6px;text-align:center}
-.loyalty p{font-size:12px;margin:0 0 6px}
-.loyalty svg{display:block;max-width:100%;height:auto;margin:0 auto;background:#fff}
 
 /* ---------- exports ---------- */
 .export .actions .btn{min-width:120px}

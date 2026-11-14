@@ -33,6 +33,8 @@ const LS = {
   get(k) { try { return JSON.parse(localStorage.getItem("themenu:" + k)); } catch { return null; } },
   set(k, v) { try { localStorage.setItem("themenu:" + k, JSON.stringify(v)); } catch {} },
 };
+// Card numbers from the old barcode feature: don't keep them on the device.
+try { localStorage.removeItem("themenu:cardNumbers"); } catch {}
 
 // ---------- dates ----------
 const iso = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -71,7 +73,6 @@ let menu = LS.get("menu");
 if (!menu?.plan || !Array.isArray(menu.dates)) menu = null;
 let deals = null;  // {updated, countries, stores: {"CC/Store": [...]}}
 // Loyalty card numbers never join the profile, so they never leave this browser.
-const cardNumbers = LS.get("cardNumbers") || {};
 
 // ---------- tabs ----------
 const VIEWS = ["menu", "list", "settings"];
@@ -101,23 +102,8 @@ function toggles(el, options, key, after) {
 function renderCards() {
   const opts = [...new Set(profile.stores.map((s) => country().stores[s]).filter(Boolean))];
   profile.cards = profile.cards.filter((c) => opts.includes(c));
-  toggles($("cardChips"), opts, "cards", renderCardNumbers);
+  toggles($("cardChips"), opts, "cards");
   if (!opts.length) $("cardChips").innerHTML = '<span class="note">Pick a supermarket first.</span>';
-  renderCardNumbers();
-}
-function renderCardNumbers() {
-  $("cardNumbers").innerHTML = profile.cards.map((c) => `
-    <label class="field card-no"><span>${esc(c)} number</span>
-      <input type="text" inputmode="numeric" autocomplete="off" data-card="${esc(c)}" value="${esc(cardNumbers[c] || "")}" placeholder="Optional">
-    </label>`).join("") || '<p class="note">Tap a card above to add its number.</p>';
-  $("cardNumbersBox").classList.toggle("hidden", !$$("#cardChips .chip").length);
-  // Keep each number as it's typed, so tapping another card or shop (which redraws
-  // these fields) never wipes it.
-  $$("#cardNumbers input").forEach((i) => (i.oninput = () => {
-    const n = i.value.replace(/\s+/g, "").slice(0, 40);
-    if (n) cardNumbers[i.dataset.card] = n; else delete cardNumbers[i.dataset.card];
-    LS.set("cardNumbers", cardNumbers);
-  }));
 }
 
 function renderSettings() {
@@ -253,40 +239,6 @@ async function makeMenu(edits = "") {
 }
 $("makeBtn1").onclick = $("makeBtn2").onclick = () => makeMenu();
 
-// ---------- loyalty-card barcodes ----------
-// EAN-13 / EAN-8 when the number is one (valid check digit), otherwise Code 128,
-// which checkout scanners also read.
-function eanValid(d) {
-  const n = [...d].map(Number), check = n.pop();
-  return (10 - n.reverse().reduce((a, x, i) => a + x * (i % 2 ? 1 : 3), 0) % 10) % 10 === check;
-}
-const barcodeFormat = (n) => (/^(\d{13}|\d{8})$/.test(n) && eanValid(n) ? `EAN${n.length}` : "CODE128");
-
-function cardBarcode(store) {
-  // Match the shop on the list to a known store even if Claude wrote it a bit
-  // differently ("Albert Heijn XL", "AH", "Delhaize (SuperPlus)").
-  const norm = (x) => String(x).toLowerCase().normalize("NFD").replace(/[^a-z0-9]/g, "");
-  const s = norm(store), keys = Object.keys(country().stores);
-  const key = keys.find((k) => norm(k) === s) || keys.find((k) => s.includes(norm(k)) || (s.length > 2 && norm(k).startsWith(s)))
-    || keys.find((k) => country().stores[k] && norm(country().stores[k]).startsWith(s));
-  const card = key && country().stores[key];
-  const n = card && cardNumbers[card];
-  return n ? `<div class="loyalty"><p>${esc(card)}</p>
-    <svg data-value="${esc(n)}" data-format="${barcodeFormat(n)}" role="img" aria-label="${esc(card)} barcode"></svg></div>` : "";
-}
-// The barcode library only loads when there's a card number to draw.
-let barcodeLib;
-async function drawBarcodes() {
-  const svgs = $$(".loyalty svg");
-  if (!svgs.length) return;
-  barcodeLib ||= new Promise((ok, fail) => document.head.appendChild(Object.assign(document.createElement("script"), { src: "/vendor/JsBarcode.all.min.js", onload: ok, onerror: fail })));
-  try { await barcodeLib; } catch { barcodeLib = null; return; }
-  svgs.forEach((el) => JsBarcode(el, el.dataset.value, {
-    format: el.dataset.format, width: 2, height: 64, margin: 12, displayValue: true,
-    font: "Courier Prime", fontSize: 14, textMargin: 4, background: "#ffffff", lineColor: "#000000",
-  }));
-}
-
 // ---------- week banners ----------
 // The menu is fixed until the next deals arrive on Sunday.
 function weekNotes(p) {
@@ -391,8 +343,7 @@ function renderMenu() {
           <label class="item${ck[k] ? " done" : ""}"><input type="checkbox" data-k="${k}"${ck[k] ? " checked" : ""}>
           <span class="t">${esc(i.item)} <span class="q">${esc(i.qty)}</span>${i.promo ? '<span class="stamp">Promo</span>' : ""}${i.organic ? '<span class="stamp bio">Organic</span>' : ""}</span>
           <span class="p">${i.promo ? "" : "≈"}${num(i.price)}</span></label>`; }).join("")}
-        <div class="sub-row"><span>Subtotal ${esc(s.store)}</span><span>${money(sumPrices(s.items))}</span></div>
-        ${cardBarcode(s.store)}`).join("")}
+        <div class="sub-row"><span>Subtotal ${esc(s.store)}</span><span>${money(sumPrices(s.items))}</span></div>`).join("")}
       <hr>
       <div class="line"><span>Items</span><span class="amt">${count}</span></div>
       <div class="line"><span>Budget</span><span class="amt">${money(profile.budget)}</span></div>
@@ -406,7 +357,6 @@ function renderMenu() {
       </div>
       <p class="note c" id="copyMsg"></p>
     </div>`;
-  drawBarcodes();
   bindMenu(p, shopping, dates);
 }
 

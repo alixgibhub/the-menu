@@ -9,7 +9,6 @@ It started as my own weekly menu in Notion. I turned it into an app so friends c
 ## What it does
 
 - **Nine countries.** Belgium, the Netherlands, France, Germany, Spain, Portugal, Switzerland, Mexico and the United Kingdom, each with its own supermarkets, loyalty cards, currency and local prices.
-- **Your loyalty card at the till.** Add a card number in settings and its real barcode (EAN-13, EAN-8 or Code 128) is printed under that shop on the shopping list, ready to scan from your phone. No number, no barcode. Numbers never leave the browser.
 - **Finds the deals by itself.** Every week scheduled Claude tasks research every country's supermarket promotions on healthy everyday groceries for the coming week, keeps only deals with a real source, ranks them by saving and saves them to the deals database in this repo. Menus are built around the biggest savings, and card-only deals are used only if you have that card.
 - **Budget or quality.** Budget builds the week from promotions and skips bulk deals for one person. Quality still uses promotions but puts organic and good produce first, marked on the list.
 - **One fixed week.** A menu covers Monday to Sunday and doesn't change halfway through; from Friday on, it plans the coming week. New deals arrive on Sunday; a banner on the menu and the shopping list says so, and warns you to shop early if a promo price ends mid-week.
@@ -28,7 +27,6 @@ It started as my own weekly menu in Notion. I turned it into an app so friends c
 | Front end | Plain HTML, CSS and JavaScript, no framework or build step |
 | Menu writing | Claude (Anthropic API), streamed so the page shows progress while it writes |
 | Deals | `public/data/deals.json`, researched weekly by scheduled Claude tasks and committed to this repo |
-| Loyalty barcodes | [JsBarcode](https://github.com/lindell/JsBarcode) (MIT), drawn in the browser and only loaded when you've added a card number |
 | Spending guard | A daily limit per visitor and a daily limit overall, counted in KV |
 
 The prompt is built on the server from validated settings, so the public endpoint can only write menus. It can't be used as a general AI proxy, and the API key never reaches the browser.
