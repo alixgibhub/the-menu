@@ -217,10 +217,11 @@ footer{text-align:center;font-size:13px;color:rgba(255,255,255,.9);margin-top:10
   h1{font-size:54px}
   h2{font-size:36px}
   .row,.choices{grid-template-columns:1fr}
-  .tabs button{font-size:13px;padding:10px 12px}
+  .tabs{gap:6px;flex-wrap:nowrap}
+  .tabs button{font-size:12px;letter-spacing:0;padding:10px 9px;white-space:nowrap}
 }
 @media print{
   body{background:#fff}
-  .tabs,footer,.actions,#view-settings,#view-deals{display:none!important}
+  .tabs,footer,.actions,.change,.day-change,#view-settings,#dealsCard{display:none!important}
   .card{filter:none;transform:none!important}
 }

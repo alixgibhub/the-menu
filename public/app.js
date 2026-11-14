@@ -72,7 +72,7 @@ let deals = null;  // {updated, countries, stores: {"CC/Store": [...]}}
 const cardNumbers = LS.get("cardNumbers") || {};
 
 // ---------- tabs ----------
-const VIEWS = ["menu", "settings", "deals"];
+const VIEWS = ["menu", "list", "settings"];
 function show(v) {
   VIEWS.forEach((n) => { $("view-" + n).classList.toggle("hidden", n !== v); $("tab-" + n).classList.toggle("on", n === v); });
 }
@@ -171,7 +171,8 @@ function renderDeals() {
   $("dealsIntro").textContent = `This week's best promotions from the supermarkets' leaflets${checked ? `, checked ${checked}` : ""}. New deals arrive every Sunday, and your menu is built around them.`;
   $("dealsOut").innerHTML = stores.map(([key, list]) => {
     list = list.slice().sort((a, b) => saving(b) - saving(a));
-    const sources = [...new Set(list.map((x) => x.source).filter(Boolean))].slice(0, 3);
+    // one link per website
+    const sources = [...new Map(list.filter((x) => x.source).map((x) => [host(x.source), x.source])).values()].slice(0, 3);
     return `
       <p class="store-name">*** ${esc(key.slice(prefix.length))} ***</p>
       <table class="deals"><tr><th>Product</th><th>Price</th><th>Until</th></tr>
@@ -239,7 +240,7 @@ async function makeMenu(edits = "") {
     $$(".makeBtn").forEach((b) => (b.disabled = false));
   }
 }
-$("makeBtn1").onclick = () => makeMenu();
+$("makeBtn1").onclick = $("makeBtn2").onclick = () => makeMenu();
 
 // ---------- loyalty-card barcodes ----------
 // EAN-13 / EAN-8 when the number is one (valid check digit), otherwise Code 128,
@@ -310,7 +311,10 @@ function changeBox(id, placeholder, rows, small) {
 
 function renderMenu() {
   $("progress").classList.add("hidden");
-  if (!menu) { $("menuEmpty").classList.remove("hidden"); $("menuOut").classList.add("hidden"); return; }
+  const has = !!menu;
+  $("menuEmpty").classList.toggle("hidden", has); $("menuOut").classList.toggle("hidden", !has);
+  $("listEmpty").classList.toggle("hidden", has); $("listOut").classList.toggle("hidden", !has);
+  if (!has) return;
   const p = menu.plan, ck = menu.checked || {};
   const shopping = Array.isArray(p.shopping) ? p.shopping : [];
   const total = shopping.reduce((a, s) => a + sumPrices(s.items), 0);
@@ -331,6 +335,7 @@ function renderMenu() {
         <div class="pick"><b>${esc(h.name)} <span class="days">(${esc(h.days)})</span></b>
           ${h.tip ? `<div class="tip">${esc(h.tip)}</div>` : ""}</div>`).join("")}
       ${banner(notes.picks)}
+      <div class="change">${changeBox("all", "e.g. no salmon, swap the lentils for chickpeas, something quicker on Wednesday", 3, false)}</div>
     </div>
 
     <p class="week-head">Your week</p>
@@ -347,6 +352,19 @@ function renderMenu() {
         </div>`).join("")}
     </div>
 
+    <div class="card export">
+      <h2>Take it with you</h2>
+      <p class="intro">Send this week to your phone or computer.</p>
+      <hr>
+      <div class="actions center">
+        <button class="btn ghost" type="button" id="exportNotes">Notes</button>
+        <button class="btn ghost" type="button" id="exportCalendar">Calendar</button>
+        <button class="btn ghost" type="button" id="exportNotion">Notion</button>
+      </div>
+      <p class="note c" id="exportMsg"></p>
+      <div id="exportLinks"></div>
+    </div>`;
+  $("listOut").innerHTML = `
     <div class="card shop">
       <p class="store-line">Shopping list · ${esc(menu.weekLabel)}</p>
       <h2>Groceries</h2>
@@ -365,28 +383,13 @@ function renderMenu() {
       <div class="total-row"><span>Total</span><span>≈ ${money(total)}</span></div>
       <div class="line"><span>${under >= 0 ? "Under budget" : "Over budget"}</span><span class="amt">${under >= 0 ? "" : "−"}${money(Math.abs(under))}</span></div>
       <hr>
-      <div class="change">${changeBox("all", "e.g. no mackerel, something quicker on Wednesday, swap the rice for potatoes", 3, false)}</div>
       <div class="actions center" style="margin-top:16px">
         <button class="btn ghost" id="copyBtn">Copy list</button>
         <button class="btn ghost" id="printBtn">Print</button>
         <button class="btn makeBtn" id="remakeBtn">New menu</button>
       </div>
       <p class="note c" id="copyMsg"></p>
-    </div>
-
-    <div class="card export">
-      <h2>Take it with you</h2>
-      <p class="intro">Send this week to your phone or computer.</p>
-      <hr>
-      <div class="actions center">
-        <button class="btn ghost" type="button" id="exportNotes">Notes</button>
-        <button class="btn ghost" type="button" id="exportCalendar">Calendar</button>
-        <button class="btn ghost" type="button" id="exportNotion">Notion</button>
-      </div>
-      <p class="note c" id="exportMsg"></p>
-      <div id="exportLinks"></div>
     </div>`;
-  $("menuEmpty").classList.add("hidden"); $("menuOut").classList.remove("hidden");
   drawBarcodes();
   bindMenu(p, shopping, dates);
 }
@@ -395,7 +398,7 @@ function bindMenu(p, shopping, dates) {
   const out = $("menuOut");
   const q = (sel) => out.querySelector(sel);
 
-  out.querySelectorAll("input[type=checkbox]").forEach((cb) => (cb.onchange = () => {
+  $("listOut").querySelectorAll("input[type=checkbox]").forEach((cb) => (cb.onchange = () => {
     menu.checked = { ...menu.checked, [cb.dataset.k]: cb.checked };
     cb.closest(".item").classList.toggle("done", cb.checked);
     LS.set("menu", menu);

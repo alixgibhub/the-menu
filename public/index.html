@@ -23,8 +23,8 @@
 
   <nav class="tabs">
     <button id="tab-menu" class="on">My menu</button>
+    <button id="tab-list">Shopping list</button>
     <button id="tab-settings">My settings</button>
-    <button id="tab-deals">Deals</button>
   </nav>
 
   <!-- MENU -->
@@ -41,6 +41,24 @@
       <p class="printing"><span class="blink">▮</span> <span id="progressText">Printing your week…</span></p>
     </div>
     <div id="menuOut" class="hidden"></div>
+  </section>
+
+  <!-- SHOPPING LIST, then this week's deals -->
+  <section id="view-list" class="hidden">
+    <div id="listEmpty" class="card empty">
+      <h2>No list yet</h2>
+      <p class="intro">Your shopping list appears here once you've printed a menu.</p>
+      <hr>
+      <div class="actions center">
+        <button class="btn makeBtn" id="makeBtn2">Print my menu</button>
+      </div>
+    </div>
+    <div id="listOut" class="hidden"></div>
+    <div class="card" id="dealsCard">
+      <h2>This week's deals</h2>
+      <p class="intro" id="dealsIntro">Loading…</p>
+      <div id="dealsOut"></div>
+    </div>
   </section>
 
   <!-- SETTINGS -->
@@ -112,15 +130,6 @@
         <span class="note" id="saveMsg"></span>
       </div>
       <p class="fine">Your settings and menu stay in this browser. Nothing is stored about you on our side.</p>
-    </div>
-  </section>
-
-  <!-- DEALS -->
-  <section id="view-deals" class="hidden">
-    <div class="card">
-      <h2>Deals</h2>
-      <p class="intro" id="dealsIntro">Loading…</p>
-      <div id="dealsOut"></div>
     </div>
   </section>
 

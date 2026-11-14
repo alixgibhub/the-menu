@@ -15,8 +15,8 @@ It started as my own weekly menu in Notion. I turned it into an app so friends c
 - **One fixed week.** A menu covers Monday to Sunday and doesn't change halfway through. New deals arrive on Sunday; a banner on the menu and the shopping list says so, and warns you to shop early if a promo price ends mid-week.
 - **Fits your week.** People, budget, which days and meals to plan, cooking time, diet, dislikes, and what's already in your fridge.
 - **Chef's picks.** Three words for the week, its key ingredients, and a chef's tip on preparing each one for the most flavour.
-- **Shopping list.** Grouped by store and ticked off as you shop. Promo prices are exact; other prices are marked ≈. You can copy or print it.
-- **Change anything.** Every day receipt has its own *Change this day* box, and the groceries list has *Change something* for the whole week. The menu is reprinted with only those changes.
+- **Shopping list.** Its own tab, with this week's deals underneath. Grouped by store and ticked off as you shop. Promo prices are exact; other prices are marked ≈. You can copy or print it.
+- **Change anything.** *Change something* under the chef's picks reprints the whole week: swap or drop a key ingredient and every meal, the shopping list and the prices follow. Each day receipt also has its own *Change this day* box.
 - **Take it with you.** Export to Notes (the phone's share sheet: Apple Notes, Google Keep, Samsung Notes), Calendar (an .ics file with every meal; on Android, one Google Calendar link per day) or Notion (copied as Markdown, so headings and to-do checkboxes paste straight in).
 - **No account needed.** Your settings and menu stay in your own browser.
 
