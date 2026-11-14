@@ -1,0 +1,109 @@
+# Where to find each country's deals
+
+Tested sources for the weekly deals research. The scheduled task reads this file
+before every pull. Start with the sources marked **Works**, in the order listed.
+Only fall back to general searching when they come back empty, and add anything
+new that works (or stops working) to this file.
+
+Last checked by hand: 14 Nov 2026, except where noted.
+
+## How to reach pages
+
+- WebFetch refuses many addresses typed by hand. Find the page with WebSearch
+  first (pass `allowed_domains` with the source's domain), then fetch the result
+  link. Links found inside a fetched page can be fetched directly.
+- Ask the fetch for "every food offer with name, pack size, offer price, regular
+  price and validity dates". If a page gives no dates, take them from the
+  leaflet's dates on the same site.
+- A deal only counts if its price was on a page you opened. Never estimate.
+
+## Belgium (BE)
+
+| Source | What it gives | Status |
+|---|---|---|
+| promotiez.be/winkels/<store>/folders-promoties | Each store's current and next folder, with dates and links to /bekijk/aanbiedingen/<store>-folder-<id> | Works |
+| promotiez.be/bekijk/aanbiedingen/<store>-folder-<id> | Every product and price in that folder, folder dates | Works |
+| promotiez.be/winkels/<store>/promoties | Current deals with regular price and % off | Works |
+
+Store slugs: lidl, aldi, delhaize, colruyt, carrefour, albert-heijn.
+Timing: Lidl and Aldi run Monday–Saturday; Delhaize Thursday–Wednesday; Colruyt
+two weeks from Wednesday. Lidl only shows next week's fresh-food deals from
+Sunday. Every Delhaize promotion needs the SuperPlus card.
+
+## France (FR)
+
+| Source | What it gives | Status |
+|---|---|---|
+| promocatalogues.fr/magasins/<store> and /regardez/offres/… | Catalogues and individual offers with prices | Works (38 of 50 deals on 13 Nov) |
+| tiendeo.fr/<city>/<store> | A few products per store with prices | Partial |
+
+## Germany (DE)
+
+| Source | What it gives | Status |
+|---|---|---|
+| discounto.de/Discounter/<store> (penny_markt, aldi, aldi_sued, lidl, norma) | That week's Prospekt offers with prices and dates | Works |
+| discounto.de/Prospekte/<store>-<dates> | A whole Prospekt, e.g. REWE | Works |
+| prospektangebote.de/angebote/<product> (frische-hahnchen, hackfleisch, lachsfilet, obst-und-gemuse …) | One product across all stores, with prices and dates | Works |
+
+Timing: most Prospekte run Monday–Saturday.
+
+## Switzerland (CH)
+
+| Source | What it gives | Status |
+|---|---|---|
+| rappn.ch/en/offers | Offers from Migros, Coop, Denner, Lidl, Aldi with prices, regular prices and dates | Works (31 of 37 deals on 13 Nov) |
+| rappn.ch/en/meat-deals-switzerland, /migros-deals-next-week-switzerland | Themed and next-week lists | Works |
+
+Note: some Denner deals are priced per 100 g; scale them to the pack.
+
+## Spain (ES)
+
+| Source | What it gives | Status |
+|---|---|---|
+| radarsuper.com/folletos/<chain> (dia, carrefour, lidl, aldi, alcampo, ahorramas) | Up to 60 offers per chain with price, reference price and % off; leaflet dates on radarsuper.com/folletos | Works |
+| radarsuper.com/folletos/mercadona | Weekly selection of Mercadona price drops | Works. Mercadona publishes no leaflet and runs almost no promotions |
+| tiendeo.com/<city>/<store> | Leaflet dates, only a handful of products | Partial |
+| tiendeo.com/Catalogos/<id> | — | Blocked (robots) |
+| carrefour.es category pages | — | Blocked (fetch refused) |
+| lidl.es weekly offer pages | Category links only, no prices | Dead end |
+
+Timing: Lidl Monday–Sunday; Dia Wednesday–Tuesday; Carrefour irregular.
+
+## Portugal (PT)
+
+| Source | What it gives | Status |
+|---|---|---|
+| tiendeo.pt/<city>/lidl (e.g. vendas-novas) | Lidl products with price, regular price, % off and leaflet end date | Works |
+| tiendeo.pt/ofertas-catalogos/continente, /pingo-doce | Catalogue lists and dates | Works for dates |
+| feed.continente.pt/folhetos/semanal-<week>-<year>-… | The whole weekly Continente leaflet as text, with prices and discounts | Works. Find the current week by searching "feed.continente.pt folhetos semanal" |
+| continente.pt/frescos/com-desconto/ | Fresh products on discount, with old and new price | Works (no dates: use the leaflet's) |
+| folhetos.pt/continente/… | Leaflet preview with dates and highlights | Works |
+
+Timing: Lidl Monday–Sunday; Continente weekly Tuesday–Monday; Pingo Doce
+weekly plus weekend leaflets.
+
+## Mexico (MX)
+
+| Source | What it gives | Status |
+|---|---|---|
+| cazaofertas.com.mx (search "Martes de Frescura Walmart", "Martes y Miércoles del Campo Soriana", "Martimiércoles Chedraui", "Miércoles de Plaza La Comer") | Full fruit and vegetable price lists for each chain's produce days | Works |
+| cazaofertas.com.mx (folletos, e.g. Soriana weekend leaflet) | Weekend leaflet prices | Works |
+
+Timing: produce promotions run only on Tuesday and/or Wednesday and are posted
+the day before, so a Sunday pull finds last week's. Prices are per kg or per
+piece; the deal's dates are those two days. Soriana deals marked "con puntos
+Soriana Ya" need that card.
+
+## United Kingdom (UK)
+
+| Source | What it gives | Status |
+|---|---|---|
+| tesco.com/groceries/en-GB/shop/fresh-food/… category pages and /buylists/… | Clubcard Prices with regular price and "Offer valid … until …" dates | Works. Needs the Tesco Clubcard |
+| sainsburys.co.uk … /fruit-vegetables-special-offers | Nectar Prices with the price without Nectar | Works (no dates). Needs Nectar |
+| corporate.sainsburys.co.uk press releases | Weekend Nectar Price events with dates | Works for dates |
+| aldi.co.uk/super-6 | The six fruit and veg offers with regular price | Works (no dates; Super 6 changes every two weeks on Thursday) |
+| leaflets.aldi.co.uk | Leaflet text with Super 6 dates | Works for dates |
+| lidl.co.uk Pick of the Week | Dates only; products are in the Lidl Plus app | Dead end |
+| Asda, Morrisons | Not tested yet | — |
+
+Most UK deals are loyalty-card prices, so set "card" on every one.

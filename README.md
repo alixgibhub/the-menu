@@ -43,6 +43,7 @@ src/prompt.js                          settings validation and the menu prompt
 src/deals.js                           reads the deals (database + your own) and cleans research
 src/admin.js                           password-protected page: research status, your own deals
 scripts/validate-deals.mjs             checks research before it's committed
+research/deal-sources.md               tested deal sources per country, read by the weekly research
 wrangler.jsonc                         Cloudflare configuration
 ```
 
