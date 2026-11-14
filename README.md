@@ -10,7 +10,7 @@ It started as my own weekly menu in Notion. I turned it into an app so friends c
 
 - **Eight countries.** Belgium, France, Germany, Spain, Portugal, Switzerland, Mexico and the United Kingdom, each with its own supermarkets, loyalty cards, currency and local prices.
 - **Your loyalty card at the till.** Add a card number in settings and its real barcode (EAN-13, EAN-8 or Code 128) is printed under that shop on the shopping list, ready to scan from your phone. No number, no barcode. Numbers never leave the browser.
-- **Finds the deals by itself.** Every Sunday a scheduled Claude task researches every country's supermarket promotions on healthy everyday groceries for the coming week, keeps only deals with a real source, ranks them by saving and saves them to the deals database in this repo. Menus are built around the biggest savings, and card-only deals are used only if you have that card.
+- **Finds the deals by itself.** Every week scheduled Claude tasks research every country's supermarket promotions on healthy everyday groceries for the coming week, keeps only deals with a real source, ranks them by saving and saves them to the deals database in this repo. Menus are built around the biggest savings, and card-only deals are used only if you have that card.
 - **Budget or quality.** Budget builds the week from promotions and skips bulk deals for one person. Quality still uses promotions but puts organic and good produce first, marked on the list.
 - **One fixed week.** A menu covers Monday to Sunday and doesn't change halfway through; from Friday on, it plans the coming week. New deals arrive on Sunday; a banner on the menu and the shopping list says so, and warns you to shop early if a promo price ends mid-week.
 - **Fits your week.** People, budget, which days and meals to plan, cooking time, diet, dislikes, and what's already in your fridge.
@@ -27,7 +27,7 @@ It started as my own weekly menu in Notion. I turned it into an app so friends c
 | Hosting | Cloudflare Workers with static assets, deployed from this repo on every push |
 | Front end | Plain HTML, CSS and JavaScript, no framework or build step |
 | Menu writing | Claude (Anthropic API), streamed so the page shows progress while it writes |
-| Deals | `public/data/deals.json`, researched every Sunday by a scheduled Claude task and committed to this repo |
+| Deals | `public/data/deals.json`, researched weekly by scheduled Claude tasks and committed to this repo |
 | Loyalty barcodes | [JsBarcode](https://github.com/lindell/JsBarcode) (MIT), drawn in the browser and only loaded when you've added a card number |
 | Spending guard | A daily limit per visitor and a daily limit overall, counted in KV |
 
@@ -68,7 +68,15 @@ Deploy with `npm run deploy`, or connect the repo in the Cloudflare dashboard (W
 
 ## Deals
 
-The deals database is [`public/data/deals.json`](public/data/deals.json). Every Sunday morning a scheduled Claude task researches each country's supermarket leaflets and promo sites for the coming Monday to Sunday, keeps only deals with a real source, checks the file with `scripts/validate-deals.mjs` (drops junk and expired deals, ranks by saving, keeps a country's previous deals if nothing new was found) and commits it here. Cloudflare redeploys on every push, so new menus use the new deals straight away.
+The deals database is [`public/data/deals.json`](public/data/deals.json). Three scheduled Claude tasks keep it fresh, each timed to when its countries' leaflets come out:
+
+| When (Brussels time) | Countries | Why then |
+|---|---|---|
+| Sunday 05:34 | Belgium, France, Germany, Switzerland | Next week's leaflets are out |
+| Sunday 06:47 | Spain, Portugal, UK | Same, plus multi-week loyalty prices |
+| Monday 19:41 | Mexico | Tuesday and Wednesday produce deals are posted on Monday |
+
+Each task researches its countries from the tested sources in [`research/deal-sources.md`](research/deal-sources.md) (and updates that file when a source breaks or a new one works), keeps only deals with a real source, checks the result with `scripts/validate-deals.mjs` (drops junk and expired deals, ranks by saving, leaves other countries alone) and `npm test`, and commits it here. Cloudflare redeploys on every push, so new menus use the new deals straight away; menus already printed don't change.
 
 On `/admin` (password: `ADMIN_TOKEN`) you can see when each country was last researched and add your own deals on top:
 
