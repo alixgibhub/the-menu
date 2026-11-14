@@ -106,11 +106,18 @@ Skip AH "Mijn Bonus Box" offers: they are personal.
 |---|---|---|
 | cazaofertas.com.mx (search "Martes de Frescura Walmart", "Martes y Miércoles del Campo Soriana", "Martimiércoles Chedraui", "Miércoles de Plaza La Comer") | Full fruit and vegetable price lists for each chain's produce days | Works |
 | cazaofertas.com.mx (folletos, e.g. Soriana weekend leaflet) | Weekend leaflet prices | Works |
+| cazaofertas.com.mx, cronica.com.mx, milenio.com (search "Alsuper martes y miércoles de frutas y verduras" + the date) | News write-ups of Alsuper's produce prices, when there are any | Not tested yet: try first for Alsuper |
+| ofertomat.mx/alsuper/ and kimbino.mx/alsuper/ | Alsuper leaflet dates and product names; prices are only in the page images | Partial (dates only, 14 Nov). Never take a price you can't read |
+| rappi.com.mx Alsuper stores | Delivery prices with % off, no dates | Dead end (app prices, not leaflet deals) |
 
 Timing: produce promotions run only on Tuesday and/or Wednesday and are posted
 the day before, so a Sunday pull finds last week's. Prices are per kg or per
 piece; the deal's dates are those two days. Soriana deals marked "con puntos
 Soriana Ya" need that card.
+Alsuper (Chihuahua, Coahuila, Durango, Zacatecas) publishes two leaflets a week:
+Friday–Monday and Tuesday–Thursday, the second one only on Tuesday morning, so a
+Monday pull can only use the Friday–Monday one (valid on Monday). No loyalty card
+found for Alsuper.
 
 ## United Kingdom (UK)
 

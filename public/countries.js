@@ -32,7 +32,7 @@ export const COUNTRIES = {
     stores: {
       "Walmart": "Walmart Beneficios", "Bodega Aurrera": "Walmart Beneficios", "Soriana": "Soriana Ya",
       "Chedraui": "Mi Chedraui", "La Comer": "Monedero Naranja", "HEB": null,
-      "Costco": "Costco membership", "Sam's Club": "Sam's Club membership",
+      "Alsuper": null, "Costco": "Costco membership", "Sam's Club": "Sam's Club membership",
     },
   },
   DE: {
