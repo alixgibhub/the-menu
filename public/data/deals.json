@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13",
+ "updated": "2026-11-14",
  "countries": {
   "BE": {
    "at": "2026-11-13T22:57:18.228Z",
@@ -35,6 +35,11 @@
    "at": "2026-11-13T22:50:34.579Z",
    "found": 15,
    "stores": 3
+  },
+  "NL": {
+   "at": "2026-11-14T14:59:00.146Z",
+   "found": 41,
+   "stores": 5
   },
   "UK": {
    "at": "2026-11-13T22:50:34.579Z",
@@ -1502,6 +1507,315 @@
     "validFrom": "2026-11-10",
     "validTo": "2026-11-16",
     "source": "https://www.tiendeo.pt/ofertas-catalogos/pingo-doce"
+   }
+  ],
+  "NL/Albert Heijn": [
+   {
+    "item": "AH Germinimix",
+    "price": 5.5,
+    "was": 8,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "AH Bonuskaart",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+   },
+   {
+    "item": "AH Mandarijnen 1 kg",
+    "price": 1.29,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "AH Bonuskaart",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+   },
+   {
+    "item": "AH Mager rundergehakt 300 g",
+    "price": 3.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "AH Bonuskaart",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+   },
+   {
+    "item": "AH Witlof 4 stuks",
+    "price": 1.49,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "AH Bonuskaart",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+   },
+   {
+    "item": "AH Snoepgroente tomaat 500 g",
+    "price": 4.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "AH Bonuskaart",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+   },
+   {
+    "item": "AH Zoete kleine appeltjes 1 kg",
+    "price": 2.24,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "AH Bonuskaart",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+   },
+   {
+    "item": "AH Scharrelkipfilet naturel",
+    "price": 2.49,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "AH Bonuskaart",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+   },
+   {
+    "item": "AH Speltbrood heel",
+    "price": 1.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "AH Bonuskaart",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+   },
+   {
+    "item": "AH Bakkersbrood Les Pains Bastille",
+    "price": 1.49,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "AH Bonuskaart",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+   },
+   {
+    "item": "De Zaanse Hoeve Goudse jong 48+ plakken",
+    "price": 3.59,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "AH Bonuskaart",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+   }
+  ],
+  "NL/Lidl": [
+   {
+    "item": "Zoete aardappel",
+    "price": 0.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
+   },
+   {
+    "item": "Bleekselderij",
+    "price": 0.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
+   },
+   {
+    "item": "Rode paprika",
+    "price": 0.59,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
+   },
+   {
+    "item": "Aubergine",
+    "price": 0.75,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
+   },
+   {
+    "item": "Bio bloemkool",
+    "price": 1.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
+   },
+   {
+    "item": "Bladmandarijnen",
+    "price": 1.49,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
+   },
+   {
+    "item": "Zespri Kiwi gold",
+    "price": 3.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
+   },
+   {
+    "item": "Volkoren bollen",
+    "price": 1.19,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
+   },
+   {
+    "item": "Nautica Warm gerookte zalm",
+    "price": 2.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
+   },
+   {
+    "item": "Milbona Goudse kaas oud stuk",
+    "price": 3.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
+   },
+   {
+    "item": "Freshona Edamame",
+    "price": 1.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
+   }
+  ],
+  "NL/Aldi": [
+   {
+    "item": "Spruiten",
+    "price": 0.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+   },
+   {
+    "item": "Cocktailtomaten",
+    "price": 1.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+   },
+   {
+    "item": "Doyenne du Comice peren",
+    "price": 1.65,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+   },
+   {
+    "item": "Daylicious Nasi-bami-groenten",
+    "price": 1.39,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+   },
+   {
+    "item": "Hamlappen",
+    "price": 6.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+   },
+   {
+    "item": "Verse worsten",
+    "price": 3.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+   },
+   {
+    "item": "Ehrmann high protein skyr",
+    "price": 2.5,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+   },
+   {
+    "item": "Molenland Belegen kaas",
+    "price": 2.49,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+   },
+   {
+    "item": "Hummus naturel",
+    "price": 0.89,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+   }
+  ],
+  "NL/Plus": [
+   {
+    "item": "Honig Deegwaren",
+    "price": 0.99,
+    "was": 2.65,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+   },
+   {
+    "item": "PLUS Rode druiven",
+    "price": 2.19,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+   },
+   {
+    "item": "Sperziebonen",
+    "price": 1.49,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+   },
+   {
+    "item": "PLUS Blauwe bessen",
+    "price": 3.99,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+   },
+   {
+    "item": "PLUS Boerentrots Verse worst",
+    "price": 3.19,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+   },
+   {
+    "item": "PLUS Goudse kaas jong belegen",
+    "price": 3.99,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+   },
+   {
+    "item": "PLUS Korenlanders Rond brood",
+    "price": 1.49,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+   }
+  ],
+  "NL/Dirk": [
+   {
+    "item": "Lassie Basmatirijst 375 g",
+    "price": 0.89,
+    "was": 2.19,
+    "validTo": "2026-11-17",
+    "source": "https://www.supermarktscanner.nl/dirk-aanbiedingen"
+   },
+   {
+    "item": "Hak Spinazie 330 g",
+    "price": 0.99,
+    "was": 2.35,
+    "validTo": "2026-11-17",
+    "source": "https://www.supermarktscanner.nl/dirk-aanbiedingen"
+   },
+   {
+    "item": "Hak Witte bonen in tomatensaus 360 g",
+    "price": 0.99,
+    "was": 2.35,
+    "validTo": "2026-11-17",
+    "source": "https://www.supermarktscanner.nl/dirk-aanbiedingen"
+   },
+   {
+    "item": "Hak Doperwten extra fijn 350 g",
+    "price": 0.99,
+    "was": 2.35,
+    "validTo": "2026-11-17",
+    "source": "https://www.supermarktscanner.nl/dirk-aanbiedingen"
    }
   ],
   "UK/Tesco": [

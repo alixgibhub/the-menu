@@ -82,6 +82,24 @@ Timing: Lidl Monday–Sunday; Dia Wednesday–Tuesday; Carrefour irregular.
 Timing: Lidl Monday–Sunday; Continente weekly Tuesday–Monday; Pingo Doce
 weekly plus weekend leaflets.
 
+## Netherlands (NL)
+
+| Source | What it gives | Status |
+|---|---|---|
+| folderz.nl/winkels/<store>-folders.html (AH: folderz.nl/winkels/deen/locaties; Lidl: folderz.nl/winkels/lidl/locaties/best; Dirk: folderz.nl/winkels/dirk/locaties/amsterdam) | Each store's current and next folder, with dates and links to /bekijk/aanbiedingen/<store>-folder-<id> | Works |
+| folderz.nl/bekijk/aanbiedingen/<store>-folder-<id> | Every product and price in that folder, folder dates (regular prices mostly missing) | Works |
+| supermarktscanner.nl/<store>-aanbiedingen (dirk, albert-heijn, plus, jumbo, hoogvliet, dekamarkt) | Current deals with regular price, % off and end date | Works for Dirk; other chains are often weeks stale, so check "Laatste prijs update" |
+| folderz.nl/winkels/<store>/folders-aanbiedingen | — | Blocked (robots) |
+
+Store slugs: albert-heijn, jumbo, lidl, aldi, plus, dirk, vomar, hoogvliet, dekamarkt, ekoplaza.
+Timing: Albert Heijn, Lidl and Aldi run Monday–Sunday (Lidl to Saturday) and next
+week's folder is online by Saturday. Plus, Jumbo, Dirk, Hoogvliet and DekaMarkt run
+Wednesday–Tuesday; Plus is out by Saturday, Jumbo and Dirk often only on Sunday or
+Monday. On a Sunday run, take this week's Wednesday folder for those chains if the
+next one isn't out: its deals still cover Monday and Tuesday.
+Albert Heijn Bonus prices need the AH Bonuskaart, so set "card" on every AH deal.
+Skip AH "Mijn Bonus Box" offers: they are personal.
+
 ## Mexico (MX)
 
 | Source | What it gives | Status |

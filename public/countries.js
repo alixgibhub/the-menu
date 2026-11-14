@@ -57,6 +57,13 @@ export const COUNTRIES = {
       "Auchan": "Clube Auchan", "Intermarché": "Cartão Poupança", "Aldi": null,
     },
   },
+  NL: {
+    name: "Netherlands", currency: "EUR", budget: 50, timezones: ["Europe/Amsterdam"],
+    stores: {
+      "Albert Heijn": "AH Bonuskaart", "Jumbo": "Jumbo Extra's", "Lidl": "Lidl Plus", "Aldi": null,
+      "Plus": null, "Dirk": null, "Vomar": null, "Hoogvliet": null, "DekaMarkt": null, "Ekoplaza": null,
+    },
+  },
   UK: {
     name: "United Kingdom", currency: "GBP", budget: 50, timezones: ["Europe/London"],
     stores: {
