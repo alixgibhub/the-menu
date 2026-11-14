@@ -81,6 +81,33 @@ with sync_playwright() as p:
     check("no page errors (Saturday run)", not pg.errors, pg.errors)
     pg.context.close()
 
+    # ---- a loyalty card number becomes a barcode a scanner can read ----
+    pg = page_at(b, datetime.datetime(2026, 11, 14, 11, 0, tzinfo=BRUSSELS))
+    pg.click("#tab-settings")
+    while pg.locator("#storeChips .chip.on").count(): pg.locator("#storeChips .chip.on").first.click()
+    pg.click("#storeChips >> text=Lidl")
+    pg.click("#cardChips >> text=Lidl Plus")
+    pg.fill("#cardNumbers input[data-card='Lidl Plus']", "2601234567892")
+    pg.click("#storeChips >> text=Delhaize"); pg.click("#cardChips >> text=Delhaize SuperPlus")
+    check("a typed card number survives tapping another shop or card",
+          pg.input_value("#cardNumbers input[data-card='Lidl Plus']") == "2601234567892")
+    pg.click("#storeChips >> text=Delhaize")   # back to Lidl only
+    pg.click("#saveBtn"); pg.wait_for_timeout(1300)
+    pg.click("#makeBtn1")
+    pg.wait_for_function("document.querySelector('#progress').classList.contains('hidden')", timeout=30000)
+    pg.click("#tab-list"); pg.wait_for_timeout(800)
+    svg = pg.locator(".loyalty svg").first
+    check("the barcode is drawn under the shop", svg.count() == 1 and svg.locator("rect").count() > 20)
+    try:
+        import io, zxingcpp
+        from PIL import Image
+        img = Image.open(io.BytesIO(svg.screenshot(scale="device")))
+        read = [r.text for r in zxingcpp.read_barcodes(img)]
+        check("a scanner reads the right number", "2601234567892" in read, read)
+    except ImportError:
+        check("a scanner reads the right number (skipped: pip install zxing-cpp pillow)", True)
+    pg.context.close()
+
     # ---- the API rejects the schema: the app still gets a menu ----
     pg = page_at(b, datetime.datetime(2026, 11, 10, 11, 0, tzinfo=BRUSSELS))
     stub_mode("reject-schema"); before = len(stub_log())

@@ -109,8 +109,15 @@ function renderCardNumbers() {
   $("cardNumbers").innerHTML = profile.cards.map((c) => `
     <label class="field card-no"><span>${esc(c)} number</span>
       <input type="text" inputmode="numeric" autocomplete="off" data-card="${esc(c)}" value="${esc(cardNumbers[c] || "")}" placeholder="Optional">
-    </label>`).join("");
-  $("cardNumbersBox").classList.toggle("hidden", !profile.cards.length);
+    </label>`).join("") || '<p class="note">Tap a card above to add its number.</p>';
+  $("cardNumbersBox").classList.toggle("hidden", !$$("#cardChips .chip").length);
+  // Keep each number as it's typed, so tapping another card or shop (which redraws
+  // these fields) never wipes it.
+  $$("#cardNumbers input").forEach((i) => (i.oninput = () => {
+    const n = i.value.replace(/\s+/g, "").slice(0, 40);
+    if (n) cardNumbers[i.dataset.card] = n; else delete cardNumbers[i.dataset.card];
+    LS.set("cardNumbers", cardNumbers);
+  }));
 }
 
 function renderSettings() {
@@ -140,11 +147,6 @@ function readSettings() {
 
 $("saveBtn").onclick = () => {
   readSettings();
-  $$("#cardNumbers input").forEach((i) => {
-    const n = i.value.replace(/\s+/g, "").slice(0, 40);
-    if (n) cardNumbers[i.dataset.card] = n; else delete cardNumbers[i.dataset.card];
-  });
-  LS.set("cardNumbers", cardNumbers);
   if (!profile.stores.length) { $("saveMsg").textContent = "Pick at least one supermarket."; return; }
   if (!profile.weekdays.length) { $("saveMsg").textContent = "Pick at least one day."; return; }
   LS.set("profile", profile);
@@ -261,7 +263,12 @@ function eanValid(d) {
 const barcodeFormat = (n) => (/^(\d{13}|\d{8})$/.test(n) && eanValid(n) ? `EAN${n.length}` : "CODE128");
 
 function cardBarcode(store) {
-  const key = Object.keys(country().stores).find((k) => k.toLowerCase() === String(store).toLowerCase());
+  // Match the shop on the list to a known store even if Claude wrote it a bit
+  // differently ("Albert Heijn XL", "AH", "Delhaize (SuperPlus)").
+  const norm = (x) => String(x).toLowerCase().normalize("NFD").replace(/[^a-z0-9]/g, "");
+  const s = norm(store), keys = Object.keys(country().stores);
+  const key = keys.find((k) => norm(k) === s) || keys.find((k) => s.includes(norm(k)) || (s.length > 2 && norm(k).startsWith(s)))
+    || keys.find((k) => country().stores[k] && norm(country().stores[k]).startsWith(s));
   const card = key && country().stores[key];
   const n = card && cardNumbers[card];
   return n ? `<div class="loyalty"><p>${esc(card)}</p>
