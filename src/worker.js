@@ -128,7 +128,13 @@ async function makeMenu(request, env, ctx) {
   const limited = await checkLimits(request, env);
   if (limited) return json({ error: limited }, 429);
 
+  // Only offer deals still running when the planned week starts.
   const deals = await readDeals(env, request);
+  const start = /^\d{4}-\d{2}-\d{2}$/.test(body.start || "") ? body.start : null;
+  if (start) for (const k in deals.stores) {
+    deals.stores[k] = deals.stores[k].filter((d) => !d.validTo || d.validTo >= start);
+    if (!deals.stores[k].length) delete deals.stores[k];
+  }
   const prompt = buildPrompt(profile, days, deals, change);
 
   const upstream = await fetch(env.ANTHROPIC_URL || "https://api.anthropic.com/v1/messages", {

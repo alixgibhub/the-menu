@@ -204,7 +204,7 @@ async function makeMenu(edits = "") {
   busy = true;
   const week = weekDays();
   const days = week.filter((d) => profile.weekdays.includes(dayName(d)));
-  const body = { profile, days: days.map((d) => `${dayName(d)} ${d.getDate()}`) };
+  const body = { profile, days: days.map((d) => `${dayName(d)} ${d.getDate()}`), start: iso(days[0]) };
   if (edits && menu) Object.assign(body, { edits, previous: menu.plan });
 
   show("menu");
@@ -225,6 +225,12 @@ async function makeMenu(edits = "") {
     const broke = text.match(/<<STREAM_ERROR:([a-z_]+)>>/);
     if (broke) throw { code: broke[1] === "max_tokens" ? "too_long" : "busy" };
     const plan = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1));
+    // a usable menu has days and something to buy; anything else is a failed print
+    const shopping = Array.isArray(plan.shopping) ? plan.shopping.filter((s) => Array.isArray(s.items) && s.items.length) : [];
+    if (!Array.isArray(plan.days) || !plan.days.length || !shopping.length) throw { code: "bad_menu" };
+    // most expensive first within each store (done here, so ticks keep matching their items)
+    shopping.forEach((s) => s.items.sort((a, b) => (+b.price || 0) - (+a.price || 0)));
+    plan.shopping = shopping;
     menu = {
       weekLabel: `${dayMonth(week[0])} – ${dayMonth(week[6])}`, start: iso(week[0]),
       dates: days.map(iso), made: iso(new Date()), plan, checked: {},
