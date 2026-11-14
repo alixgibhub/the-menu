@@ -2,3 +2,6 @@ node_modules/
 .wrangler/
 .dev.vars
 .DS_Store
+tests/e2e/stub.log
+tests/e2e/wrangler.log
+tests/e2e/STUB_MODE

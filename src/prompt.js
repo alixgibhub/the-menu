@@ -97,19 +97,46 @@ ${priorityRules}
 - Batch-cook to keep cost and effort down (e.g. a soup or curry that covers several meals).
 - Quantities in grams or ml, scaled for ${ppl}.
 - Assign each item to the cheapest of THEIR supermarkets that makes sense; keep it to at most 2 stores.
-- All prices are numbers in ${c.currency}. For promo items set "promo": true, use the promo price, and set "until" to that deal's validTo date if it has one. For everything else give a realistic typical ${c.name} price and "promo": false. Never invent promotions.
+- All prices are numbers in ${c.currency}. For promo items set "promo": true, use the promo price, set "deal" to that deal's "item" name copied exactly, and set "until" to its validTo date if it has one. For everything else give a realistic typical ${c.name} price and "promo": false. Never invent promotions.
 - PANTRY: assume the kitchen already has oil, vinegar, salt, pepper, sugar, flour, dried herbs and spices, stock cubes, mustard, soy sauce, honey and similar condiments. Never put these on the shopping list, and don't buy any small jar, sachet or bottle of seasoning or sauce that would be poor value for one week. If a recipe really needs one, write it in the meal text, never on the list. Only list ingredients the week actually uses up, in sensible pack sizes.
 - For meals they don't want planned, use "—".
 - Write in English; local product names from the deals are fine.
 
-Reply with ONLY a JSON object, no markdown, in this exact shape:
+Reply with a JSON object in this shape:
 {
  "mood": ["cosy", "frugal", "seasonal"],
  "highlights": [ {"emoji":"🐟","name":"Salmon","days":"Mon & Fri","tip":"Pat dry, salt 10 minutes ahead, then sear skin-side down until crisp."} ],
  "days": [ {"day":"${days[0]}","breakfast":"…","lunch":"…","dinner":"…"} ],
  "snack": "daily snack line or —",
- "shopping": [ {"store":"${profile.stores[0]}","items":[ {"item":"Salmon fillets","qty":"250 g","price":3.99,"promo":true,"until":"2026-11-19","organic":false}, {"item":"Red lentils","qty":"500 g","price":1.80,"promo":false,"organic":false} ]} ],
+ "shopping": [ {"store":"${profile.stores[0]}","items":[ {"item":"Salmon fillets","deal":"Zalmfilet 2 x 125 g","qty":"250 g","price":3.99,"promo":true,"until":"2026-11-19","organic":false}, {"item":"Red lentils","qty":"500 g","price":1.80,"promo":false,"organic":false} ]} ],
  "notes": "one short practical note (e.g. which loyalty-card app to check for coupons)"
 }
 "mood" is exactly three single-word adjectives that describe the week. Each highlight is a key ingredient of the week, and its "tip" is one short chef’s tip (at most 15 words) on how to prepare that ingredient for the most flavour. Give 4–7 highlights (dinners first). Sort shopping items within each store from most to least expensive.${changeBlock}`;
 }
+
+// The exact shape a menu must have. Sent to the Claude API as structured
+// output, so the reply is always valid JSON in this shape.
+const str = { type: "string" };
+const obj = (properties, required = Object.keys(properties)) =>
+  ({ type: "object", properties, required, additionalProperties: false });
+export const MENU_SCHEMA = obj({
+  mood: { type: "array", items: str },
+  highlights: { type: "array", items: obj({ emoji: str, name: str, days: str, tip: str }) },
+  days: { type: "array", items: obj({ day: str, breakfast: str, lunch: str, dinner: str }) },
+  snack: str,
+  shopping: {
+    type: "array",
+    items: obj({
+      store: str,
+      items: {
+        type: "array",
+        items: obj(
+          { item: str, deal: str, qty: str, price: { type: "number" }, promo: { type: "boolean" }, until: str, organic: { type: "boolean" } },
+          ["item", "qty", "price", "promo", "organic"],
+        ),
+      },
+    }),
+  },
+  notes: str,
+});
+

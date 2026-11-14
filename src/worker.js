@@ -7,8 +7,8 @@
 //   GET  /api/calendar/<id>.ics  that link
 //   GET  /admin                  deals admin page
 
-import { buildPrompt, cleanProfile } from "./prompt.js";
-import { readDeals } from "./deals.js";
+import { buildPrompt, cleanProfile, MENU_SCHEMA } from "./prompt.js";
+import { readDeals, dealsFrom } from "./deals.js";
 import { COUNTRIES } from "../public/countries.js";
 import { ADMIN_HTML } from "./admin.js";
 
@@ -129,32 +129,16 @@ async function makeMenu(request, env, ctx) {
   if (limited) return json({ error: limited }, 429);
 
   // Only offer deals still running when the planned week starts.
-  const deals = await readDeals(env, request);
-  const start = /^\d{4}-\d{2}-\d{2}$/.test(body.start || "") ? body.start : null;
-  if (start) for (const k in deals.stores) {
-    deals.stores[k] = deals.stores[k].filter((d) => !d.validTo || d.validTo >= start);
-    if (!deals.stores[k].length) delete deals.stores[k];
-  }
+  const deals = dealsFrom(await readDeals(env, request), body.start);
   const prompt = buildPrompt(profile, days, deals, change);
 
-  const upstream = await fetch(env.ANTHROPIC_URL || "https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "x-api-key": env.ANTHROPIC_API_KEY,
-      "anthropic-version": "2023-06-01",
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      model: env.MODEL || "claude-sonnet-5-5",
-      max_tokens: 12000,
-      // A menu needs little reasoning: thinking only between tool calls (there are
-      // none) and medium effort keep it fast, cheap, and leave the tokens for the menu.
-      thinking: { type: "between_tools" },
-      output_config: { effort: "medium" },
-      stream: true,
-      messages: [{ role: "user", content: prompt }],
-    }),
-  });
+  // Structured output keeps the reply valid JSON in the menu's shape. If the API
+  // ever rejects the schema, ask again without it rather than fail the menu.
+  let upstream = await askClaude(env, prompt, true);
+  if (upstream.status === 400) {
+    console.error("Claude API rejected the request with the schema:", await upstream.text().catch(() => ""));
+    upstream = await askClaude(env, prompt, false);
+  }
 
   if (!upstream.ok || !upstream.body) {
     console.error("Claude API error", upstream.status, await upstream.text().catch(() => ""));
@@ -167,6 +151,27 @@ async function makeMenu(request, env, ctx) {
   ctx.waitUntil(pipeText(upstream.body, writable));
   return new Response(readable, {
     headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "no-store" },
+  });
+}
+
+function askClaude(env, prompt, structured) {
+  return fetch(env.ANTHROPIC_URL || "https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "x-api-key": env.ANTHROPIC_API_KEY,
+      "anthropic-version": "2023-06-01",
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      model: env.MODEL || "claude-sonnet-5-5",
+      max_tokens: 12000,
+      // A menu needs little reasoning: thinking only between tool calls (there are
+      // none) and medium effort keep it fast, cheap, and leave the tokens for the menu.
+      thinking: { type: "between_tools" },
+      output_config: structured ? { effort: "medium", format: { type: "json_schema", schema: MENU_SCHEMA } } : { effort: "medium" },
+      stream: true,
+      messages: [{ role: "user", content: prompt }],
+    }),
   });
 }
 

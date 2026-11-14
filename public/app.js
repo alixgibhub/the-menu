@@ -1,5 +1,6 @@
 import { COUNTRIES, DEFAULT_COUNTRY } from "/countries.js";
 import { device, menuText, menuICS, googleDayLinks, openICS, download } from "/export.js";
+import { reconcile } from "/reconcile.js";
 
 const MEALS = ["Breakfast", "Lunch", "Dinner", "Snack"];
 const DIETS = ["Vegetarian", "Pescatarian", "Vegan", "Lactose-free", "Gluten-free", "No pork", "High protein"];
@@ -41,11 +42,12 @@ const shortDate = (d) => d.toLocaleDateString("en-GB", { weekday: "short", day: 
 const longDay = (d) => d.toLocaleDateString("en-GB", { weekday: "long" });
 const dayMonth = (d) => `${d.getDate()} ${MONTHS[d.getMonth()]}`;
 
-// A menu covers one fixed week, Monday to Sunday. Deals refresh on Sunday,
-// so on Sunday we plan the coming week; on any other day, this week.
-function weekDays() {
-  const t = new Date(); t.setHours(0, 0, 0, 0);
-  const mon = new Date(t); mon.setDate(t.getDate() + (t.getDay() === 0 ? 1 : 1 - t.getDay()));
+// A menu covers one fixed week, Monday to Sunday. From Friday on, most of
+// this week is gone, so we plan the coming week; Monday to Thursday, this week.
+export function weekDays(now = new Date()) {
+  const t = new Date(now); t.setHours(0, 0, 0, 0);
+  const dow = t.getDay(); // 0 = Sunday
+  const mon = new Date(t); mon.setDate(t.getDate() + (dow === 0 ? 1 : dow >= 5 ? 8 - dow : 1 - dow));
   return WEEK.map((_, i) => { const d = new Date(mon); d.setDate(mon.getDate() + i); return d; });
 }
 
@@ -231,6 +233,7 @@ async function makeMenu(edits = "") {
     // most expensive first within each store (done here, so ticks keep matching their items)
     shopping.forEach((s) => s.items.sort((a, b) => (+b.price || 0) - (+a.price || 0)));
     plan.shopping = shopping;
+    reconcile(plan, deals, profile.country); // promo marks and end dates from the real deals
     menu = {
       weekLabel: `${dayMonth(week[0])} – ${dayMonth(week[6])}`, start: iso(week[0]),
       dates: days.map(iso), made: iso(new Date()), plan, checked: {},

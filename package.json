@@ -5,7 +5,9 @@
   "description": "A healthy weekly menu and shopping list, built around your supermarkets' deals.",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "test": "node tests/unit.mjs",
+    "test:e2e": "bash tests/e2e/run.sh"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"

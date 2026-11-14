@@ -17,7 +17,8 @@ import { cleanDeals } from "../src/deals.js";
 const input = process.argv[2];
 if (!input) { console.error("usage: node scripts/validate-deals.mjs research.json"); process.exit(2); }
 
-const OUT = new URL("../public/data/deals.json", import.meta.url);
+// DEALS_OUT lets the tests write somewhere else.
+const OUT = process.env.DEALS_OUT || new URL("../public/data/deals.json", import.meta.url);
 const research = JSON.parse(readFileSync(input, "utf8"));
 const previous = existsSync(OUT) ? JSON.parse(readFileSync(OUT, "utf8")) : { stores: {}, countries: {} };
 const now = new Date().toISOString();

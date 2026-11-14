@@ -74,3 +74,14 @@ export function cleanDeals(found, cc, today = iso(new Date())) {
   }
   return out;
 }
+
+// Only the deals still running when the planned week starts (YYYY-MM-DD).
+export function dealsFrom(deals, start) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(start || "")) return deals;
+  const stores = {};
+  for (const [k, list] of Object.entries(deals.stores || {})) {
+    const live = list.filter((d) => !d.validTo || d.validTo >= start);
+    if (live.length) stores[k] = live;
+  }
+  return { ...deals, stores };
+}

@@ -12,7 +12,7 @@ It started as my own weekly menu in Notion. I turned it into an app so friends c
 - **Your loyalty card at the till.** Add a card number in settings and its real barcode (EAN-13, EAN-8 or Code 128) is printed under that shop on the shopping list, ready to scan from your phone. No number, no barcode. Numbers never leave the browser.
 - **Finds the deals by itself.** Every Sunday a scheduled Claude task researches every country's supermarket promotions on healthy everyday groceries for the coming week, keeps only deals with a real source, ranks them by saving and saves them to the deals database in this repo. Menus are built around the biggest savings, and card-only deals are used only if you have that card.
 - **Budget or quality.** Budget builds the week from promotions and skips bulk deals for one person. Quality still uses promotions but puts organic and good produce first, marked on the list.
-- **One fixed week.** A menu covers Monday to Sunday and doesn't change halfway through. New deals arrive on Sunday; a banner on the menu and the shopping list says so, and warns you to shop early if a promo price ends mid-week.
+- **One fixed week.** A menu covers Monday to Sunday and doesn't change halfway through; from Friday on, it plans the coming week. New deals arrive on Sunday; a banner on the menu and the shopping list says so, and warns you to shop early if a promo price ends mid-week.
 - **Fits your week.** People, budget, which days and meals to plan, cooking time, diet, dislikes, and what's already in your fridge.
 - **Chef's picks.** Three words for the week, its key ingredients, and a chef's tip on preparing each one for the most flavour.
 - **Shopping list.** Its own tab, with this week's deals underneath. Grouped by store and ticked off as you shop. Promo prices are exact; other prices are marked ≈. You can copy or print it.
@@ -42,6 +42,8 @@ src/worker.js                          API: /api/menu, /api/deals, /api/calendar
 src/prompt.js                          settings validation and the menu prompt
 src/deals.js                           reads the deals (database + your own) and cleans research
 src/admin.js                           password-protected page: research status, your own deals
+public/reconcile.js                    checks each promo item against the real deals
+tests/                                 unit tests (run before every deploy) and browser tests
 scripts/validate-deals.mjs             checks research before it's committed
 research/deal-sources.md               tested deal sources per country, read by the weekly research
 wrangler.jsonc                         Cloudflare configuration
@@ -58,6 +60,11 @@ wrangler.jsonc                         Cloudflare configuration
 3. `npm run dev` and open http://localhost:8787
 
 Deploy with `npm run deploy`, or connect the repo in the Cloudflare dashboard (Workers → Create → Import a repository). Add `ANTHROPIC_API_KEY` and `ADMIN_TOKEN` as secrets under the Worker's Settings → Variables and Secrets. To change the KV namespace id or the daily limits, edit `wrangler.jsonc`.
+
+## Tests
+
+- `npm test` runs fast checks on the deals database, the menu prompt, the menu schema and the promo matching. Cloudflare runs them before every deploy (`build.command` in `wrangler.jsonc`), so a failing test, or a broken `deals.json`, stops the deploy and the live app stays as it was.
+- `npm run test:e2e` starts a local copy of the app with a stand-in for Claude and clicks through it in a browser: printing, the shopping list tab, ticks, changes, exports, the planned week, and what happens when Claude's reply is rejected or empty. Needs Python 3 with Playwright.
 
 ## Deals
 
