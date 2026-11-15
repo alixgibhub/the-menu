@@ -23,9 +23,12 @@ Last checked by hand: 14 Nov 2026, except where noted.
 |---|---|---|
 | promotiez.be/winkels/<store>/folders-promoties | Each store's current and next folder, with dates and links to /bekijk/aanbiedingen/<store>-folder-<id> | Works |
 | promotiez.be/bekijk/aanbiedingen/<store>-folder-<id> | Every product and price in that folder, folder dates | Works |
-| promotiez.be/winkels/<store>/promoties | Current deals with regular price and % off | Works |
+| promotiez.be/winkels/<store>/promoties | Current deals with regular price and % off; next week's show as "Vanaf morgen geldig" with no end date, over ~9 result pages (only page 1 fetches) | Works (15 Nov 2026) |
+| promotiez.be/bekijk/aanbiedingen/carrefour-folder-<id> | Carrefour runs several overlapping folders (e.g. 11–23 and 18–30 Nov); check them all. Folder prices only, "Beste keuzes" box sometimes shows a regular price | Works (15 Nov 2026) |
 
-Store slugs: lidl, aldi, delhaize, colruyt, carrefour, albert-heijn.
+Store slugs: lidl, aldi, delhaize, colruyt, carrefour, albert-heijn. Aldi folder URLs look like
+/bekijk/aanbiedingen/aldi-folder-week-<n>-<id>. Folder pages give no pack sizes and rarely a
+regular price. Delhaize's next folder can show captions without prices on Sunday: use the current one.
 Timing: Lidl and Aldi run Monday–Saturday; Delhaize Thursday–Wednesday; Colruyt
 two weeks from Wednesday. Lidl only shows next week's fresh-food deals from
 Sunday. Every Delhaize promotion needs the SuperPlus card.
@@ -35,7 +38,9 @@ Sunday. Every Delhaize promotion needs the SuperPlus card.
 | Source | What it gives | Status |
 |---|---|---|
 | promocatalogues.fr/magasins/<store> and /regardez/offres/… | Catalogues and individual offers with prices | Works (38 of 50 deals on 13 Nov) |
-| tiendeo.fr/<city>/<store> | A few products per store with prices | Partial |
+| promocatalogues.fr/magasins/<store>/catalogues-promotions | Each catalogue with dates and link; catalogue pages give names and offer prices but rarely pack size or regular price | Works (15 Nov 2026) |
+| promocatalogues.fr/magasins/lidl/offres and /magasins/<store>/offres/<slug>-offre-<id>/ | Lidl offers with regular price and % off; single offer pages give pack size, regular price and exact dates | Works (new, 15 Nov 2026) |
+| tiendeo.fr/<city>/<store> | A few "most clicked" products with prices, no per-item dates | Partial |
 
 ## Germany (DE)
 
@@ -43,18 +48,24 @@ Sunday. Every Delhaize promotion needs the SuperPlus card.
 |---|---|---|
 | discounto.de/Discounter/<store> (penny_markt, aldi, aldi_sued, lidl, norma) | That week's Prospekt offers with prices and dates | Works |
 | discounto.de/Prospekte/<store>-<dates> | A whole Prospekt, e.g. REWE | Works |
-| prospektangebote.de/angebote/<product> (frische-hahnchen, hackfleisch, lachsfilet, obst-und-gemuse …) | One product across all stores, with prices and dates | Works |
+| discounto.de/Discounter/<store>/Angebot-Datum:naechste-woche/ (REWE: /Supermarkt/REWE/Angebot-Datum:naechste-woche/) | Next week's offers with dates; little fresh food on Sundays | Works (new, 15 Nov 2026) |
+| prospektangebote.de/angebote/<product> (hackfleisch, rinder-hackfleisch, hahnchen, hahnchenbrustfilet, lachsfilet, frische-eier, tomaten, apfel, brokkoli, schweine …) | Top-10 table: store, pack size, price, regular price, exact dates across stores. Only the dated table is reliable; other lists show relative times | Works (gave most DE deals, 15 Nov 2026) |
+| prospektangebote.de/geschaefte/<store>/angebote | Relative dates only | Dead end (15 Nov 2026) |
 
-Timing: most Prospekte run Monday–Saturday.
+Timing: most Prospekte run Monday–Saturday. On Sunday, discounto's next-week Prospekt pages
+often show only teaser items (sweets, non-food) and PDF links.
 
 ## Switzerland (CH)
 
 | Source | What it gives | Status |
 |---|---|---|
-| rappn.ch/en/offers | Offers from Migros, Coop, Denner, Lidl, Aldi with prices, regular prices and dates | Works (31 of 37 deals on 13 Nov) |
+| rappn.ch/en/offers/<store> (migros, coop, denner, lidl-switzerland, aldi-switzerland) | Per-store offers with price, regular price and end date (page 1 only). Reach via links on rappn.ch/en/compare-deals | Works (40 deals, 15 Nov 2026). Aldi page has no dates |
+| rappn.ch/en/offers | Offers from Migros, Coop, Denner, Lidl, Aldi with prices, regular prices and dates | Fetch refused on 15 Nov 2026 (worked 13 Nov); use the per-store pages |
 | rappn.ch/en/meat-deals-switzerland, /migros-deals-next-week-switzerland | Themed and next-week lists | Works |
 
 Note: some Denner deals are priced per 100 g; scale them to the pack.
+Timing: Migros/Coop/Denner/Lidl run Thursday–Wednesday; next week's deals are not on rappn on
+Sunday, so a Sunday pull only covers Monday–Wednesday. Manor, Volg and Spar are not on rappn.
 
 ## Spain (ES)
 
