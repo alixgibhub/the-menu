@@ -13,6 +13,7 @@ It started as my own weekly menu in Notion. I turned it into an app so friends c
 - **Budget or quality.** Budget builds the week from promotions and skips bulk deals for one person. Quality still uses promotions but puts organic and good produce first, marked on the list.
 - **One fixed week.** A menu covers Monday to Sunday and doesn't change halfway through; from Friday on, it plans the coming week. New deals arrive on Sunday; a banner on the menu and the shopping list says so, and warns you to shop early if a promo price ends mid-week.
 - **Fits your week.** People, budget, which days and meals to plan, cooking time, diet, dislikes, and what's already in your fridge.
+- **Less waste.** Each menu notes what will probably be left over (half a bag of rice, two leeks). When the next week comes, The Menu asks which of those are still in your kitchen, uses them up first, and the shopping list says what was used up.
 - **Chef's picks.** Three words for the week, its key ingredients, and a chef's tip on preparing each one for the most flavour.
 - **Shopping list.** Its own tab, with this week's deals underneath. Grouped by store and ticked off as you shop. Promo prices are exact; other prices are marked ≈. You can copy or print it.
 - **Change anything.** *Change something* under the chef's picks reprints the whole week: swap or drop a key ingredient and every meal, the shopping list and the prices follow. Each day receipt also has its own *Change this day* box.

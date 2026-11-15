@@ -130,7 +130,9 @@ async function makeMenu(request, env, ctx) {
 
   // Only offer deals still running when the planned week starts.
   const deals = dealsFrom(await readDeals(env, request), body.start);
-  const prompt = buildPrompt(profile, days, deals, change);
+  // Optional: what's left from last week, to use up first.
+  const leftovers = String(body.leftovers ?? "").replace(/[\r\n]+/g, " ").replace(/"/g, "'").trim().slice(0, 400);
+  const prompt = buildPrompt(profile, days, deals, change, leftovers);
 
   // Structured output keeps the reply valid JSON in the menu's shape. If the API
   // ever rejects the schema, ask again without it rather than fail the menu.

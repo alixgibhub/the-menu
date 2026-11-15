@@ -45,6 +45,9 @@ http.createServer((req, res) => {
         { item: "Rice", qty: "1 kg", price: 1.39, promo: false, organic: false },
       ] }],
       notes: "Test menu.",
+      usedUp: ((prompt.match(/Left over from last week[^:]*: ([^\n]+)/) || [])[1] || "nothing listed") === "nothing listed" ? []
+        : prompt.match(/Left over from last week[^:]*: ([^\n]+)/)[1].split(", ").map((x) => x.replace(/^about \d+ g /i, "")),
+      leftovers: ["About 600 g rice", "2 leeks", "Half a block of feta"],
     };
     const out = JSON.stringify(plan);
     res.writeHead(200, { "content-type": "text/event-stream" });

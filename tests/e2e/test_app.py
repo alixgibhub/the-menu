@@ -86,6 +86,27 @@ with sync_playwright() as p:
     check("no page errors (Saturday run)", not pg.errors, pg.errors)
     pg.context.close()
 
+    # ---- anything left from last week ----
+    pg = page_at(b, datetime.datetime(2026, 11, 14, 11, 0, tzinfo=BRUSSELS)); setup_and_print(pg)
+    check("this week: no leftovers question", not pg.is_visible("#leftOut"))
+    pg.clock.set_system_time(datetime.datetime(2026, 11, 20, 18, 0, tzinfo=BRUSSELS)); pg.reload(); pg.wait_for_timeout(600)
+    pg.click("#tab-list"); pg.click("#remakeBtn"); pg.wait_for_timeout(300)
+    check("Friday, New menu: asks about leftovers before printing",
+          pg.is_visible("#leftOut") and pg.is_hidden("#progress"))
+    pg.clock.set_system_time(datetime.datetime(2026, 11, 24, 9, 0, tzinfo=BRUSSELS)); pg.reload(); pg.wait_for_timeout(600)
+    chips = pg.locator("#leftChips .chip")
+    check("week over: last week's likely leftovers, all unticked",
+          pg.is_visible("#leftOut") and chips.count() == 3 and pg.locator("#leftChips .chip.on").count() == 0)
+    pg.click("#leftChips >> text=2 leeks"); pg.fill("#leftOther", "half a cabbage")
+    pg.click("#leftPrint")
+    pg.wait_for_function("document.querySelector('#progress').classList.contains('hidden')", timeout=30000)
+    check("after printing, the question is gone", not pg.is_visible("#leftOut"))
+    pg.click("#tab-list"); pg.wait_for_timeout(300)
+    used = [t for t in pg.locator("#listOut .line.good").all_inner_texts() if "used up" in t.lower()]
+    check("the list says what was used up from last week",
+          bool(used) and "last week" in used[0].lower() and "leeks" in used[0].lower() and "cabbage" in used[0].lower() and "feta" not in used[0].lower(), used)
+    pg.context.close()
+
     # ---- calendar export on a computer, on iPhone Safari, and in Instagram's browser ----
     sat = datetime.datetime(2026, 11, 14, 11, 0, tzinfo=BRUSSELS)
     pg = page_at(b, sat); setup_and_print(pg)

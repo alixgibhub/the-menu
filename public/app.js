@@ -196,9 +196,11 @@ async function makeMenu(edits = "") {
   const days = week.filter((d) => profile.weekdays.includes(dayName(d)));
   const body = { profile, days: days.map((d) => `${dayName(d)} ${d.getDate()}`), start: iso(days[0]) };
   if (edits && menu) Object.assign(body, { edits, previous: menu.plan });
+  const leftovers = edits ? "" : pickedLeftovers();
+  if (leftovers) body.leftovers = leftovers;
 
   show("menu");
-  $("menuEmpty").classList.add("hidden"); $("menuOut").classList.add("hidden"); $("progress").classList.remove("hidden");
+  $("menuEmpty").classList.add("hidden"); $("menuOut").classList.add("hidden"); $("leftOut").classList.add("hidden"); $("progress").classList.remove("hidden");
   $("progressText").textContent = edits ? "Reprinting with your changes…" : "Printing your week…";
   $$(".makeBtn").forEach((b) => (b.disabled = true));
   try {
@@ -225,6 +227,7 @@ async function makeMenu(edits = "") {
     menu = {
       weekLabel: `${dayMonth(week[0])} – ${dayMonth(week[6])}`, start: iso(week[0]),
       dates: days.map(iso), made: iso(new Date()), plan, checked: {},
+      ...(leftovers ? { fromLastWeek: true } : {}),
     };
     LS.set("menu", menu);
     renderMenu();
@@ -238,6 +241,37 @@ async function makeMenu(edits = "") {
   }
 }
 $("makeBtn1").onclick = $("makeBtn2").onclick = () => makeMenu();
+
+// ---------- anything left from last week ----------
+// A new week is due when the menu on file is for an earlier week than the one we'd plan now.
+const newWeek = () => !!menu && iso(weekDays()[0]) !== menu.start;
+
+function renderLeftovers() {
+  const guess = (Array.isArray(menu?.plan?.leftovers) ? menu.plan.leftovers : []).filter((x) => typeof x === "string" && x.trim()).slice(0, 8);
+  $("leftOut").innerHTML = `
+    <h2>Anything left from last week?</h2>
+    <p class="intro">${guess.length
+      ? "Your last menu probably left these. Tap what's still in your kitchen, and this week's meals will use it up first."
+      : "Add what's still in your kitchen, and this week's meals will use it up first."}</p>
+    <hr>
+    ${guess.length ? `<div class="chips" id="leftChips">${guess.map((g) => `<button class="chip" type="button">${esc(g)}</button>`).join("")}</div>` : ""}
+    <label class="field"><span>${guess.length ? "Anything else?" : "What's left?"}</span>
+      <input type="text" id="leftOther" maxlength="200" placeholder="e.g. half a cabbage, 2 carrots">
+    </label>
+    <hr>
+    <div class="actions center"><button class="btn makeBtn" type="button" id="leftPrint">Print my menu</button></div>
+    <p class="note c">Nothing left? Just print: unticked items are ignored.</p>`;
+  $$("#leftChips .chip").forEach((c) => (c.onclick = () => c.classList.toggle("on")));
+  $("leftPrint").onclick = () => makeMenu();
+  $("leftOut").classList.remove("hidden");
+}
+
+function pickedLeftovers() {
+  if ($("leftOut").classList.contains("hidden")) return "";
+  const picked = [...$$("#leftChips .chip.on")].map((c) => c.textContent.trim());
+  const other = ($("leftOther")?.value || "").trim();
+  return [...picked, other].filter(Boolean).join(", ").slice(0, 400);
+}
 
 // ---------- week banners ----------
 // The menu is fixed until the next deals arrive on Sunday.
@@ -282,12 +316,14 @@ function renderMenu() {
   const has = !!menu;
   $("menuEmpty").classList.toggle("hidden", has); $("menuOut").classList.toggle("hidden", !has);
   $("listEmpty").classList.toggle("hidden", has); $("listOut").classList.toggle("hidden", !has);
-  if (!has) return;
+  if (!has) { $("leftOut").classList.add("hidden"); return; }
+  if (weekNotes(menu.plan).stale) renderLeftovers(); else $("leftOut").classList.add("hidden");
   const p = menu.plan, ck = menu.checked || {};
   const shopping = Array.isArray(p.shopping) ? p.shopping : [];
   const total = shopping.reduce((a, s) => a + sumPrices(s.items), 0);
   const count = shopping.reduce((a, s) => a + (s.items || []).length, 0);
   const under = profile.budget - total;
+  const usedUp = (Array.isArray(p.usedUp) ? p.usedUp : []).filter((x) => typeof x === "string" && x.trim()).slice(0, 8);
   const saved = shopping.reduce((a, s) => a + (s.items || []).reduce((b, i) => b + (i.promo && i.saved > 0 ? i.saved : 0), 0), 0);
   const meals = [["Breakfast", "breakfast"], ["Lunch", "lunch"], ["Dinner", "dinner"]].filter(([m]) => profile.meals.includes(m));
   const dates = menu.dates.map(fromIso);
@@ -351,6 +387,7 @@ function renderMenu() {
       <div class="total-row"><span>Total</span><span>≈ ${money(total)}</span></div>
       <div class="line${under >= 0 ? " good" : ""}"><span>${under >= 0 ? "Under budget" : "Over budget"}</span><span class="amt">${under >= 0 ? "" : "−"}${money(Math.abs(under))}</span></div>
       ${saved > 0 ? `<div class="line good"><span>Saved with promos</span><span class="amt">${money(saved)}</span></div>` : ""}
+      ${usedUp.length ? `<div class="line good"><span>Used up from ${menu.fromLastWeek ? "last week" : "your kitchen"}</span><span class="amt">${esc(usedUp.join(", "))}</span></div>` : ""}
       <hr>
       <div class="actions center" style="margin-top:16px">
         <button class="btn ghost" id="copyBtn">Copy list</button>
@@ -388,7 +425,12 @@ function bindMenu(p, shopping, dates) {
     makeMenu(`Only change ${d ? `${longDay(d)} ${dayMonth(d)}` : p.days[+id]?.day}: ${t}. Keep the other days the same.`);
   }));
 
-  $("remakeBtn").onclick = () => makeMenu();
+  // A new week: ask about leftovers first. Same week: just reprint.
+  $("remakeBtn").onclick = () => {
+    if (newWeek() && $("leftOut").classList.contains("hidden")) {
+      show("menu"); renderLeftovers(); $("leftOut").scrollIntoView({ behavior: "smooth", block: "start" });
+    } else makeMenu();
+  };
   $("printBtn").onclick = () => window.print();
   $("copyBtn").onclick = async () => {
     const txt = shopping.map((s) => `${s.store}\n` + (s.items || []).map((i) => `- ${i.item} — ${i.qty} · ${money(i.price)}`).join("\n")).join("\n\n");

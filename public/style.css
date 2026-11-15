@@ -222,3 +222,7 @@ footer{text-align:center;font-size:13px;color:rgba(255,255,255,.9);margin-top:10
   .tabs,footer,.actions,.change,.day-change,#view-settings,#dealsCard{display:none!important}
   .card{filter:none;transform:none!important}
 }
+
+/* anything left from last week */
+#leftOut .chips + .field{margin-top:18px}
+.line.good .amt{white-space:normal;max-width:60%}

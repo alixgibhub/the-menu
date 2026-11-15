@@ -88,6 +88,11 @@ const profile = cleanProfile({ country: "BE", stores: ["Lidl", "Nowhere"], cards
 const deals = { stores: { "BE/Lidl": [{ item: "Zalmfilet", price: 3.99, was: 5.49, validTo: "2026-11-21", source: "https://x" }], "BE/Aldi": [{ item: "Not mine", price: 1, source: "https://x" }] } };
 const prompt = buildPrompt(profile, ["Mon 16", "Tue 17"], deals, null);
 
+test("leftovers from last week reach the prompt", () => {
+  const p = buildPrompt(profile, ["Mon 16"], deals, null, "About 600 g rice, 2 leeks");
+  ok(/Left over from last week[^\n]*: About 600 g rice, 2 leeks/.test(p), "leftovers missing");
+  ok(/Left over from last week[^\n]*: nothing listed/.test(buildPrompt(profile, ["Mon 16"], deals, null)), "empty leftovers not marked");
+});
 test("cleanProfile drops unknown stores and keeps limits", () => {
   ok(profile.stores.join() === "Lidl", "unknown store kept");
   ok(cleanProfile({ people: 99, budget: 1e9 }).people === 8, "people not capped");
@@ -108,7 +113,7 @@ test("change requests carry the current menu and the edits", () => {
 });
 
 test("the menu schema requires every part the app reads", () => {
-  ok(MENU_SCHEMA.required.join() === "mood,highlights,days,snack,shopping,notes", "top-level fields");
+  ok(MENU_SCHEMA.required.join() === "mood,highlights,days,snack,shopping,notes,usedUp,leftovers", "top-level fields");
   const item = MENU_SCHEMA.properties.shopping.items.properties.items.items;
   ok(item.required.includes("price") && item.required.includes("promo"), "item fields");
   const walk = (s) => { if (s.type === "object") { ok(s.additionalProperties === false, "additionalProperties must be false"); Object.values(s.properties).forEach(walk); } if (s.items) walk(s.items); };
