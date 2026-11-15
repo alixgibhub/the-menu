@@ -6,7 +6,11 @@ export function device() {
   const iOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
   const android = /Android/.test(ua);
   const mac = !iOS && /Macintosh/.test(ua);
-  return { iOS, android, mac, mobile: iOS || android, canShare: typeof navigator.share === "function" };
+  // Apps' built-in browsers (Instagram, Facebook, LinkedIn, Gmail…) and Chrome or
+  // Firefox on iPhone can't hand a calendar file to the Calendar app.
+  const inApp = /FBAN|FBAV|Instagram|LinkedInApp|Line\/|Twitter|Snapchat|TikTok|GSA\/|; wv\)/.test(ua);
+  const notSafariIOS = iOS && (inApp || /CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo/.test(ua));
+  return { iOS, android, mac, inApp, notSafariIOS, mobile: iOS || android, canShare: typeof navigator.share === "function" };
 }
 
 const MEALS = [
@@ -66,7 +70,17 @@ const pad = n => String(n).padStart(2, "0");
 const icsTime = (d, h, m) => `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}T${pad(h)}${pad(m)}00`;
 const icsEscape = t => String(t || "").replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
 // Lines over 75 octets must be folded (RFC 5545).
-const fold = line => { const parts = []; while (line.length > 70) { parts.push(line.slice(0, 70)); line = " " + line.slice(70); } parts.push(line); return parts.join("\r\n"); };
+// Split by bytes, never inside a character, so accents and emoji stay intact.
+export const fold = (line) => {
+  const enc = new TextEncoder(), parts = []; let cur = "", size = 0;
+  for (const ch of line) {
+    const n = enc.encode(ch).length;
+    if (size + n > (parts.length ? 74 : 75)) { parts.push(cur); cur = ""; size = 0; }
+    cur += ch; size += n;
+  }
+  parts.push(cur);
+  return parts.join("\r\n ");
+};
 
 export function menuICS(menu, profile) {
   const p = menu.plan, dates = menuDates(menu);

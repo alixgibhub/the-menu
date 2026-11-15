@@ -19,9 +19,10 @@ def stub_log():
     try: return open(os.path.join(HERE, "stub.log")).read().splitlines()
     except FileNotFoundError: return []
 
-def page_at(browser, when):
+def page_at(browser, when, ua=None):
+    extra = {"user_agent": ua} if ua else {}
     ctx = browser.new_context(viewport={"width": 390, "height": 844}, timezone_id="Europe/Brussels",
-                              permissions=["clipboard-read", "clipboard-write"])
+                              permissions=["clipboard-read", "clipboard-write"], accept_downloads=True, **extra)
     pg = ctx.new_page()
     pg.errors = []
     pg.on("pageerror", lambda e: pg.errors.append(str(e)))
@@ -83,6 +84,36 @@ with sync_playwright() as p:
     md = pg.evaluate("navigator.clipboard.readText()")
     check("Notion export copies Markdown with to-dos", md.startswith("# The Menu") and "- [ ]" in md)
     check("no page errors (Saturday run)", not pg.errors, pg.errors)
+    pg.context.close()
+
+    # ---- calendar export on a computer, on iPhone Safari, and in Instagram's browser ----
+    sat = datetime.datetime(2026, 11, 14, 11, 0, tzinfo=BRUSSELS)
+    pg = page_at(b, sat); setup_and_print(pg)
+    with pg.expect_download() as dl:
+        pg.click("#exportCalendar")
+    ics = open(dl.value.path(), encoding="utf-8").read()
+    check("computer: the calendar file downloads with every meal",
+          ics.startswith("BEGIN:VCALENDAR") and ics.count("BEGIN:VEVENT") >= 7 and ics.rstrip().endswith("END:VCALENDAR"))
+    pg.context.close()
+
+    IPHONE = "Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Mobile/15E148 Safari/604.1"
+    pg = page_at(b, sat, IPHONE); setup_and_print(pg)
+    try:
+        with pg.expect_response(lambda r: "/api/calendar/" in r.url, timeout=8000) as r:
+            pg.click("#exportCalendar")
+        resp = r.value
+        check("iPhone Safari: opens a calendar link that Calendar can read",
+              resp.status == 200 and resp.headers.get("content-type", "").startswith("text/calendar"))
+    except Exception as e:
+        check("iPhone Safari: opens a calendar link that Calendar can read", False, str(e))
+    pg.context.close()
+
+    INSTAGRAM = IPHONE.replace("Safari/604.1", "Instagram 350.0.0.0 (iPhone15,2; iOS 18_1)")
+    pg = page_at(b, sat, INSTAGRAM); setup_and_print(pg)
+    pg.click("#exportCalendar"); pg.wait_for_timeout(300)
+    check("Instagram's browser: says to open in Safari and offers Google Calendar day links",
+          "safari" in pg.inner_text("#exportMsg").lower()
+          and pg.locator("#exportLinks a[href*='calendar.google.com']").count() >= 7)
     pg.context.close()
 
     # ---- the API rejects the schema: the app still gets a menu ----

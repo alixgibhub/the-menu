@@ -416,19 +416,35 @@ function bindMenu(p, shopping, dates) {
   };
 
   $("exportCalendar").onclick = async () => {
-    if (dev.android) {
-      // Google Calendar can't import a file from the web, so add it day by day.
-      say("Tap each day to add it to Google Calendar.");
-      links(gcalLinks() + `<p class="note c">Using another calendar app? <a href="#" id="icsAnyway">Get the calendar file</a></p>`);
-      $("icsAnyway").onclick = (e) => { e.preventDefault(); calendarFile(); };
+    const icsName = `the-menu-${menu.start}.ics`;
+    const fileLink = `<a href="#" id="icsFile">download the calendar file</a>`;
+    const wire = () => {
+      $("icsFile") && ($("icsFile").onclick = (e) => { e.preventDefault(); download(icsName, menuICS(menu, profile), "text/calendar"); say("Calendar file downloaded. Open it to add your meals."); });
+      $("gcalLinks") && ($("gcalLinks").onclick = (e) => { e.preventDefault(); links(gcalLinks()); });
+    };
+    if (dev.android || dev.notSafariIOS) {
+      // Google Calendar can't import a file from the web, and apps' built-in
+      // browsers (and Chrome on iPhone) can't open one in Calendar: add day by day.
+      say(dev.notSafariIOS
+        ? "To add the whole week to Apple Calendar at once, open The Menu in Safari and tap Calendar there. Or add it day by day to Google Calendar:"
+        : "Tap each day to add it to Google Calendar.");
+      links(gcalLinks() + (dev.notSafariIOS ? "" : `<p class="note c">Using another calendar app? ${fileLink}</p>`));
+      wire();
       return;
     }
-    say("Preparing your calendar…");
-    if (!(await calendarFile())) return;
-    if (dev.iOS) { links(""); say("Tap “Add All” to put your meals in Calendar."); return; }
+    if (dev.iOS) {
+      say("Preparing your calendar…");
+      if (!(await calendarFile())) return;
+      say("Tap “Add All” to put your meals in Calendar.");
+      links(`<p class="note c">Nothing happened? Add it <a href="#" id="gcalLinks">day by day to Google Calendar</a>.</p>`);
+      wire();
+      return;
+    }
+    // Computers: download the file straight away, no round trip to the server.
+    download(icsName, menuICS(menu, profile), "text/calendar");
     say("Calendar file downloaded. Open it to add your meals to Calendar or Outlook.");
     links(`<p class="note c">Use Google Calendar? <a href="#" id="gcalLinks">Add day by day instead</a></p>`);
-    $("gcalLinks").onclick = (e) => { e.preventDefault(); links(gcalLinks()); };
+    wire();
   };
 
   $("exportNotion").onclick = async () => {

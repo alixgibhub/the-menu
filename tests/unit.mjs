@@ -143,5 +143,16 @@ test("deals match by name even without the deal field", () => {
   ok(!findDeal({ item: "Chicken" }, [{ item: "Kippenwokreepjes" }]), "false match");
 });
 
+// ---------- calendar file ----------
+const { fold } = await import("../public/export.js");
+test("long calendar lines are folded without breaking accents or emoji", () => {
+  const line = "SUMMARY:Dinner: " + "Gratin dauphinois 🥔 à la crème fraîche, salade d'endives ".repeat(4);
+  const parts = fold(line).split("\r\n");
+  const enc = new TextEncoder();
+  ok(parts.every((p) => enc.encode(p).length <= 75), "a line is longer than 75 bytes");
+  ok(parts.slice(1).every((p) => p.startsWith(" ")), "continuation lines must start with a space");
+  ok(parts.map((p, i) => (i ? p.slice(1) : p)).join("") === line, "folding changed the text");
+});
+
 console.log(`${passed} passed, ${failed} failed`);
 if (failed) process.exit(1);
