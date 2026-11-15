@@ -433,11 +433,20 @@ function bindMenu(p, shopping, dates) {
       return;
     }
     if (dev.iOS) {
-      say("Preparing your calendar…");
-      if (!(await calendarFile())) return;
-      say("Tap “Add All” to put your meals in Calendar.");
-      links(`<p class="note c">Nothing happened? Add it <a href="#" id="gcalLinks">day by day to Google Calendar</a>.</p>`);
-      wire();
+      // Ask which calendar: Apple's takes the whole week at once, Google's day by day.
+      say("Which calendar do you use?");
+      links(`<div class="actions center"><button class="btn ghost small" type="button" id="calApple">Apple Calendar</button><button class="btn ghost small" type="button" id="calGoogle">Google Calendar</button></div>`);
+      $("calGoogle").onclick = () => {
+        say("Tap each day to add it to Google Calendar.");
+        links(gcalLinks() + `<p class="note c">Or the whole week at once: add your Google account in Settings → Calendar → Accounts, make it the Default Calendar, then use Apple Calendar here.</p>`);
+      };
+      $("calApple").onclick = async () => {
+        say("Preparing your calendar…");
+        if (!(await calendarFile())) return;
+        say("Tap “Add All” to put your meals in Calendar.");
+        links(`<p class="note c">Nothing happened? Add it <a href="#" id="gcalLinks">day by day to Google Calendar</a>.</p>`);
+        wire();
+      };
       return;
     }
     // Computers: download the file straight away, no round trip to the server.

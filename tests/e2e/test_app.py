@@ -99,13 +99,19 @@ with sync_playwright() as p:
     IPHONE = "Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Mobile/15E148 Safari/604.1"
     pg = page_at(b, sat, IPHONE); setup_and_print(pg)
     try:
+        pg.click("#exportCalendar")
         with pg.expect_response(lambda r: "/api/calendar/" in r.url, timeout=8000) as r:
-            pg.click("#exportCalendar")
+            pg.click("#calApple")
         resp = r.value
         check("iPhone Safari: opens a calendar link that Calendar can read",
               resp.status == 200 and resp.headers.get("content-type", "").startswith("text/calendar"))
     except Exception as e:
         check("iPhone Safari: opens a calendar link that Calendar can read", False, str(e))
+    pg.context.close()
+    pg = page_at(b, sat, IPHONE); setup_and_print(pg)
+    pg.click("#exportCalendar"); pg.click("#calGoogle"); pg.wait_for_timeout(200)
+    check("iPhone with Google Calendar: one Google Calendar link per day",
+          pg.locator("#exportLinks a[href*='calendar.google.com']").count() >= 7)
     pg.context.close()
 
     INSTAGRAM = IPHONE.replace("Safari/604.1", "Instagram 350.0.0.0 (iPhone15,2; iOS 18_1)")
