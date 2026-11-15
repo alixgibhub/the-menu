@@ -66,15 +66,16 @@ Deploy with `npm run deploy`, or connect the repo in the Cloudflare dashboard (W
 
 ## Deals
 
-The deals database is [`public/data/deals.json`](public/data/deals.json). Three scheduled Claude tasks keep it fresh, each timed to when its countries' leaflets come out:
+The deals database is [`public/data/deals.json`](public/data/deals.json). Four scheduled Claude tasks keep it fresh, each timed to when its countries' leaflets come out:
 
 | When (Brussels time) | Countries | Why then |
 |---|---|---|
 | Sunday 05:34 | Belgium, France, Germany, Switzerland | Next week's leaflets are out |
 | Sunday 06:47 | Spain, Portugal, UK, Netherlands | Same, plus multi-week loyalty prices; Dutch Wednesday chains are often out by then |
 | Monday 19:41 | Mexico | Tuesday and Wednesday produce deals are posted on Monday |
+| Wednesday 12:19 | Belgium: Colruyt and Delhaize | Their folders start on Wednesday and Thursday |
 
-Each task researches its countries from the tested sources in [`research/deal-sources.md`](research/deal-sources.md) (and updates that file when a source breaks or a new one works), keeps only deals with a real source, checks the result with `scripts/validate-deals.mjs` (drops junk and expired deals, ranks by saving, leaves other countries alone) and `npm test`, and commits it here. Cloudflare redeploys on every push, so new menus use the new deals straight away; menus already printed don't change.
+Each task researches its countries from the tested sources in [`research/deal-sources.md`](research/deal-sources.md) (and updates that file when a source breaks or a new one works), keeps only deals with a real source, checks the result with `scripts/validate-deals.mjs` (drops junk and expired deals, ranks by saving, leaves other countries and stores it didn't research alone) and `npm test`, and commits it here. Cloudflare redeploys on every push, so new menus use the new deals straight away; menus already printed don't change.
 
 On `/admin` (password: `ADMIN_TOKEN`) you can see when each country was last researched and add your own deals on top:
 

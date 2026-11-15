@@ -32,8 +32,17 @@ for (const cc of Object.keys(COUNTRIES)) {
   const found = Object.values(fresh).reduce((a, l) => a + l.length, 0);
   if (found) {
     for (const [store, list] of Object.entries(fresh)) db.stores[`${cc}/${store}`] = list;
-    db.countries[cc] = { at: now, found, stores: Object.keys(fresh).length };
-    summary.push(`${cc}: ${found} deals in ${Object.keys(fresh).length} stores`);
+    // Stores this research didn't cover keep last time's deals that are still
+    // valid, so a midweek top-up of one store never wipes the others.
+    let kept = 0;
+    for (const [key, list] of Object.entries(previous.stores || {})) {
+      if (!key.startsWith(cc + "/") || db.stores[key]) continue;
+      const live = list.filter((d) => !d.validTo || d.validTo >= today);
+      if (live.length) { db.stores[key] = live; kept += live.length; }
+    }
+    const stores = Object.keys(db.stores).filter((k) => k.startsWith(cc + "/")).length;
+    db.countries[cc] = { at: now, found: found + kept, stores };
+    summary.push(`${cc}: ${found} new deals in ${Object.keys(fresh).length} stores` + (kept ? `, kept ${kept} still-valid deals in other stores` : ""));
     continue;
   }
   // nothing new: keep last time's deals that are still valid

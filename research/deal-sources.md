@@ -24,13 +24,17 @@ Last checked by hand: 14 Nov 2026, except where noted.
 | promotiez.be/winkels/<store>/folders-promoties | Each store's current and next folder, with dates and links to /bekijk/aanbiedingen/<store>-folder-<id> | Works |
 | promotiez.be/bekijk/aanbiedingen/<store>-folder-<id> | Every product and price in that folder, folder dates | Works |
 | promotiez.be/winkels/<store>/promoties | Current deals with regular price and % off; next week's show as "Vanaf morgen geldig" with no end date, over ~9 result pages (only page 1 fetches) | Works (15 Nov 2026) |
+| promotiez.be/promoties/<keyword>/<store> (e.g. /promoties/pasta/colruyt) | A table per keyword: full product name with pack size, regular price, promo price, mechanism, start and end date. The best source for Colruyt. Find keyword pages with WebSearch (allowed_domains promotiez.be, e.g. "promotiez colruyt groenten promo"); try keywords like groenten, fruit, aardappelen, vlees, kip, gehakt, vis, zalm, kaas, yoghurt, eieren, brood, rijst, pasta, tofu, diepvriesgroenten. Only take rows whose end date is on or after Monday | Works (15 Nov 2026) |
+| promotiez.be/bekijk/aanbiedingen/colruyt-folder-<id> | Only ~2 products per page in the captions, so a 30-page folder gives few fresh deals: use it to find the folder dates and product names, then the keyword pages for the rest | Partial (15 Nov 2026) |
+| colruyt.be/nl/acties/vers, /acties/toppromo | Dates only; products load with JavaScript | Dead end (15 Nov 2026) |
 | promotiez.be/bekijk/aanbiedingen/carrefour-folder-<id> | Carrefour runs several overlapping folders (e.g. 11–23 and 18–30 Nov); check them all. Folder prices only, "Beste keuzes" box sometimes shows a regular price | Works (15 Nov 2026) |
 
 Store slugs: lidl, aldi, delhaize, colruyt, carrefour, albert-heijn. Aldi folder URLs look like
 /bekijk/aanbiedingen/aldi-folder-week-<n>-<id>. Folder pages give no pack sizes and rarely a
 regular price. Delhaize's next folder can show captions without prices on Sunday: use the current one.
 Timing: Lidl and Aldi run Monday–Saturday; Delhaize Thursday–Wednesday; Colruyt
-two weeks from Wednesday. Lidl only shows next week's fresh-food deals from
+two weeks from Wednesday. Colruyt's and Delhaize's next folders usually aren't online
+on Sunday, so a Wednesday task tops up those two stores. Lidl only shows next week's fresh-food deals from
 Sunday. Every Delhaize promotion needs the SuperPlus card.
 
 ## France (FR)

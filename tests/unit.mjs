@@ -73,12 +73,14 @@ test("dealsFrom drops deals that end before the planned week", () => {
 test("the validator writes a clean database and keeps other countries", () => {
   const dir = mkdtempSync(join(tmpdir(), "deals-"));
   const out = join(dir, "deals.json"), research = join(dir, "research.json");
-  writeFileSync(out, JSON.stringify({ stores: { "FR/Lidl": [{ item: "kept", price: 1, validTo: "2099-01-01", source: "https://x.fr" }] }, countries: { FR: { at: "x", found: 1 } } }));
+  writeFileSync(out, JSON.stringify({ stores: { "FR/Lidl": [{ item: "kept", price: 1, validTo: "2099-01-01", source: "https://x.fr" }], "BE/Colruyt": [{ item: "Spruitjes", price: 2.29, validTo: "2099-01-01", source: "https://x.be" }], "BE/Aldi": [{ item: "expired", price: 1, validTo: "2000-01-01", source: "https://x.be" }] }, countries: { FR: { at: "x", found: 1 } } }));
   writeFileSync(research, JSON.stringify({ BE: { Lidl: [{ item: "Kip", price: 4, was: 6, validTo: "2099-01-01", source: "https://x.be" }, { item: "bad", price: 1 }] } }));
   execFileSync(process.execPath, [new URL("scripts/validate-deals.mjs", root).pathname, research], { env: { ...process.env, DEALS_OUT: out }, stdio: "pipe" });
   const db = JSON.parse(readFileSync(out, "utf8"));
   ok(db.stores["BE/Lidl"]?.length === 1, "BE deal not written");
   ok(db.stores["FR/Lidl"]?.[0].item === "kept", "FR deals not kept");
+  ok(db.stores["BE/Colruyt"]?.[0].item === "Spruitjes", "a store the research skipped lost its valid deals");
+  ok(!db.stores["BE/Aldi"], "expired deals kept");
 });
 
 // ---------- the menu prompt ----------

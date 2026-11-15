@@ -69,7 +69,7 @@ export function cleanDeals(found, cc, today = iso(new Date())) {
     }).filter(Boolean)
       // biggest saving first
       .sort((x, y) => ((y.was ? 1 - y.price / y.was : 0) - (x.was ? 1 - x.price / x.was : 0)))
-      .slice(0, 12);
+      .slice(0, 30);
     if (clean.length) out[store] = clean;
   }
   return out;
