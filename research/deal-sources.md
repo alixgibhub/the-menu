@@ -73,7 +73,11 @@ Sunday, so a Sunday pull only covers Monday–Wednesday. Manor, Volg and Spar ar
 |---|---|---|
 | radarsuper.com/folletos/<chain> (dia, carrefour, lidl, aldi, alcampo, ahorramas) | Up to 60 offers per chain with price, reference price and % off; leaflet dates on radarsuper.com/folletos | Works |
 | radarsuper.com/folletos/mercadona | Weekly selection of Mercadona price drops | Works. Mercadona publishes no leaflet and runs almost no promotions |
+| radarsuper.com/folletos/aldi | Leaflet dates only; no prices since June 2026 | Dead end (15 Nov 2026) |
+| radarsuper.com/folletos/alcampo | Leaflet dates; only a few online-price offers, mostly not fresh food | Partial (15 Nov 2026) |
+| radarsuper.com/folletos/lidl/provincia/<province> | Current leaflet's offers with prices; next leaflet's dates only, not its prices (Sunday) | Partial (15 Nov 2026) |
 | tiendeo.com/<city>/<store> | Leaflet dates, only a handful of products | Partial |
+| tiendeo.com/<city>/eroski, /consum | Leaflet dates only; no usable food prices | Dead end (15 Nov 2026) |
 | tiendeo.com/Catalogos/<id> | — | Blocked (robots) |
 | carrefour.es category pages | — | Blocked (fetch refused) |
 | lidl.es weekly offer pages | Category links only, no prices | Dead end |
@@ -84,10 +88,13 @@ Timing: Lidl Monday–Sunday; Dia Wednesday–Tuesday; Carrefour irregular.
 
 | Source | What it gives | Status |
 |---|---|---|
-| tiendeo.pt/<city>/lidl (e.g. vendas-novas) | Lidl products with price, regular price, % off and leaflet end date | Works |
+| folhetos.pt/<store> (continente, lidl, aldi, pingo-doce) and /<store>/antevisao-folheto-…-<id> | Leaflet list with dates; leaflet pages give a text summary of highlights with prices and often regular prices (Lidl Plus marked). auchan and intermarche list pages are stale (October) | Works (new, 15 Nov 2026) |
+| ocacapromocoes.pt/folheto-<store>-antevisao-promocoes-<dates>/ (tags: /tag/antevisao-folheto-auchan/, -intermarche/, -continente/) | Leaflet previews with 3–4 priced highlights, no regular prices; next week's Lidl out by Sunday. Only source found for Auchan and Intermarché | Works (new, 15 Nov 2026) |
+| tiendeo.pt/<city>/lidl (e.g. vendas-novas) | Only ~7 "most clicked" products, from the leaflet ending Sunday; next week's not listed with products | Partial (15 Nov 2026) |
 | tiendeo.pt/ofertas-catalogos/continente, /pingo-doce | Catalogue lists and dates | Works for dates |
-| feed.continente.pt/folhetos/semanal-<week>-<year>-… | The whole weekly Continente leaflet as text, with prices and discounts | Works. Find the current week by searching "feed.continente.pt folhetos semanal" |
-| continente.pt/frescos/com-desconto/ | Fresh products on discount, with old and new price | Works (no dates: use the leaflet's) |
+| feed.continente.pt/folhetos/semanal-<week>-<year>-… | The whole weekly Continente leaflet as text, with prices and discounts (week 46 = 10–16 Nov, Tue–Mon) | Fetch not permitted on 15 Nov 2026 (worked before). Find the current week by searching "feed.continente.pt folhetos semanal" |
+| continente.pt/frescos/com-desconto/ | "Página não encontrada" | Dead end (15 Nov 2026) |
+| radarsuper.com/pt/folhetos/<chain> (continente) | Leaflet dates only; products only in images | Works for dates (new, 15 Nov 2026) |
 | folhetos.pt/continente/… | Leaflet preview with dates and highlights | Works |
 
 Timing: Lidl Monday–Sunday; Continente weekly Tuesday–Monday; Pingo Doce
@@ -98,8 +105,8 @@ weekly plus weekend leaflets.
 | Source | What it gives | Status |
 |---|---|---|
 | folderz.nl/winkels/<store>-folders.html (AH: folderz.nl/winkels/deen/locaties; Lidl: folderz.nl/winkels/lidl/locaties/best; Dirk: folderz.nl/winkels/dirk/locaties/amsterdam) | Each store's current and next folder, with dates and links to /bekijk/aanbiedingen/<store>-folder-<id> | Works |
-| folderz.nl/bekijk/aanbiedingen/<store>-folder-<id> | Every product and price in that folder, folder dates (regular prices mostly missing) | Works |
-| supermarktscanner.nl/<store>-aanbiedingen (dirk, albert-heijn, plus, jumbo, hoogvliet, dekamarkt) | Current deals with regular price, % off and end date | Works for Dirk; other chains are often weeks stale, so check "Laatste prijs update" |
+| folderz.nl/bekijk/aanbiedingen/<store>-folder-<id> | Every product and price in that folder, folder dates (regular prices mostly missing). Find IDs with WebSearch (allowed_domains folderz.nl, "folderz <store> folder week <n>"). Vomar and Ekoplaza folder links are on folderz.nl/winkels/<store>/locaties/<city> (vomar: amsterdam, ekoplaza: utrecht) | Works (all 10 chains, 15 Nov 2026) |
+| supermarktscanner.nl/<store>-aanbiedingen (dirk, albert-heijn, plus, jumbo, hoogvliet, dekamarkt) | Current deals with regular price, % off and end date | Works for Dirk (mostly canned/dry goods); other chains are often stale (check "Laatste prijs update"); AH and Jumbo updated 15 Nov but list almost no fresh food (15 Nov 2026) |
 | folderz.nl/winkels/<store>/folders-aanbiedingen | — | Blocked (robots) |
 
 Store slugs: albert-heijn, jumbo, lidl, aldi, plus, dirk, vomar, hoogvliet, dekamarkt, ekoplaza.
@@ -135,11 +142,16 @@ found for Alsuper.
 | Source | What it gives | Status |
 |---|---|---|
 | tesco.com/groceries/en-GB/shop/fresh-food/… category pages and /buylists/… | Clubcard Prices with regular price and "Offer valid … until …" dates | Works. Needs the Tesco Clubcard |
-| sainsburys.co.uk … /fruit-vegetables-special-offers | Nectar Prices with the price without Nectar | Works (no dates). Needs Nectar |
+| tesco.com/groceries/en-GB/buylists/meat-fish-poultry/save-25-percent and /buylists/clubcard-prices/top-picks | More Clubcard Prices on meat and fish, with regular price and validity dates | Works (new, 15 Nov 2026) |
+| sainsburys.co.uk … /fruit-vegetables-special-offers | Nectar Prices with the price without Nectar | Works (no dates). Needs Nectar. Link too long for WebFetch on 15 Nov 2026 |
+| sainsburys.co.uk/groceries/browse/meat-and-fish/meat-and-fish-essentials/c:1020377/offer | Nectar Prices on meat and fish with regular price, no dates | Works (no dates, 15 Nov 2026) |
 | corporate.sainsburys.co.uk press releases | Weekend Nectar Price events with dates | Works for dates |
 | aldi.co.uk/super-6 | The six fruit and veg offers with regular price | Works (no dates; Super 6 changes every two weeks on Thursday) |
 | leaflets.aldi.co.uk | Leaflet text with Super 6 dates | Works for dates |
+| aldi.co.uk/leaflet/uk_week<n> (linked from aldi.co.uk/specialbuys/leaflet) | Weekly leaflet | Fetch not permitted (15 Nov 2026) |
+| aldi.co.uk/super-weekly-offers | Pies and Christmas items, no dates | Dead end (15 Nov 2026) |
 | lidl.co.uk Pick of the Week | Dates only; products are in the Lidl Plus app | Dead end |
-| Asda, Morrisons | Not tested yet | — |
+| groceries.morrisons.com/promotions/fresh-foods/176739 | Dairy and deli meat offers, no dates or More Card labels, no fresh produce | Partial (no dates, 15 Nov 2026) |
+| asda.com/groceries/price-drop/… | — | Fetch failed (15 Nov 2026) |
 
 Most UK deals are loyalty-card prices, so set "card" on every one.

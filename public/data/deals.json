@@ -27,24 +27,24 @@
    "stores": 9
   },
   "ES": {
-   "at": "2026-11-13T22:50:34.579Z",
-   "found": 10,
-   "stores": 1
+   "at": "2026-11-15T05:57:59.315Z",
+   "found": 24,
+   "stores": 4
   },
   "PT": {
-   "at": "2026-11-13T22:50:34.579Z",
-   "found": 15,
-   "stores": 3
+   "at": "2026-11-15T05:57:59.315Z",
+   "found": 34,
+   "stores": 6
   },
   "NL": {
-   "at": "2026-11-14T14:59:00.146Z",
-   "found": 41,
-   "stores": 5
+   "at": "2026-11-15T05:57:59.315Z",
+   "found": 94,
+   "stores": 10
   },
   "UK": {
-   "at": "2026-11-13T22:50:34.579Z",
-   "found": 2,
-   "stores": 1
+   "at": "2026-11-15T05:57:59.315Z",
+   "found": 25,
+   "stores": 3
   }
  },
  "stores": {
@@ -1422,217 +1422,479 @@
     "source": "https://www.prospektangebote.de/angebote/brokkoli"
    }
   ],
-  "ES/Lidl": [
+  "ES/Dia": [
    {
-    "item": "Aguacate a granel (1 kg)",
-    "price": 3.59,
-    "was": 5.19,
+    "item": "Calabaza (pieza aprox. 1,6 kg)",
+    "price": 1.58,
+    "was": 3.18,
     "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "card": "Lidl Plus",
-    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
+    "validTo": "2026-11-17",
+    "source": "https://radarsuper.com/folletos/dia"
    },
    {
-    "item": "Mejillón fresco 1 kg",
-    "price": 2.45,
-    "was": 2.89,
-    "validFrom": "2026-11-09",
-    "validTo": "2026-11-15",
-    "source": "https://radarsuper.com/folletos/lidl/provincia/madrid"
-   },
-   {
-    "item": "Naranjas 3 kg",
-    "price": 4.47,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
-   },
-   {
-    "item": "Naranja a granel (1 kg)",
+    "item": "Cebolla malla 1 kg",
     "price": 0.75,
-    "validFrom": "2026-11-20",
-    "validTo": "2026-11-22",
-    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
-   },
-   {
-    "item": "Cebolla 2 kg",
-    "price": 1.5,
-    "validFrom": "2026-11-20",
-    "validTo": "2026-11-22",
-    "card": "Lidl Plus",
-    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
-   },
-   {
-    "item": "Filete de pechuga de pollo aprox. 500 g",
-    "price": 3.99,
+    "was": 1.5,
     "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
+    "validTo": "2026-11-17",
+    "source": "https://radarsuper.com/folletos/dia"
    },
    {
-    "item": "Filetes de merluza argentina Ocean Sea 970 g",
-    "price": 7.59,
+    "item": "Patatas 4 kg",
+    "price": 2.99,
+    "was": 4.49,
     "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
+    "validTo": "2026-11-17",
+    "source": "https://radarsuper.com/folletos/dia"
    },
    {
-    "item": "Dorada limpia aprox. 500 g",
-    "price": 6.25,
+    "item": "Pera conferencia bandeja 700 g",
+    "price": 1.15,
+    "was": 1.69,
     "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
+    "validTo": "2026-11-17",
+    "source": "https://radarsuper.com/folletos/dia"
    },
    {
-    "item": "Patatas para freír 2,5 kg",
-    "price": 2.62,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://eldiariodeunapeluquera.com/2026/11/10/catalogo-lidl-alimentacion-16-22-noviembre-2026/"
-   },
-   {
-    "item": "Campo Largo Alubia blanca 1 kg",
-    "price": 1.99,
-    "validFrom": "2026-11-09",
-    "validTo": "2026-11-15",
-    "source": "https://radarsuper.com/folletos/lidl/provincia/madrid"
-   }
-  ],
-  "PT/Lidl": [
-   {
-    "item": "Pimento mini (Mix)",
+    "item": "Pimiento semipicante 200 g",
     "price": 1.19,
-    "was": 1.99,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-15",
-    "source": "https://www.tiendeo.pt/vendas-novas/lidl"
+    "was": 1.69,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-17",
+    "source": "https://radarsuper.com/folletos/dia"
    },
    {
-    "item": "Cebola nacional",
-    "price": 0.99,
-    "was": 1.49,
-    "validFrom": "2026-11-09",
-    "validTo": "2026-11-15",
-    "source": "https://www.tiendeo.pt/vendas-novas/lidl"
+    "item": "Mandarina selección malla 750 g",
+    "price": 1.99,
+    "was": 2.79,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-17",
+    "source": "https://radarsuper.com/folletos/dia"
    },
    {
-    "item": "Maçã Golden nacional",
-    "price": 1.49,
-    "was": 1.99,
-    "validFrom": "2026-11-09",
-    "validTo": "2026-11-15",
-    "source": "https://www.tiendeo.pt/vendas-novas/lidl"
+    "item": "Aguacate 700 g",
+    "price": 2.75,
+    "was": 3.69,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-17",
+    "source": "https://radarsuper.com/folletos/dia"
    },
    {
-    "item": "Queijo flamengo em fatias Milbona",
+    "item": "Puerro (unidad)",
+    "price": 0.69,
+    "was": 0.89,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-17",
+    "source": "https://radarsuper.com/folletos/dia"
+   },
+   {
+    "item": "Mandarina malla 1 kg",
+    "price": 1.99,
+    "was": 2.5,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-17",
+    "source": "https://radarsuper.com/folletos/dia"
+   },
+   {
+    "item": "Coliflor (aprox. 1 kg)",
     "price": 1.99,
     "was": 2.49,
-    "validFrom": "2026-11-09",
-    "validTo": "2026-11-15",
-    "source": "https://www.tiendeo.pt/vendas-novas/lidl"
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-17",
+    "source": "https://radarsuper.com/folletos/dia"
+   }
+  ],
+  "ES/Carrefour": [
+   {
+    "item": "Queso curado Tierra de Tradición (pieza 1,1 kg)",
+    "price": 13.69,
+    "was": 19.95,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://radarsuper.com/folletos/carrefour"
    },
    {
-    "item": "Leite de pastagem Terra Nostra",
-    "price": 0.89,
-    "was": 1.07,
-    "validFrom": "2026-11-09",
-    "validTo": "2026-11-15",
-    "source": "https://www.tiendeo.pt/vendas-novas/lidl"
+    "item": "Brócoli Carrefour 500 g",
+    "price": 0.95,
+    "was": 1.29,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://radarsuper.com/folletos/carrefour"
    },
    {
-    "item": "Atum natural",
-    "price": 0.69,
-    "was": 0.79,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-15",
-    "source": "https://www.tiendeo.pt/vendas-novas/lidl"
+    "item": "Pera ercolina Carrefour (aprox. 1 kg)",
+    "price": 2.29,
+    "was": 2.85,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://radarsuper.com/folletos/carrefour"
+   }
+  ],
+  "ES/Mercadona": [
+   {
+    "item": "Hígados y corazones de pollo 390 g",
+    "price": 1.2,
+    "was": 1.56,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://radarsuper.com/folletos/mercadona"
+   },
+   {
+    "item": "Manzana roja acidulce (pieza aprox. 270 g)",
+    "price": 0.5,
+    "was": 0.65,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://radarsuper.com/folletos/mercadona"
+   },
+   {
+    "item": "Rama de tomates 740 g",
+    "price": 1.57,
+    "was": 2,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://radarsuper.com/folletos/mercadona"
+   },
+   {
+    "item": "Naranjas malla 3 kg",
+    "price": 4.65,
+    "was": 5.85,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://radarsuper.com/folletos/mercadona"
+   },
+   {
+    "item": "Solomillos de pollo 400 g",
+    "price": 3.36,
+    "was": 4.2,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://radarsuper.com/folletos/mercadona"
+   },
+   {
+    "item": "Bífidus natural Activia 0% pack 8",
+    "price": 3.3,
+    "was": 3.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://radarsuper.com/folletos/mercadona"
+   },
+   {
+    "item": "Mandarina malla 1 kg",
+    "price": 1.95,
+    "was": 2.35,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://radarsuper.com/folletos/mercadona"
+   },
+   {
+    "item": "Filetes de pechuga de pollo 590 g",
+    "price": 5,
+    "was": 5.9,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://radarsuper.com/folletos/mercadona"
+   },
+   {
+    "item": "Chuletas de lomo de cerdo finas 530 g",
+    "price": 3.11,
+    "was": 3.66,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://radarsuper.com/folletos/mercadona"
+   },
+   {
+    "item": "Pechugas enteras de pollo 580 g",
+    "price": 3.33,
+    "was": 3.86,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://radarsuper.com/folletos/mercadona"
+   }
+  ],
+  "ES/Alcampo": [
+   {
+    "item": "Findus guisantes finos congelados 800 g",
+    "price": 2.8,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-18",
+    "source": "https://radarsuper.com/folletos/alcampo"
    }
   ],
   "PT/Continente": [
    {
-    "item": "Bife de novilho Continente",
-    "price": 12.99,
-    "was": 19.99,
+    "item": "Camarão grande 20/30 Vannamei congelado (kg)",
+    "price": 7.99,
+    "was": 9.99,
     "validFrom": "2026-11-10",
     "validTo": "2026-11-16",
-    "source": "https://www.tiendeo.pt/promocoes-folhetos/continente-bom-dia"
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-10-a-16-novembro-6951"
    },
    {
-    "item": "Cebola nova",
-    "price": 1.35,
-    "was": 1.69,
+    "item": "Entrecosto de porco Continente (kg)",
+    "price": 4.79,
+    "was": 5.29,
     "validFrom": "2026-11-10",
     "validTo": "2026-11-16",
-    "source": "https://www.tiendeo.pt/promocoes-folhetos/continente-bom-dia"
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-10-a-16-novembro-6951"
    },
    {
-    "item": "Maminha de bovino Continente",
-    "price": 15.99,
-    "was": 16.99,
+    "item": "Dourada grande fresca +600 g (kg)",
+    "price": 7.99,
     "validFrom": "2026-11-10",
     "validTo": "2026-11-16",
-    "source": "https://www.tiendeo.pt/promocoes-folhetos/continente-bom-dia"
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-10-a-16-novembro-6951"
    },
    {
-    "item": "Cachaço de porco Continente",
-    "price": 5.29,
+    "item": "Peito de frango Continente, balcão (kg)",
+    "price": 6.19,
     "validFrom": "2026-11-10",
     "validTo": "2026-11-16",
-    "source": "https://www.tiendeo.pt/promocoes-folhetos/continente-bom-dia"
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-10-a-16-novembro-6951"
    },
    {
-    "item": "Lombos de bacalhau Continente",
-    "price": 20.99,
-    "validFrom": "2026-11-10",
-    "validTo": "2026-11-16",
-    "source": "https://www.tiendeo.pt/promocoes-folhetos/continente-bom-dia"
-   },
-   {
-    "item": "Bacalhau Continente",
+    "item": "Bacalhau graúdo da Noruega Continente Seleção (kg)",
     "price": 23.99,
     "validFrom": "2026-11-10",
     "validTo": "2026-11-16",
-    "source": "https://www.tiendeo.pt/promocoes-folhetos/continente-bom-dia"
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-10-a-16-novembro-6951"
+   },
+   {
+    "item": "Postas de salmão (kg)",
+    "price": 12.99,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-16",
+    "source": "https://www.ocacapromocoes.pt/folheto-continente-fim-de-semana-antevisao-promocoes-13-a-16-de-novembro/"
+   },
+   {
+    "item": "Couve brócolos (kg)",
+    "price": 1.99,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-16",
+    "source": "https://www.ocacapromocoes.pt/folheto-continente-fim-de-semana-antevisao-promocoes-13-a-16-de-novembro/"
+   },
+   {
+    "item": "Romã (kg)",
+    "price": 1.99,
+    "validFrom": "2026-11-13",
+    "validTo": "2026-11-16",
+    "source": "https://www.ocacapromocoes.pt/folheto-continente-fim-de-semana-antevisao-promocoes-13-a-16-de-novembro/"
    }
   ],
   "PT/Pingo Doce": [
    {
-    "item": "Leite UHT de pastagem Terra Nostra",
-    "price": 0.89,
-    "was": 1.07,
+    "item": "Romã vermelha nacional (kg)",
+    "price": 1.99,
+    "was": 2.99,
     "validFrom": "2026-11-10",
     "validTo": "2026-11-16",
-    "source": "https://www.tiendeo.pt/ofertas-catalogos/pingo-doce"
+    "source": "https://www.folhetos.pt/pingo-doce/antevisao-folheto-pingo-doce-lojas-grandes-promocoes-de-10-a-16-novembro-6950"
    },
    {
-    "item": "Queijo flamengo Limiano",
+    "item": "Queijo flamengo Limiano fatias 200 g",
     "price": 2.35,
     "was": 2.79,
     "validFrom": "2026-11-10",
     "validTo": "2026-11-16",
-    "source": "https://www.tiendeo.pt/ofertas-catalogos/pingo-doce"
+    "source": "https://www.folhetos.pt/pingo-doce/antevisao-folheto-pingo-doce-lojas-grandes-promocoes-de-10-a-16-novembro-6950"
    },
    {
-    "item": "Polvo limpo",
-    "price": 13.49,
-    "was": 15.49,
+    "item": "Bifanas de porco (kg)",
+    "price": 4.49,
+    "was": 4.99,
     "validFrom": "2026-11-10",
     "validTo": "2026-11-16",
-    "source": "https://www.tiendeo.pt/ofertas-catalogos/pingo-doce"
+    "source": "https://www.folhetos.pt/pingo-doce/antevisao-folheto-pingo-doce-lojas-grandes-promocoes-de-10-a-16-novembro-6950"
+   },
+   {
+    "item": "Bacalhau graúdo da Noruega Pingo Doce (kg)",
+    "price": 22.99,
+    "was": 24.99,
+    "validFrom": "2026-11-10",
+    "validTo": "2026-11-16",
+    "source": "https://www.folhetos.pt/pingo-doce/antevisao-folheto-pingo-doce-lojas-grandes-promocoes-de-10-a-16-novembro-6950"
+   }
+  ],
+  "PT/Lidl": [
+   {
+    "item": "Papaia via aérea (kg)",
+    "price": 3.59,
+    "was": 4.59,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-22",
+    "card": "Lidl Plus",
+    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-fim-de-semana-promocoes-de-20-a-22-novembro-6977"
+   },
+   {
+    "item": "Uva branca sem grainha 500 g",
+    "price": 2.19,
+    "was": 2.79,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "Lidl Plus",
+    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-promocoes-de-16-a-22-novembro-6971"
+   },
+   {
+    "item": "Pescada do Chile à posta congelada Ocean Sea (kg)",
+    "price": 8.99,
+    "was": 11.39,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-22",
+    "card": "Lidl Plus",
+    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-fim-de-semana-promocoes-de-20-a-22-novembro-6977"
+   },
+   {
+    "item": "Carne picada de bovino XXL 1 kg",
+    "price": 9.99,
+    "was": 11.69,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-22",
+    "card": "Lidl Plus",
+    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-fim-de-semana-promocoes-de-20-a-22-novembro-6977"
+   },
+   {
+    "item": "Peito de frango XXL (kg)",
+    "price": 5.99,
+    "was": 6.49,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "Lidl Plus",
+    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-promocoes-de-16-a-22-novembro-6971"
+   },
+   {
+    "item": "Clementina nacional (kg)",
+    "price": 1.49,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.ocacapromocoes.pt/folheto-lidl-frescos-antevisao-promocoes-16-a-22-de-novembro/"
+   },
+   {
+    "item": "Batata vermelha 3 kg",
+    "price": 2.79,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.ocacapromocoes.pt/folheto-lidl-frescos-antevisao-promocoes-16-a-22-de-novembro/"
+   },
+   {
+    "item": "Couve coração nacional (kg)",
+    "price": 1.19,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.ocacapromocoes.pt/folheto-lidl-frescos-antevisao-promocoes-16-a-22-de-novembro/"
+   },
+   {
+    "item": "Arroz carolino Campo Largo",
+    "price": 0.79,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.ocacapromocoes.pt/folheto-lidl-mercearia-antevisao-promocoes-16-a-22-de-novembro/"
+   },
+   {
+    "item": "Massa laços Combino",
+    "price": 0.79,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.ocacapromocoes.pt/folheto-lidl-mercearia-antevisao-promocoes-16-a-22-de-novembro/"
+   }
+  ],
+  "PT/Aldi": [
+   {
+    "item": "Arroz agulha Oriente 3 kg",
+    "price": 2.99,
+    "was": 4.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-16-a-22-novembro-6952"
+   },
+   {
+    "item": "Clementina (kg)",
+    "price": 1.69,
+    "was": 2.49,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-16-a-22-novembro-6952"
+   },
+   {
+    "item": "Chocos limpos Golden Seafood 800 g",
+    "price": 5.75,
+    "was": 7.69,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-16-a-22-novembro-6952"
+   },
+   {
+    "item": "Camarão Vannamei 20/30 (kg)",
+    "price": 7.99,
+    "was": 9.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-16-a-22-novembro-6952"
+   },
+   {
+    "item": "Entrecosto para forno (kg)",
+    "price": 5.49,
+    "was": 6.49,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-16-a-22-novembro-6952"
+   }
+  ],
+  "PT/Auchan": [
+   {
+    "item": "Couve coração (kg)",
+    "price": 1.39,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://www.ocacapromocoes.pt/folheto-auchan-antevisao-promocoes-12-a-18-de-novembro/"
+   },
+   {
+    "item": "Tomate rama (kg)",
+    "price": 2.69,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://www.ocacapromocoes.pt/folheto-auchan-antevisao-promocoes-12-a-18-de-novembro/"
+   },
+   {
+    "item": "Leite Mimosa magro ou meio gordo",
+    "price": 0.89,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://www.ocacapromocoes.pt/folheto-auchan-antevisao-promocoes-12-a-18-de-novembro/"
+   }
+  ],
+  "PT/Intermarché": [
+   {
+    "item": "Laranja (kg)",
+    "price": 1.49,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://www.ocacapromocoes.pt/folheto-intermarche-antevisao-promocoes-12-a-18-de-novembro/"
+   },
+   {
+    "item": "Esparguete Nacional",
+    "price": 0.79,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://www.ocacapromocoes.pt/folheto-intermarche-antevisao-promocoes-12-a-18-de-novembro/"
+   },
+   {
+    "item": "Iogurte Oikos Danone",
+    "price": 2.15,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://www.ocacapromocoes.pt/folheto-intermarche-antevisao-promocoes-12-a-18-de-novembro/"
+   },
+   {
+    "item": "Manteiga com sal Milhafre",
+    "price": 2.08,
+    "validFrom": "2026-11-12",
+    "validTo": "2026-11-18",
+    "source": "https://www.ocacapromocoes.pt/folheto-intermarche-antevisao-promocoes-12-a-18-de-novembro/"
    }
   ],
   "NL/Albert Heijn": [
    {
-    "item": "AH Germinimix",
-    "price": 5.5,
-    "was": 8,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "card": "AH Bonuskaart",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
-   },
-   {
-    "item": "AH Mandarijnen 1 kg",
+    "item": "AH Mandarijnen 1kg",
     "price": 1.29,
     "validFrom": "2026-11-16",
     "validTo": "2026-11-22",
@@ -1640,7 +1902,7 @@
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
    },
    {
-    "item": "AH Mager rundergehakt 300 g",
+    "item": "AH Mager rundergehakt 300g",
     "price": 3.99,
     "validFrom": "2026-11-16",
     "validTo": "2026-11-22",
@@ -1656,15 +1918,7 @@
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
    },
    {
-    "item": "AH Snoepgroente tomaat 500 g",
-    "price": 4.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "card": "AH Bonuskaart",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
-   },
-   {
-    "item": "AH Zoete kleine appeltjes 1 kg",
+    "item": "AH Zoete kleine appeltjes 1kg",
     "price": 2.24,
     "validFrom": "2026-11-16",
     "validTo": "2026-11-22",
@@ -1680,14 +1934,6 @@
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
    },
    {
-    "item": "AH Speltbrood heel",
-    "price": 1.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "card": "AH Bonuskaart",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
-   },
-   {
     "item": "AH Bakkersbrood Les Pains Bastille",
     "price": 1.49,
     "validFrom": "2026-11-16",
@@ -1696,8 +1942,24 @@
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
    },
    {
-    "item": "De Zaanse Hoeve Goudse jong 48+ plakken",
+    "item": "Alle AH Speltbroden",
+    "price": 1.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "AH Bonuskaart",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+   },
+   {
+    "item": "De Zaanse Hoeve Goudse jong 48+ plakken voordeelpak",
     "price": 3.59,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "card": "AH Bonuskaart",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+   },
+   {
+    "item": "AH Snoepgroente tomaat 500g",
+    "price": 4.99,
     "validFrom": "2026-11-16",
     "validTo": "2026-11-22",
     "card": "AH Bonuskaart",
@@ -1705,20 +1967,6 @@
    }
   ],
   "NL/Lidl": [
-   {
-    "item": "Zoete aardappel",
-    "price": 0.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-21",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
-   },
-   {
-    "item": "Bleekselderij",
-    "price": 0.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-21",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
-   },
    {
     "item": "Rode paprika",
     "price": 0.59,
@@ -1734,8 +1982,15 @@
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
    },
    {
-    "item": "Bio bloemkool",
-    "price": 1.99,
+    "item": "Zoete aardappel",
+    "price": 0.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
+   },
+   {
+    "item": "Bleekselderij",
+    "price": 0.99,
     "validFrom": "2026-11-16",
     "validTo": "2026-11-21",
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
@@ -1748,8 +2003,15 @@
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
    },
    {
-    "item": "Zespri Kiwi gold",
-    "price": 3.99,
+    "item": "Bio bloemkool",
+    "price": 1.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
+   },
+   {
+    "item": "Perssinaasappelen",
+    "price": 2.99,
     "validFrom": "2026-11-16",
     "validTo": "2026-11-21",
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
@@ -1769,14 +2031,7 @@
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
    },
    {
-    "item": "Milbona Goudse kaas oud stuk",
-    "price": 3.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-21",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3901610"
-   },
-   {
-    "item": "Freshona Edamame",
+    "item": "Freshona Edamame (diepvries)",
     "price": 1.99,
     "validFrom": "2026-11-16",
     "validTo": "2026-11-21",
@@ -1792,13 +2047,6 @@
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
    },
    {
-    "item": "Cocktailtomaten",
-    "price": 1.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
-   },
-   {
     "item": "Doyenne du Comice peren",
     "price": 1.65,
     "validFrom": "2026-11-16",
@@ -1806,8 +2054,15 @@
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
    },
    {
-    "item": "Daylicious Nasi-bami-groenten",
-    "price": 1.39,
+    "item": "Cocktailtomaten",
+    "price": 1.99,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+   },
+   {
+    "item": "HAK Sperziebonen of rode kool",
+    "price": 1.29,
     "validFrom": "2026-11-16",
     "validTo": "2026-11-22",
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
@@ -1820,8 +2075,15 @@
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
    },
    {
-    "item": "Verse worsten",
-    "price": 3.99,
+    "item": "Speklappen",
+    "price": 3.49,
+    "validFrom": "2026-11-16",
+    "validTo": "2026-11-22",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+   },
+   {
+    "item": "Golden Seafood Maatjesharing",
+    "price": 2.99,
     "validFrom": "2026-11-16",
     "validTo": "2026-11-22",
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
@@ -1841,8 +2103,8 @@
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
    },
    {
-    "item": "Hummus naturel",
-    "price": 0.89,
+    "item": "Bakkerij Kara Firin Mini Turks brood",
+    "price": 1.29,
     "validFrom": "2026-11-16",
     "validTo": "2026-11-22",
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
@@ -1865,8 +2127,8 @@
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
    },
    {
-    "item": "Sperziebonen",
-    "price": 1.49,
+    "item": "PLUS Kaki of kleine zoete appeltjes",
+    "price": 2.49,
     "validFrom": "2026-11-18",
     "validTo": "2026-11-24",
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
@@ -1879,14 +2141,35 @@
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
    },
    {
-    "item": "PLUS Boerentrots Verse worst",
-    "price": 3.19,
+    "item": "Sperziebonen",
+    "price": 1.49,
     "validFrom": "2026-11-18",
     "validTo": "2026-11-24",
     "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
    },
    {
-    "item": "PLUS Goudse kaas jong belegen",
+    "item": "Bio+ Zuurkool",
+    "price": 0.89,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+   },
+   {
+    "item": "PLUS Nasi-bami of macaroni-spaghetti groenten",
+    "price": 1.49,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+   },
+   {
+    "item": "Danio Romige Kwark",
+    "price": 3.99,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+   },
+   {
+    "item": "PLUS Goudse kaas Jong belegen",
     "price": 3.99,
     "validFrom": "2026-11-18",
     "validTo": "2026-11-24",
@@ -1902,52 +2185,626 @@
   ],
   "NL/Dirk": [
    {
-    "item": "Lassie Basmatirijst 375 g",
+    "item": "Lassie Basmatirijst 375g",
     "price": 0.89,
     "was": 2.19,
+    "validFrom": "2026-11-11",
     "validTo": "2026-11-17",
     "source": "https://www.supermarktscanner.nl/dirk-aanbiedingen"
    },
    {
-    "item": "Hak Spinazie 330 g",
+    "item": "Hak Doperwten extra fijn 350g",
     "price": 0.99,
     "was": 2.35,
+    "validFrom": "2026-11-11",
     "validTo": "2026-11-17",
     "source": "https://www.supermarktscanner.nl/dirk-aanbiedingen"
    },
    {
-    "item": "Hak Witte bonen in tomatensaus 360 g",
-    "price": 0.99,
-    "was": 2.35,
-    "validTo": "2026-11-17",
-    "source": "https://www.supermarktscanner.nl/dirk-aanbiedingen"
+    "item": "Hollandse spruiten",
+    "price": 0.89,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
    },
    {
-    "item": "Hak Doperwten extra fijn 350 g",
+    "item": "Hollandse witlof",
     "price": 0.99,
-    "was": 2.35,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
+   },
+   {
+    "item": "BIO+ rode bieten",
+    "price": 0.99,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
+   },
+   {
+    "item": "Spaanse handsinaasappelen",
+    "price": 2.49,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
+   },
+   {
+    "item": "Kippenboutfilet",
+    "price": 7.99,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
+   },
+   {
+    "item": "Rundergehaktschnitzels",
+    "price": 4.99,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
+   },
+   {
+    "item": "Grote garnalen met staart, gepelde- of cocktailgarnalen",
+    "price": 1.99,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
+   },
+   {
+    "item": "Optimel kwark of Griekse stijl yoghurt",
+    "price": 1.69,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
+   }
+  ],
+  "NL/Jumbo": [
+   {
+    "item": "Mandarijnen",
+    "price": 1.29,
+    "validFrom": "2026-11-11",
     "validTo": "2026-11-17",
-    "source": "https://www.supermarktscanner.nl/dirk-aanbiedingen"
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3892591"
+   },
+   {
+    "item": "Courgette",
+    "price": 0.59,
+    "validFrom": "2026-11-11",
+    "validTo": "2026-11-17",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3892591"
+   },
+   {
+    "item": "Aubergine",
+    "price": 0.89,
+    "validFrom": "2026-11-11",
+    "validTo": "2026-11-17",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3892591"
+   },
+   {
+    "item": "Rucola, Veldsla of Melanges",
+    "price": 0.99,
+    "validFrom": "2026-11-11",
+    "validTo": "2026-11-17",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3892591"
+   },
+   {
+    "item": "Blauwe bessen",
+    "price": 3.49,
+    "validFrom": "2026-11-11",
+    "validTo": "2026-11-17",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3892591"
+   },
+   {
+    "item": "Alle Kanzi appels",
+    "price": 2.49,
+    "validFrom": "2026-11-11",
+    "validTo": "2026-11-17",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3892591"
+   },
+   {
+    "item": "Haricots Verts, Sugar Snaps of Peultjes",
+    "price": 2.19,
+    "validFrom": "2026-11-11",
+    "validTo": "2026-11-17",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3892591"
+   },
+   {
+    "item": "Jumbo Noorse Gerookte Zalm",
+    "price": 4.99,
+    "validFrom": "2026-11-11",
+    "validTo": "2026-11-17",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3892591"
+   },
+   {
+    "item": "Jumbo Roerbakgarnalen",
+    "price": 5.99,
+    "validFrom": "2026-11-11",
+    "validTo": "2026-11-17",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3892591"
+   },
+   {
+    "item": "Jumbo fijn volkoren brood",
+    "price": 1,
+    "validFrom": "2026-11-11",
+    "validTo": "2026-11-17",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3892591"
+   }
+  ],
+  "NL/Hoogvliet": [
+   {
+    "item": "SanLucar mandarijnen",
+    "price": 1.19,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
+   },
+   {
+    "item": "Courgette",
+    "price": 0.69,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
+   },
+   {
+    "item": "Sperziebonen los",
+    "price": 1.49,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
+   },
+   {
+    "item": "Alle Aardappelen",
+    "price": 2.99,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
+   },
+   {
+    "item": "Avocado Ready to eat",
+    "price": 3.99,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
+   },
+   {
+    "item": "Kipfilet",
+    "price": 8.49,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
+   },
+   {
+    "item": "Alle Campina kwark of yoghurt",
+    "price": 1.49,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
+   },
+   {
+    "item": "Alle Koggelandse kaasplakken",
+    "price": 2.49,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
+   },
+   {
+    "item": "Tijgerbrood",
+    "price": 1.79,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
+   }
+  ],
+  "NL/DekaMarkt": [
+   {
+    "item": "Blauwe bessen",
+    "price": 3.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3903461"
+   },
+   {
+    "item": "Mini krieltjes naturel of bistro",
+    "price": 0.79,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3903461"
+   },
+   {
+    "item": "Ribkarbonade",
+    "price": 1.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3903461"
+   },
+   {
+    "item": "Magere runderlappen",
+    "price": 9.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3903461"
+   },
+   {
+    "item": "Scharrel kipkluifjes",
+    "price": 3.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3903461"
+   },
+   {
+    "item": "Hoogland zalmfilet met huid",
+    "price": 7.49,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3903461"
+   },
+   {
+    "item": "Grand'Italia tortellini of gnocchi",
+    "price": 1.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3903461"
+   }
+  ],
+  "NL/Vomar": [
+   {
+    "item": "Fijne IJsbergsla",
+    "price": 0.79,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3904852"
+   },
+   {
+    "item": "Geschrapte Wortelen",
+    "price": 0.98,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3904852"
+   },
+   {
+    "item": "Bio+ Bietjes",
+    "price": 0.99,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3904852"
+   },
+   {
+    "item": "Snijbonen",
+    "price": 1.79,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3904852"
+   },
+   {
+    "item": "Kaki",
+    "price": 2.39,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3904852"
+   },
+   {
+    "item": "Goede Vangst Gerookte Noorse Zalm",
+    "price": 3.49,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3904852"
+   },
+   {
+    "item": "Weide Velden Ierse Sukadelappen",
+    "price": 8.99,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3904852"
+   },
+   {
+    "item": "Danio Kwark",
+    "price": 1.99,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3904852"
+   },
+   {
+    "item": "Molenaersbrood",
+    "price": 1.99,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3904852"
+   },
+   {
+    "item": "Lassie Rijst",
+    "price": 2.5,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-21",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3904852"
+   }
+  ],
+  "NL/Ekoplaza": [
+   {
+    "item": "Groene kool",
+    "price": 1.59,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
+   },
+   {
+    "item": "Puur NL Boerenkool",
+    "price": 2.59,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
+   },
+   {
+    "item": "PotatoNext Aardappel Vastkokend",
+    "price": 1.79,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
+   },
+   {
+    "item": "Demeter Peer Conference",
+    "price": 1.99,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
+   },
+   {
+    "item": "Demeter Clementine Mandarijnen",
+    "price": 2.49,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
+   },
+   {
+    "item": "Ravenswaard Boerenkaas",
+    "price": 2.09,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
+   },
+   {
+    "item": "Bastiaansen Geitenkaas",
+    "price": 2.89,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
+   },
+   {
+    "item": "Laitois Roomkefir",
+    "price": 1.35,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
+   },
+   {
+    "item": "Bakkerij van der Westen Pane Maire Mais",
+    "price": 4.59,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
    }
   ],
   "UK/Tesco": [
    {
-    "item": "Oatly No Sugars Fibre Low Cal Edition Oat Drink 1L",
-    "price": 1.75,
-    "was": 2.4,
-    "validFrom": "2026-10-07",
-    "validTo": "2026-11-17",
+    "item": "Tesco Lamb Shoulder Half (per kg)",
+    "price": 7,
+    "was": 15,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-25",
     "card": "Tesco Clubcard",
-    "source": "https://www.tesco.com/shop/en-GB/promotions/all"
+    "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/fresh/fruit-and-vegetables"
    },
    {
-    "item": "Oatly Fibre Barista Edition Oat Drink 1L",
-    "price": 1.75,
-    "was": 2.4,
+    "item": "Tesco Lamb Whole Shoulder Joint (per kg)",
+    "price": 7,
+    "was": 14.9,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-25",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/groceries/en-GB/buylists/clubcard-prices/top-picks"
+   },
+   {
+    "item": "Tesco Pork Loin Joint (per kg, half price)",
+    "price": 3.5,
+    "was": 7,
+    "validFrom": "2026-10-28",
+    "validTo": "2026-11-22",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/fresh/fruit-and-vegetables"
+   },
+   {
+    "item": "Tesco Large Beef Brisket Joint (per kg)",
+    "price": 11.25,
+    "was": 17,
+    "validFrom": "2026-10-06",
+    "validTo": "2026-11-22",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/groceries/en-GB/buylists/clubcard-prices/fresh/dairy"
+   },
+   {
+    "item": "Tesco Large Pork Leg Joint (per kg)",
+    "price": 4.65,
+    "was": 7,
+    "validFrom": "2026-10-28",
+    "validTo": "2026-12-29",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/groceries/en-GB/buylists/meat-fish-poultry/save-25-percent"
+   },
+   {
+    "item": "Tesco Roast In Bag Butter Basted Whole Chicken 1.5kg",
+    "price": 5.4,
+    "was": 7.25,
+    "validFrom": "2026-10-28",
+    "validTo": "2026-11-17",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/fresh/fruit-and-vegetables"
+   },
+   {
+    "item": "Tesco Finest Baby Potatoes 750g",
+    "price": 0.99,
+    "was": 1.3,
+    "validFrom": "2026-11-03",
+    "validTo": "2026-11-16",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/groceries/en-GB/buylists/fresh-fruit-and-vegetables/top-offers"
+   },
+   {
+    "item": "Tesco Boneless Salmon Half Side 500g",
+    "price": 7.5,
+    "was": 9.2,
+    "validFrom": "2026-10-28",
+    "validTo": "2026-11-29",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/fresh/fruit-and-vegetables"
+   },
+   {
+    "item": "Tesco 2 Boneless Salmon Fillets 260g",
+    "price": 4,
+    "was": 4.9,
     "validFrom": "2026-10-07",
     "validTo": "2026-11-17",
     "card": "Tesco Clubcard",
-    "source": "https://www.tesco.com/shop/en-GB/promotions/all"
+    "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/fresh/fruit-and-vegetables"
+   },
+   {
+    "item": "Tesco Chicken Breast Mini Fillets 650g",
+    "price": 4.5,
+    "was": 5.4,
+    "validFrom": "2026-10-28",
+    "validTo": "2026-11-17",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/groceries/en-GB/buylists/meat-fish-poultry/save-25-percent"
+   }
+  ],
+  "UK/Sainsbury's": [
+   {
+    "item": "Sainsbury's British or New Zealand Whole Leg of Lamb approx. 1.2-1.96kg (half price)",
+    "price": 15.39,
+    "was": 30.78,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "card": "Nectar",
+    "source": "https://www.sainsburys.co.uk/groceries/browse/meat-and-fish/meat-and-fish-essentials/c:1020377/offer"
+   },
+   {
+    "item": "Sainsbury's British Smoked Mackerel Fillets 140g",
+    "price": 2.5,
+    "was": 3.75,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "card": "Nectar",
+    "source": "https://www.sainsburys.co.uk/groceries/browse/meat-and-fish/meat-and-fish-essentials/c:1020377/offer"
+   },
+   {
+    "item": "Sainsbury's Thick Cut British Pork Chops x2 500g",
+    "price": 3.93,
+    "was": 5.25,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "card": "Nectar",
+    "source": "https://www.sainsburys.co.uk/groceries/browse/meat-and-fish/meat-and-fish-essentials/c:1020377/offer"
+   },
+   {
+    "item": "Sainsbury's British or Irish 21 Day Matured Ribeye Steak 225g",
+    "price": 4.87,
+    "was": 6.5,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "card": "Nectar",
+    "source": "https://www.sainsburys.co.uk/groceries/browse/meat-and-fish/meat-and-fish-essentials/c:1020377/offer"
+   },
+   {
+    "item": "Sainsbury's British Pork Loin Steaks x4 480g",
+    "price": 3.56,
+    "was": 4.75,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "card": "Nectar",
+    "source": "https://www.sainsburys.co.uk/groceries/browse/meat-and-fish/meat-and-fish-essentials/c:1020377/offer"
+   },
+   {
+    "item": "Sainsbury's British or Irish 21 Day Matured Rump Steak 225g",
+    "price": 3,
+    "was": 4,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "card": "Nectar",
+    "source": "https://www.sainsburys.co.uk/groceries/browse/meat-and-fish/meat-and-fish-essentials/c:1020377/offer"
+   },
+   {
+    "item": "Sainsbury's British or Irish 21 Day Matured Sirloin Steak 225g",
+    "price": 4.5,
+    "was": 6,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "card": "Nectar",
+    "source": "https://www.sainsburys.co.uk/groceries/browse/meat-and-fish/meat-and-fish-essentials/c:1020377/offer"
+   },
+   {
+    "item": "Sainsbury's British Chicken Breast Fillets 320g (buy 2 for £4)",
+    "price": 4,
+    "was": 4.88,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "card": "Nectar",
+    "source": "https://www.sainsburys.co.uk/groceries/browse/meat-and-fish/meat-and-fish-essentials/c:1020377/offer"
+   },
+   {
+    "item": "Sainsbury's British Chicken Breast Fillets 640g (buy 2 for £8)",
+    "price": 8,
+    "was": 9.24,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "card": "Nectar",
+    "source": "https://www.sainsburys.co.uk/groceries/browse/meat-and-fish/meat-and-fish-essentials/c:1020377/offer"
+   }
+  ],
+  "UK/Aldi": [
+   {
+    "item": "Nature's Pick British Baby Potatoes 1kg (Super 6)",
+    "price": 0.49,
+    "was": 0.99,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "source": "https://www.aldi.co.uk/super-6"
+   },
+   {
+    "item": "Nature's Pick Red Onions 1kg (Super 6)",
+    "price": 0.59,
+    "was": 0.95,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "source": "https://www.aldi.co.uk/super-6"
+   },
+   {
+    "item": "Nature's Pick British Chestnut Mushrooms 250g (Super 6)",
+    "price": 0.59,
+    "was": 0.95,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "source": "https://www.aldi.co.uk/super-6"
+   },
+   {
+    "item": "Nature's Pick British Royal Gala Apples 6 pack (Super 6)",
+    "price": 0.99,
+    "was": 1.59,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "source": "https://www.aldi.co.uk/super-6"
+   },
+   {
+    "item": "Nature's Pick Baby Corn 145g (Super 6)",
+    "price": 0.69,
+    "was": 1.09,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "source": "https://www.aldi.co.uk/super-6"
+   },
+   {
+    "item": "Nature's Pick Crownless Pineapple (Super 6)",
+    "price": 0.69,
+    "was": 0.98,
+    "validFrom": "2026-11-15",
+    "validTo": "2026-11-18",
+    "source": "https://www.aldi.co.uk/super-6"
    }
   ]
  }
