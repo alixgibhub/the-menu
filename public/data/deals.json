@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15",
+ "updated": "2026-11-17",
  "countries": {
   "BE": {
    "at": "2026-11-15T04:45:06.499Z",
@@ -17,9 +17,9 @@
    "stores": 4
   },
   "MX": {
-   "at": "2026-11-13T22:50:34.579Z",
-   "found": 10,
-   "stores": 1
+   "at": "2026-11-17T03:01:47.732Z",
+   "found": 33,
+   "stores": 3
   },
   "DE": {
    "at": "2026-11-15T04:45:06.499Z",
@@ -33,7 +33,7 @@
   },
   "PT": {
    "at": "2026-11-15T05:57:59.315Z",
-   "found": 34,
+   "found": 22,
    "stores": 6
   },
   "NL": {
@@ -43,7 +43,7 @@
   },
   "UK": {
    "at": "2026-11-15T05:57:59.315Z",
-   "found": 25,
+   "found": 24,
    "stores": 3
   }
  },
@@ -1146,77 +1146,241 @@
     "source": "https://rappn.ch/en/offers/lidl-switzerland"
    }
   ],
+  "MX/Walmart": [
+   {
+    "item": "Plátano Chiapas (kg)",
+    "price": 18,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Piña miel (kg)",
+    "price": 30,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Pera de Anjou (kg)",
+    "price": 40,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Manzana Gala Marketside en bolsa (kg)",
+    "price": 40,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Manzana Red Delicious (kg)",
+    "price": 42,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Perón Golden (kg)",
+    "price": 40,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Aguacate Hass (kg)",
+    "price": 42,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Papa blanca (kg)",
+    "price": 51,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Lechuga Hidropónica Eva Sweet (paquete)",
+    "price": 39,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Lechuga italiana Hidropónica Eva (paquete)",
+    "price": 49,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Filete de basa blanco (kg)",
+    "price": 79,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Pescado para caldo (kg)",
+    "price": 85,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Pechuga de pollo sin hueso (kg)",
+    "price": 172,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Chuleta ahumada de cerdo (kg)",
+    "price": 132,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Carne de res para hamburguesa congelada Marketside (8 piezas)",
+    "price": 89,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Huevo rojo o blanco Aires de Campo (paquete)",
+    "price": 81,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Yogurt griego sin azúcar añadida Yoplait",
+    "price": 75,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   },
+   {
+    "item": "Queso gouda Nochebuena (1/4 kg)",
+    "price": 73,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-17",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martes-de-frescura-walmart-las-mejores-ofertas-hoy-17-de-noviembre/"
+   }
+  ],
   "MX/Soriana": [
    {
-    "item": "Pierna y muslo de pollo fresca por kg",
-    "price": 31.9,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-16",
-    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+    "item": "Papaya (kg)",
+    "price": 32.8,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://cazaofertas.com.mx/abarrotes/martes-y-miercoles-del-campo-soriana-17-y-18-de-noviembre-ofertas-frutas-y-verduras/"
    },
    {
-    "item": "Piña Gota Miel por kg",
-    "price": 29.8,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-16",
-    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+    "item": "Tomate huaje (kg)",
+    "price": 49.8,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://cazaofertas.com.mx/abarrotes/martes-y-miercoles-del-campo-soriana-17-y-18-de-noviembre-ofertas-frutas-y-verduras/"
+   }
+  ],
+  "MX/Chedraui": [
+   {
+    "item": "Plátano Chiapas (kg)",
+    "price": 13.5,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martimiercoles-de-chedraui-las-mejores-ofertas-de-este-17-y-18-de-noviembre/"
    },
    {
-    "item": "Jícama por kg",
-    "price": 26.8,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-16",
-    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+    "item": "Limón sin semilla (kg)",
+    "price": 15.5,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martimiercoles-de-chedraui-las-mejores-ofertas-de-este-17-y-18-de-noviembre/"
    },
    {
-    "item": "Manzana Golden por kg (bolsa)",
-    "price": 38.8,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-16",
-    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+    "item": "Manzana Golden chica en bolsa (kg)",
+    "price": 29.5,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martimiercoles-de-chedraui-las-mejores-ofertas-de-este-17-y-18-de-noviembre/"
    },
    {
-    "item": "Guayaba por kg",
-    "price": 42.8,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-16",
-    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+    "item": "Plátano macho (kg)",
+    "price": 29.5,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martimiercoles-de-chedraui-las-mejores-ofertas-de-este-17-y-18-de-noviembre/"
    },
    {
-    "item": "Elote blanco por pieza",
-    "price": 9.8,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-16",
-    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+    "item": "Naranja Paramount (kg)",
+    "price": 42.5,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martimiercoles-de-chedraui-las-mejores-ofertas-de-este-17-y-18-de-noviembre/"
    },
    {
-    "item": "Huevo blanco Bachoco 30 piezas (con 100 puntos Soriana Ya)",
-    "price": 56.9,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-16",
-    "card": "Soriana Ya",
-    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+    "item": "Toronja importada (kg)",
+    "price": 42.5,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martimiercoles-de-chedraui-las-mejores-ofertas-de-este-17-y-18-de-noviembre/"
    },
    {
-    "item": "Mojarra tilapia entera congelada por kg",
-    "price": 68,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-16",
-    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+    "item": "Pera asiática (kg)",
+    "price": 59.9,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martimiercoles-de-chedraui-las-mejores-ofertas-de-este-17-y-18-de-noviembre/"
    },
    {
-    "item": "Filete de mojarra por kg",
-    "price": 97,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-16",
-    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+    "item": "Uva roja sin semilla (kg)",
+    "price": 59.9,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martimiercoles-de-chedraui-las-mejores-ofertas-de-este-17-y-18-de-noviembre/"
    },
    {
-    "item": "Carne molida de cerdo por kg",
-    "price": 99,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-16",
-    "source": "https://cazaofertas.com.mx/el-buen-fin/folleto-de-fin-de-semana-buen-fest-2026-soriana-al-16-de-noviembre-2026/"
+    "item": "Pimiento verde (kg)",
+    "price": 59,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martimiercoles-de-chedraui-las-mejores-ofertas-de-este-17-y-18-de-noviembre/"
+   },
+   {
+    "item": "Pechuga de pollo fresca corte americano (kg)",
+    "price": 89.9,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martimiercoles-de-chedraui-las-mejores-ofertas-de-este-17-y-18-de-noviembre/"
+   },
+   {
+    "item": "Filete de basa blanco (kg)",
+    "price": 72,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martimiercoles-de-chedraui-las-mejores-ofertas-de-este-17-y-18-de-noviembre/"
+   },
+   {
+    "item": "Milanesa de cerdo (kg)",
+    "price": 104,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martimiercoles-de-chedraui-las-mejores-ofertas-de-este-17-y-18-de-noviembre/"
+   },
+   {
+    "item": "Milanesa de pollo (kg)",
+    "price": 169,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-18",
+    "source": "https://www.razon.com.mx/mexico/2026/11/16/martimiercoles-de-chedraui-las-mejores-ofertas-de-este-17-y-18-de-noviembre/"
    }
   ],
   "DE/Lidl": [
@@ -1619,100 +1783,6 @@
     "validFrom": "2026-11-16",
     "validTo": "2026-11-18",
     "source": "https://radarsuper.com/folletos/alcampo"
-   }
-  ],
-  "PT/Continente": [
-   {
-    "item": "Camarão grande 20/30 Vannamei congelado (kg)",
-    "price": 7.99,
-    "was": 9.99,
-    "validFrom": "2026-11-10",
-    "validTo": "2026-11-16",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-10-a-16-novembro-6951"
-   },
-   {
-    "item": "Entrecosto de porco Continente (kg)",
-    "price": 4.79,
-    "was": 5.29,
-    "validFrom": "2026-11-10",
-    "validTo": "2026-11-16",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-10-a-16-novembro-6951"
-   },
-   {
-    "item": "Dourada grande fresca +600 g (kg)",
-    "price": 7.99,
-    "validFrom": "2026-11-10",
-    "validTo": "2026-11-16",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-10-a-16-novembro-6951"
-   },
-   {
-    "item": "Peito de frango Continente, balcão (kg)",
-    "price": 6.19,
-    "validFrom": "2026-11-10",
-    "validTo": "2026-11-16",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-10-a-16-novembro-6951"
-   },
-   {
-    "item": "Bacalhau graúdo da Noruega Continente Seleção (kg)",
-    "price": 23.99,
-    "validFrom": "2026-11-10",
-    "validTo": "2026-11-16",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-10-a-16-novembro-6951"
-   },
-   {
-    "item": "Postas de salmão (kg)",
-    "price": 12.99,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-16",
-    "source": "https://www.ocacapromocoes.pt/folheto-continente-fim-de-semana-antevisao-promocoes-13-a-16-de-novembro/"
-   },
-   {
-    "item": "Couve brócolos (kg)",
-    "price": 1.99,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-16",
-    "source": "https://www.ocacapromocoes.pt/folheto-continente-fim-de-semana-antevisao-promocoes-13-a-16-de-novembro/"
-   },
-   {
-    "item": "Romã (kg)",
-    "price": 1.99,
-    "validFrom": "2026-11-13",
-    "validTo": "2026-11-16",
-    "source": "https://www.ocacapromocoes.pt/folheto-continente-fim-de-semana-antevisao-promocoes-13-a-16-de-novembro/"
-   }
-  ],
-  "PT/Pingo Doce": [
-   {
-    "item": "Romã vermelha nacional (kg)",
-    "price": 1.99,
-    "was": 2.99,
-    "validFrom": "2026-11-10",
-    "validTo": "2026-11-16",
-    "source": "https://www.folhetos.pt/pingo-doce/antevisao-folheto-pingo-doce-lojas-grandes-promocoes-de-10-a-16-novembro-6950"
-   },
-   {
-    "item": "Queijo flamengo Limiano fatias 200 g",
-    "price": 2.35,
-    "was": 2.79,
-    "validFrom": "2026-11-10",
-    "validTo": "2026-11-16",
-    "source": "https://www.folhetos.pt/pingo-doce/antevisao-folheto-pingo-doce-lojas-grandes-promocoes-de-10-a-16-novembro-6950"
-   },
-   {
-    "item": "Bifanas de porco (kg)",
-    "price": 4.49,
-    "was": 4.99,
-    "validFrom": "2026-11-10",
-    "validTo": "2026-11-16",
-    "source": "https://www.folhetos.pt/pingo-doce/antevisao-folheto-pingo-doce-lojas-grandes-promocoes-de-10-a-16-novembro-6950"
-   },
-   {
-    "item": "Bacalhau graúdo da Noruega Pingo Doce (kg)",
-    "price": 22.99,
-    "was": 24.99,
-    "validFrom": "2026-11-10",
-    "validTo": "2026-11-16",
-    "source": "https://www.folhetos.pt/pingo-doce/antevisao-folheto-pingo-doce-lojas-grandes-promocoes-de-10-a-16-novembro-6950"
    }
   ],
   "PT/Lidl": [
@@ -2636,15 +2706,6 @@
     "validTo": "2026-11-17",
     "card": "Tesco Clubcard",
     "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/fresh/fruit-and-vegetables"
-   },
-   {
-    "item": "Tesco Finest Baby Potatoes 750g",
-    "price": 0.99,
-    "was": 1.3,
-    "validFrom": "2026-11-03",
-    "validTo": "2026-11-16",
-    "card": "Tesco Clubcard",
-    "source": "https://www.tesco.com/groceries/en-GB/buylists/fresh-fruit-and-vegetables/top-offers"
    },
    {
     "item": "Tesco Boneless Salmon Half Side 500g",
