@@ -27,24 +27,24 @@
    "stores": 10
   },
   "ES": {
-   "at": "2026-11-15T05:57:59.315Z",
-   "found": 13,
+   "at": "2026-11-22T05:59:47.319Z",
+   "found": 26,
    "stores": 4
   },
   "PT": {
-   "at": "2026-11-15T05:57:59.315Z",
-   "found": 15,
-   "stores": 6
+   "at": "2026-11-22T05:59:47.319Z",
+   "found": 31,
+   "stores": 5
   },
   "NL": {
-   "at": "2026-11-15T05:57:59.315Z",
-   "found": 62,
+   "at": "2026-11-22T05:59:47.319Z",
+   "found": 124,
    "stores": 10
   },
   "UK": {
-   "at": "2026-11-15T05:57:59.315Z",
-   "found": 6,
-   "stores": 3
+   "at": "2026-11-22T05:59:47.319Z",
+   "found": 16,
+   "stores": 1
   }
  },
  "stores": {
@@ -2354,30 +2354,138 @@
     "source": "https://www.prospektangebote.de/angebote/brokkoli"
    }
   ],
+  "ES/Dia": [
+   {
+    "item": "Gallo plumas altas en proteínas 400 g",
+    "price": 1,
+    "was": 1.77,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://radarsuper.com/folletos/dia"
+   },
+   {
+    "item": "Mandarina malla 1 kg",
+    "price": 1.59,
+    "was": 2.5,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://radarsuper.com/folletos/dia"
+   },
+   {
+    "item": "Banana a granel ~900 g",
+    "price": 1.04,
+    "was": 1.4,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://radarsuper.com/folletos/dia"
+   },
+   {
+    "item": "Tomates cherry Tomati&co 200 g",
+    "price": 1.49,
+    "was": 1.99,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://radarsuper.com/folletos/dia"
+   },
+   {
+    "item": "Tomate en rama a granel ~1 kg",
+    "price": 2.99,
+    "was": 3.99,
+    "validFrom": "2026-11-18",
+    "validTo": "2026-11-24",
+    "source": "https://radarsuper.com/folletos/dia"
+   }
+  ],
   "ES/Carrefour": [
    {
-    "item": "Queso curado Tierra de Tradición (pieza 1,1 kg)",
-    "price": 13.69,
-    "was": 19.95,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
+    "item": "Queso puro de oveja viejo Flor de Esgueva 400 g",
+    "price": 7.99,
+    "was": 12.19,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-29",
     "source": "https://radarsuper.com/folletos/carrefour"
    },
    {
-    "item": "Brócoli Carrefour 500 g",
-    "price": 0.95,
-    "was": 1.29,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
+    "item": "Queso semicurado mezcla Tierra de Tradición 1,1 kg",
+    "price": 11.99,
+    "was": 17.59,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-29",
     "source": "https://radarsuper.com/folletos/carrefour"
    },
    {
-    "item": "Pera ercolina Carrefour (aprox. 1 kg)",
-    "price": 2.29,
-    "was": 2.85,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
+    "item": "Leche desnatada 0% con calcio Movit Pascual 1 L",
+    "price": 1.39,
+    "was": 1.75,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-29",
     "source": "https://radarsuper.com/folletos/carrefour"
+   },
+   {
+    "item": "Leche semidesnatada sin lactosa Central Lechera Asturiana 1 L",
+    "price": 1.39,
+    "was": 1.68,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-29",
+    "source": "https://radarsuper.com/folletos/carrefour"
+   },
+   {
+    "item": "Pasta espagueti integral Gallo Nature 450 g",
+    "price": 1.74,
+    "was": 2.05,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-29",
+    "source": "https://radarsuper.com/folletos/carrefour"
+   },
+   {
+    "item": "Pasta plumas rayadas integrales Gallo Nature 450 g",
+    "price": 1.74,
+    "was": 2.05,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-29",
+    "source": "https://radarsuper.com/folletos/carrefour"
+   },
+   {
+    "item": "Pasta espaguetis Garofalo 500 g",
+    "price": 1.6,
+    "was": 1.88,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-29",
+    "source": "https://radarsuper.com/folletos/carrefour"
+   },
+   {
+    "item": "Pasta penne ziti rigate Garofalo 500 g",
+    "price": 1.6,
+    "was": 1.88,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-29",
+    "source": "https://radarsuper.com/folletos/carrefour"
+   },
+   {
+    "item": "Queso ricotta Galbani 250 g",
+    "price": 3.29,
+    "was": 3.85,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-29",
+    "source": "https://radarsuper.com/folletos/carrefour"
+   }
+  ],
+  "ES/Alcampo": [
+   {
+    "item": "Sveltesse leche desnatada en polvo con bífidus y calcio 400 g",
+    "price": 3.5,
+    "was": 6.16,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-30",
+    "source": "https://radarsuper.com/folletos/alcampo"
+   },
+   {
+    "item": "Pescafácil langostinos cocidos vannamei 20/30 1 kg",
+    "price": 7.99,
+    "was": 11.42,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-30",
+    "source": "https://radarsuper.com/folletos/alcampo"
    }
   ],
   "ES/Mercadona": [
@@ -2464,625 +2572,1235 @@
   ],
   "PT/Lidl": [
    {
-    "item": "Papaia via aérea (kg)",
-    "price": 3.59,
-    "was": 4.59,
-    "validFrom": "2026-11-20",
-    "validTo": "2026-11-22",
+    "item": "Arroz carolino Ceifeira 1 kg",
+    "price": 0.74,
+    "was": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
     "card": "Lidl Plus",
-    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-fim-de-semana-promocoes-de-20-a-22-novembro-6977"
+    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-promocoes-de-23-a-29-novembro-7017"
    },
    {
-    "item": "Uva branca sem grainha 500 g",
-    "price": 2.19,
-    "was": 2.79,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
+    "item": "Batata doce laranja nacional 1 kg",
+    "price": 1.24,
+    "was": 2.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
     "card": "Lidl Plus",
-    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-promocoes-de-16-a-22-novembro-6971"
+    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-promocoes-de-23-a-29-novembro-7017"
    },
    {
-    "item": "Pescada do Chile à posta congelada Ocean Sea (kg)",
-    "price": 8.99,
-    "was": 11.39,
-    "validFrom": "2026-11-20",
-    "validTo": "2026-11-22",
-    "card": "Lidl Plus",
-    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-fim-de-semana-promocoes-de-20-a-22-novembro-6977"
-   },
-   {
-    "item": "Carne picada de bovino XXL 1 kg",
-    "price": 9.99,
-    "was": 11.69,
-    "validFrom": "2026-11-20",
-    "validTo": "2026-11-22",
-    "card": "Lidl Plus",
-    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-fim-de-semana-promocoes-de-20-a-22-novembro-6977"
-   },
-   {
-    "item": "Peito de frango XXL (kg)",
-    "price": 5.99,
-    "was": 6.49,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "card": "Lidl Plus",
-    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-promocoes-de-16-a-22-novembro-6971"
-   },
-   {
-    "item": "Clementina nacional (kg)",
-    "price": 1.49,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.ocacapromocoes.pt/folheto-lidl-frescos-antevisao-promocoes-16-a-22-de-novembro/"
-   },
-   {
-    "item": "Batata vermelha 3 kg",
-    "price": 2.79,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.ocacapromocoes.pt/folheto-lidl-frescos-antevisao-promocoes-16-a-22-de-novembro/"
-   },
-   {
-    "item": "Couve coração nacional (kg)",
+    "item": "Curgete nacional (preço/kg)",
     "price": 1.19,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.ocacapromocoes.pt/folheto-lidl-frescos-antevisao-promocoes-16-a-22-de-novembro/"
+    "was": 1.89,
+    "validFrom": "2026-11-27",
+    "validTo": "2026-11-29",
+    "card": "Lidl Plus",
+    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-fim-de-semana-promocoes-de-27-a-29-novembro-7016"
    },
    {
-    "item": "Arroz carolino Campo Largo",
-    "price": 0.79,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.ocacapromocoes.pt/folheto-lidl-mercearia-antevisao-promocoes-16-a-22-de-novembro/"
+    "item": "Preparado de carne picada misto XXL 1 kg",
+    "price": 6.99,
+    "was": 8.99,
+    "validFrom": "2026-11-27",
+    "validTo": "2026-11-29",
+    "card": "Lidl Plus",
+    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-fim-de-semana-promocoes-de-27-a-29-novembro-7016"
    },
    {
-    "item": "Massa laços Combino",
-    "price": 0.79,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.ocacapromocoes.pt/folheto-lidl-mercearia-antevisao-promocoes-16-a-22-de-novembro/"
+    "item": "Amêijoa vietnamita congelada (preço/kg)",
+    "price": 1.79,
+    "was": 2.29,
+    "validFrom": "2026-11-27",
+    "validTo": "2026-11-29",
+    "card": "Lidl Plus",
+    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-fim-de-semana-promocoes-de-27-a-29-novembro-7016"
+   },
+   {
+    "item": "Esparguete Combino 500 g, 3+3 grátis (preço por 6 un.)",
+    "price": 2.07,
+    "validFrom": "2026-11-27",
+    "validTo": "2026-11-29",
+    "card": "Lidl Plus",
+    "source": "https://www.folhetos.pt/lidl/antevisao-folheto-lidl-fim-de-semana-promocoes-de-27-a-29-novembro-7016"
    }
   ],
   "PT/Aldi": [
    {
-    "item": "Arroz agulha Oriente 3 kg",
-    "price": 2.99,
+    "item": "Laranja (preço/kg)",
+    "price": 1.15,
+    "was": 1.69,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-23-a-29-novembro-6982"
+   },
+   {
+    "item": "Camarão cozido 30/50 Golden Seafood 500 g",
+    "price": 4.49,
+    "was": 5.99,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-23-a-29-novembro-6982"
+   },
+   {
+    "item": "Lombos de salmão com pele Golden Seafood 250 g",
+    "price": 3.99,
+    "was": 5.25,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-23-a-29-novembro-6982"
+   },
+   {
+    "item": "Pá de porco sem osso (preço/kg)",
+    "price": 3.99,
     "was": 4.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-16-a-22-novembro-6952"
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-23-a-29-novembro-6982"
    },
    {
-    "item": "Clementina (kg)",
-    "price": 1.69,
-    "was": 2.49,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-16-a-22-novembro-6952"
-   },
-   {
-    "item": "Chocos limpos Golden Seafood 800 g",
-    "price": 5.75,
-    "was": 7.69,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-16-a-22-novembro-6952"
-   },
-   {
-    "item": "Camarão Vannamei 20/30 (kg)",
-    "price": 7.99,
+    "item": "Posta média de bacalhau congelada Tesouros do Mar 800 g",
+    "price": 8.49,
     "was": 9.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-16-a-22-novembro-6952"
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-23-a-29-novembro-6982"
+   }
+  ],
+  "PT/Continente": [
+   {
+    "item": "Camarão 30/50 cozido (preço/kg)",
+    "price": 9.99,
+    "was": 14.99,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-fim-de-semana-promocoes-de-20-a-23-novembro-7014"
    },
    {
-    "item": "Entrecosto para forno (kg)",
-    "price": 5.49,
-    "was": 6.49,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-16-a-22-novembro-6952"
+    "item": "Curgete verde (preço/kg)",
+    "price": 1.19,
+    "was": 1.69,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-fim-de-semana-promocoes-de-20-a-23-novembro-7014"
+   },
+   {
+    "item": "Polvo Continente congelado 800 g–1,5 kg (preço/kg)",
+    "price": 11.99,
+    "was": 14.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-17-a-23-novembro-6985"
+   },
+   {
+    "item": "Abacaxi super sweet inteiro (preço/kg)",
+    "price": 1.69,
+    "was": 1.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-17-a-23-novembro-6985"
+   },
+   {
+    "item": "Pá de porco com osso Continente (preço/kg)",
+    "price": 3.99,
+    "was": 4.49,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-fim-de-semana-promocoes-de-20-a-23-novembro-7014"
+   },
+   {
+    "item": "Frango do campo inteiro com miúdos Continente Seleção (preço/kg)",
+    "price": 3.99,
+    "was": 4.49,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-fim-de-semana-promocoes-de-20-a-23-novembro-7014"
+   },
+   {
+    "item": "Bifanas de porco Continente (preço/kg)",
+    "price": 4.49,
+    "was": 4.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-17-a-23-novembro-6985"
+   },
+   {
+    "item": "Costeletas de vitelão, balcão (preço/kg)",
+    "price": 13.49,
+    "was": 14.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-17-a-23-novembro-6985"
+   },
+   {
+    "item": "Bife pá e acém de vitelão, balcão (preço/kg)",
+    "price": 12.99,
+    "was": 13.99,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-fim-de-semana-promocoes-de-20-a-23-novembro-7014"
+   },
+   {
+    "item": "Dourada média fresca 200–600 g (preço/kg)",
+    "price": 6.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-17-a-23-novembro-6985"
+   },
+   {
+    "item": "Salmão inteiro pequeno fresco 1–3 kg (preço/kg)",
+    "price": 8.99,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-fim-de-semana-promocoes-de-20-a-23-novembro-7014"
+   },
+   {
+    "item": "Peito de peru Continente, balcão (preço/kg)",
+    "price": 7.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-17-a-23-novembro-6985"
+   },
+   {
+    "item": "Maçã Golden (preço/kg)",
+    "price": 1.69,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-fim-de-semana-promocoes-de-20-a-23-novembro-7014"
+   },
+   {
+    "item": "Bacalhau graúdo de 1.ª da Islândia Continente Seleção, salgado seco inteiro (preço/kg)",
+    "price": 23.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-17-a-23-novembro-6985"
+   }
+  ],
+  "PT/Pingo Doce": [
+   {
+    "item": "Laranja a granel (preço/kg)",
+    "price": 1.19,
+    "was": 1.69,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/pingo-doce/antevisao-folheto-pingo-doce-lojas-grandes-promocoes-de-17-a-23-novembro-6986"
+   },
+   {
+    "item": "Frango do campo nacional a granel (preço/kg)",
+    "price": 3.99,
+    "was": 4.49,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/pingo-doce/antevisao-folheto-pingo-doce-lojas-grandes-promocoes-de-17-a-23-novembro-6986"
+   },
+   {
+    "item": "Dourada nacional fresca até 600 g (preço/kg)",
+    "price": 8.99,
+    "was": 9.99,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-23",
+    "source": "https://www.folhetos.pt/pingo-doce/antevisao-folheto-pingo-doce-lojas-grandes-promocoes-de-17-a-23-novembro-6986"
+   },
+   {
+    "item": "Salmão inteiro (preço/kg)",
+    "price": 8.99,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-23",
+    "source": "https://www.ocacapromocoes.pt/folheto-pingo-doce-fim-de-semana-antevisao-promocoes-20-a-23-de-novembro/"
+   }
+  ],
+  "PT/Auchan": [
+   {
+    "item": "Maçã Golden (preço/kg)",
+    "price": 1.7,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "source": "https://www.ocacapromocoes.pt/folheto-auchan-antevisao-promocoes-19-a-25-de-novembro/"
+   },
+   {
+    "item": "Tomate (preço/kg)",
+    "price": 2.29,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "source": "https://www.ocacapromocoes.pt/folheto-auchan-antevisao-promocoes-19-a-25-de-novembro/"
    }
   ],
   "NL/Albert Heijn": [
    {
-    "item": "AH Mandarijnen 1kg",
-    "price": 1.29,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
+    "item": "AH Broccoli los",
+    "price": 0.99,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
     "card": "AH Bonuskaart",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3917842"
    },
    {
-    "item": "AH Mager rundergehakt 300g",
-    "price": 3.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
+    "item": "AH Mango los",
+    "price": 1.39,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
     "card": "AH Bonuskaart",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3917842"
    },
    {
-    "item": "AH Witlof 4 stuks",
-    "price": 1.49,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
+    "item": "AH Trostomaten los",
+    "price": 0.89,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
     "card": "AH Bonuskaart",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3917842"
    },
    {
-    "item": "AH Zoete kleine appeltjes 1kg",
-    "price": 2.24,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
+    "item": "AH Boerenkool",
+    "price": 0.99,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
     "card": "AH Bonuskaart",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3917842"
    },
    {
-    "item": "AH Scharrelkipfilet naturel",
-    "price": 2.49,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
+    "item": "AH Scharrelkipfilethaasjes 300 g",
+    "price": 3.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
     "card": "AH Bonuskaart",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3917842"
    },
    {
-    "item": "AH Bakkersbrood Les Pains Bastille",
-    "price": 1.49,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
+    "item": "AH Bakkersbrood rond volkoren heel",
+    "price": 0.99,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
     "card": "AH Bonuskaart",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3917842"
    },
    {
-    "item": "Alle AH Speltbroden",
-    "price": 1.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
+    "item": "De Zaanse Hoeve halfvolle melk",
+    "price": 1.45,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
     "card": "AH Bonuskaart",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3917842"
    },
    {
-    "item": "De Zaanse Hoeve Goudse jong 48+ plakken voordeelpak",
-    "price": 3.59,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "card": "AH Bonuskaart",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
-   },
-   {
-    "item": "AH Snoepgroente tomaat 500g",
+    "item": "AH Verse fruitsalades 325-400 g",
     "price": 4.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
     "card": "AH Bonuskaart",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3904233"
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3917842"
+   },
+   {
+    "item": "AH Biologisch houdbare zuurkool",
+    "price": 0.99,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "card": "AH Bonuskaart",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/albert-heijn-folder-3917842"
+   }
+  ],
+  "NL/Lidl": [
+   {
+    "item": "Courgette",
+    "price": 0.39,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3914943"
+   },
+   {
+    "item": "Prei",
+    "price": 0.39,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3914943"
+   },
+   {
+    "item": "Bospeen",
+    "price": 1.19,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3914943"
+   },
+   {
+    "item": "Handsinaasappelen",
+    "price": 2.29,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3914943"
+   },
+   {
+    "item": "Gieser Wildeman peren",
+    "price": 1.59,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3914943"
+   },
+   {
+    "item": "Evelina appels",
+    "price": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3914943"
+   },
+   {
+    "item": "Freshona Groente-pannetje",
+    "price": 1.99,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3914943"
+   },
+   {
+    "item": "Slavink",
+    "price": 2.99,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3914943"
+   },
+   {
+    "item": "Chef Select varkensfilet met spek",
+    "price": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3914943"
+   },
+   {
+    "item": "Chef Select chicken wings",
+    "price": 5.29,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3914943"
+   },
+   {
+    "item": "Deluxe warm gerookte zalm",
+    "price": 8.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3914943"
+   },
+   {
+    "item": "Milbona Goudse kaas belegen 30+ stuk",
+    "price": 4.76,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/lidl-folder-3914943"
    }
   ],
   "NL/Aldi": [
    {
-    "item": "Spruiten",
+    "item": "Prei",
+    "price": 0.39,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
+   },
+   {
+    "item": "Trio sla op kluit",
     "price": 0.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
    },
    {
-    "item": "Doyenne du Comice peren",
-    "price": 1.65,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
-   },
-   {
-    "item": "Cocktailtomaten",
+    "item": "Elstar appels",
     "price": 1.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
    },
    {
-    "item": "HAK Sperziebonen of rode kool",
-    "price": 1.29,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+    "item": "Mandarijnen",
+    "price": 1.39,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
    },
    {
-    "item": "Hamlappen",
-    "price": 6.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+    "item": "Kruimige aardappelen",
+    "price": 4.99,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
    },
    {
-    "item": "Speklappen",
-    "price": 3.49,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+    "item": "Daylicious boerenkool fijn",
+    "price": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
    },
    {
-    "item": "Golden Seafood Maatjesharing",
+    "item": "All Seasons boerenkool (diepvries)",
+    "price": 0.79,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
+   },
+   {
+    "item": "Kipfilet",
+    "price": 5.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
+   },
+   {
+    "item": "Kipgehakt",
     "price": 2.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
    },
    {
-    "item": "Ehrmann high protein skyr",
-    "price": 2.5,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+    "item": "Culinaire varkensfilet",
+    "price": 3.99,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
    },
    {
-    "item": "Molenland Belegen kaas",
-    "price": 2.49,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+    "item": "Golden Seafood zalmfilets op huid",
+    "price": 7.99,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
    },
    {
-    "item": "Bakkerij Kara Firin Mini Turks brood",
-    "price": 1.29,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3903744"
+    "item": "John West tonijn",
+    "price": 5.99,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
+   },
+   {
+    "item": "Milsani magere kwark",
+    "price": 0.89,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
+   },
+   {
+    "item": "Molenland Goudse kaas 48+",
+    "price": 3.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
+   },
+   {
+    "item": "Echte boter",
+    "price": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
+   },
+   {
+    "item": "Gourmet gnocchi",
+    "price": 1.99,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-29",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/aldi-folder-3916962"
    }
   ],
   "NL/Plus": [
    {
-    "item": "Honig Deegwaren",
+    "item": "Nederlandse witlof los",
     "price": 0.99,
-    "was": 2.65,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3916770"
    },
    {
-    "item": "PLUS Rode druiven",
+    "item": "Biologisch PLUS Nederlandse rode en witte kool",
+    "price": 1.79,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3916770"
+   },
+   {
+    "item": "Mango",
+    "price": 1.49,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3916770"
+   },
+   {
+    "item": "Kanzi handappels",
+    "price": 2.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3916770"
+   },
+   {
+    "item": "Zespri kiwi gold",
+    "price": 2.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3916770"
+   },
+   {
+    "item": "PLUS Blonde d'Aquitaine biefstuk",
+    "price": 2.79,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3916770"
+   },
+   {
+    "item": "PLUS Boerentrots kippenbouten, -poten en -braadsticks",
+    "price": 3.49,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3916770"
+   },
+   {
+    "item": "PLUS Oosterschelde mosselen",
+    "price": 7.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3916770"
+   },
+   {
+    "item": "GIJS warm-gerookte zalm",
+    "price": 3.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3916770"
+   },
+   {
+    "item": "GIJS boerderij eieren",
+    "price": 1.98,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3916770"
+   },
+   {
+    "item": "John West tonijnmoten",
+    "price": 1.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3916770"
+   },
+   {
+    "item": "Brinta volkoren graanontbijt / havermout",
+    "price": 3.49,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3916770"
+   },
+   {
+    "item": "PLUS Korenlanders stokbroden",
+    "price": 0.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3916770"
+   }
+  ],
+  "NL/Jumbo": [
+   {
+    "item": "Witlof",
+    "price": 0.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3918695"
+   },
+   {
+    "item": "Kanzi appels",
+    "price": 1.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3918695"
+   },
+   {
+    "item": "Pink Lady appels",
+    "price": 2.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3918695"
+   },
+   {
+    "item": "Pitloze witte druiven",
     "price": 2.19,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3918695"
    },
    {
-    "item": "PLUS Kaki of kleine zoete appeltjes",
-    "price": 2.49,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+    "item": "Blauwe bessen",
+    "price": 3.49,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3918695"
    },
    {
-    "item": "PLUS Blauwe bessen",
-    "price": 3.99,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+    "item": "Meloenmix of ananas",
+    "price": 2.79,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3918695"
    },
    {
-    "item": "Sperziebonen",
-    "price": 1.49,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+    "item": "Alle soeppakketten",
+    "price": 3.49,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3918695"
    },
    {
-    "item": "Bio+ Zuurkool",
-    "price": 0.89,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+    "item": "HAK, Boon of Bonduelle",
+    "price": 1.29,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3918695"
    },
    {
-    "item": "PLUS Nasi-bami of macaroni-spaghetti groenten",
-    "price": 1.49,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+    "item": "Spaghetti & macaroni",
+    "price": 0.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3918695"
    },
    {
-    "item": "Danio Romige Kwark",
-    "price": 3.99,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+    "item": "Gekruid gemengd gehakt duo pack",
+    "price": 4.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3918695"
    },
    {
-    "item": "PLUS Goudse kaas Jong belegen",
-    "price": 3.99,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+    "item": "Zalmfilet met huid",
+    "price": 7.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3918695"
    },
    {
-    "item": "PLUS Korenlanders Rond brood",
-    "price": 1.49,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/plus-folder-3903777"
+    "item": "Jumbo Goudse kaas 48+ stukken",
+    "price": 7.5,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3918695"
+   },
+   {
+    "item": "Arla Protein",
+    "price": 1.79,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/jumbo-folder-3918695"
    }
   ],
   "NL/Dirk": [
    {
-    "item": "Hollandse spruiten",
-    "price": 0.89,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
-   },
-   {
-    "item": "Hollandse witlof",
-    "price": 0.99,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
-   },
-   {
-    "item": "BIO+ rode bieten",
-    "price": 0.99,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
-   },
-   {
-    "item": "Spaanse handsinaasappelen",
-    "price": 2.49,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
-   },
-   {
-    "item": "Kippenboutfilet",
-    "price": 7.99,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
-   },
-   {
-    "item": "Rundergehaktschnitzels",
-    "price": 4.99,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
-   },
-   {
-    "item": "Grote garnalen met staart, gepelde- of cocktailgarnalen",
-    "price": 1.99,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
-   },
-   {
-    "item": "Optimel kwark of Griekse stijl yoghurt",
-    "price": 1.69,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3904406"
-   }
-  ],
-  "NL/Hoogvliet": [
-   {
-    "item": "SanLucar mandarijnen",
+    "item": "De Beste hutspot of ongekookte kruimige aardappelen",
     "price": 1.19,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3918118"
    },
    {
-    "item": "Courgette",
-    "price": 0.69,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
-   },
-   {
-    "item": "Sperziebonen los",
-    "price": 1.49,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
-   },
-   {
-    "item": "Alle Aardappelen",
+    "item": "Soep verspakket",
     "price": 2.99,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3918118"
    },
    {
-    "item": "Avocado Ready to eat",
-    "price": 3.99,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
+    "item": "Hollandse Conference peren",
+    "price": 1.29,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3918118"
    },
    {
-    "item": "Kipfilet",
-    "price": 8.49,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
-   },
-   {
-    "item": "Alle Campina kwark of yoghurt",
-    "price": 1.49,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
-   },
-   {
-    "item": "Alle Koggelandse kaasplakken",
+    "item": "Zoete punt paprika's",
     "price": 2.49,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3918118"
    },
    {
-    "item": "Tijgerbrood",
-    "price": 1.79,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3904611"
+    "item": "Blauwe bessen",
+    "price": 3.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3918118"
+   },
+   {
+    "item": "Ribkarbonade",
+    "price": 4.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3918118"
+   },
+   {
+    "item": "Kabeljauw- of zalmburgers",
+    "price": 1.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3918118"
+   },
+   {
+    "item": "Puuls wokgarnalen",
+    "price": 5.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3918118"
+   },
+   {
+    "item": "Almhof roomyoghurt",
+    "price": 1.49,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3918118"
+   },
+   {
+    "item": "Wasa knäckebröd",
+    "price": 1.19,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dirk-folder-3918118"
    }
   ],
   "NL/DekaMarkt": [
    {
+    "item": "Melkunie yoghurt",
+    "price": 0.79,
+    "was": 1.95,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-30",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3916870"
+   },
+   {
+    "item": "Pink Lady appelen",
+    "price": 2.49,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-30",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3916870"
+   },
+   {
+    "item": "Galia meloen, mango eetrijp of Conference peren",
+    "price": 3.98,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-30",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3916870"
+   },
+   {
     "item": "Blauwe bessen",
     "price": 3.99,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3903461"
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-30",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3916870"
    },
    {
-    "item": "Mini krieltjes naturel of bistro",
+    "item": "Soep verspakket",
+    "price": 2.99,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-30",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3916870"
+   },
+   {
+    "item": "Scharrel kipdrumsticks",
+    "price": 2.49,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-30",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3916870"
+   },
+   {
+    "item": "Puur Visch",
+    "price": 4.99,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-30",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3916870"
+   },
+   {
+    "item": "Wegdam vrije uitloop eieren",
+    "price": 2.49,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-30",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3916870"
+   },
+   {
+    "item": "Almhof yoghurt",
+    "price": 1.79,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-30",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3916870"
+   },
+   {
+    "item": "Hollander of Tarpan brood",
+    "price": 1.89,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-30",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3916870"
+   }
+  ],
+  "NL/Vomar": [
+   {
+    "item": "Campina langhoudbare melk",
     "price": 0.79,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3903461"
+    "was": 1.87,
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
    },
    {
-    "item": "Ribkarbonade",
+    "item": "Bananen",
+    "price": 0.99,
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
+   },
+   {
+    "item": "Hollandse spruiten",
+    "price": 0.99,
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
+   },
+   {
+    "item": "Gesneden kastanjechampignons",
+    "price": 1.49,
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
+   },
+   {
+    "item": "Avocado's",
+    "price": 2.49,
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
+   },
+   {
+    "item": "Perssinaasappelen",
     "price": 1.99,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3903461"
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
+   },
+   {
+    "item": "Rundergehakt",
+    "price": 7.99,
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
    },
    {
     "item": "Magere runderlappen",
-    "price": 9.99,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3903461"
+    "price": 8.99,
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
    },
    {
-    "item": "Scharrel kipkluifjes",
+    "item": "Kogelbiefstuk",
+    "price": 2.99,
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
+   },
+   {
+    "item": "Gulden Hoeve kipdij-shoarma",
     "price": 3.99,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3903461"
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
    },
    {
-    "item": "Hoogland zalmfilet met huid",
-    "price": 7.49,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3903461"
-   },
-   {
-    "item": "Grand'Italia tortellini of gnocchi",
+    "item": "Deepblue tonijnstukken",
     "price": 1.99,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/dekamarkt-folder-3903461"
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
+   },
+   {
+    "item": "Campina kwark of yoghurt",
+    "price": 1.49,
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
+   },
+   {
+    "item": "Noordwoudse belegen of pikante kaas",
+    "price": 4.99,
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
+   },
+   {
+    "item": "Daily Chef verse pasta",
+    "price": 1,
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
+   },
+   {
+    "item": "Grand'Italia pasta all'uovo of gnocchi",
+    "price": 1.99,
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
+   },
+   {
+    "item": "Robberbrood",
+    "price": 1.99,
+    "validFrom": "2026-11-22",
+    "validTo": "2026-11-28",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/vomar-voordeelmarkt-folder-3918216"
+   }
+  ],
+  "NL/Hoogvliet": [
+   {
+    "item": "Cocktail trostomaten",
+    "price": 2.49,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3918088"
+   },
+   {
+    "item": "Druiven wit pitloos",
+    "price": 1.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3918088"
+   },
+   {
+    "item": "SanLucar mandarijnen",
+    "price": 3.49,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3918088"
+   },
+   {
+    "item": "Alle mini krieltjes, krieltjes of schijfjes",
+    "price": 0.89,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3918088"
+   },
+   {
+    "item": "Alle HAK potten",
+    "price": 0.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3918088"
+   },
+   {
+    "item": "Alle kipkluifjes",
+    "price": 5.49,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3918088"
+   },
+   {
+    "item": "Alle Bettine geitenkaas",
+    "price": 1.29,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3918088"
+   },
+   {
+    "item": "Alle Milner kaasplakken",
+    "price": 1.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3918088"
+   },
+   {
+    "item": "Geraspte kaas mild",
+    "price": 3.49,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3918088"
+   },
+   {
+    "item": "Alle Brinta",
+    "price": 1.69,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3918088"
+   },
+   {
+    "item": "Sallands zonnepit brood",
+    "price": 1.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/hoogvliet-folder-3918088"
    }
   ],
   "NL/Ekoplaza": [
    {
-    "item": "Groene kool",
-    "price": 1.59,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
-   },
-   {
-    "item": "Puur NL Boerenkool",
-    "price": 2.59,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
-   },
-   {
-    "item": "PotatoNext Aardappel Vastkokend",
-    "price": 1.79,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
-   },
-   {
-    "item": "Demeter Peer Conference",
-    "price": 1.99,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
-   },
-   {
-    "item": "Demeter Clementine Mandarijnen",
-    "price": 2.49,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
-   },
-   {
-    "item": "Ravenswaard Boerenkaas",
+    "item": "Bastiaansen blauwschimmel kaas 60+",
     "price": 2.09,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
+    "was": 2.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3917715"
    },
    {
-    "item": "Bastiaansen Geitenkaas",
-    "price": 2.89,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
+    "item": "Zuiver Zuivel kefir 500 g (20% korting)",
+    "price": 2.23,
+    "was": 2.79,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3917715"
    },
    {
-    "item": "Laitois Roomkefir",
-    "price": 1.35,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
+    "item": "Broccoli",
+    "price": 2.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3917715"
    },
    {
-    "item": "Bakkerij van der Westen Pane Maire Mais",
-    "price": 4.59,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3904127"
+    "item": "Baby spinazie",
+    "price": 2.59,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3917715"
+   },
+   {
+    "item": "Soepgroenten",
+    "price": 1.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3917715"
+   },
+   {
+    "item": "Demeter venkel",
+    "price": 2.29,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3917715"
+   },
+   {
+    "item": "Puur NL portobello",
+    "price": 1.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3917715"
+   },
+   {
+    "item": "Cranberries",
+    "price": 3.99,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3917715"
+   },
+   {
+    "item": "Marqt lengfilet",
+    "price": 9.26,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3917715"
+   },
+   {
+    "item": "Zuiver Zuivel yoghurt",
+    "price": 2.36,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3917715"
+   },
+   {
+    "item": "Boeren skyr",
+    "price": 3.18,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3917715"
+   },
+   {
+    "item": "Demeter Ommelanden Yogarde",
+    "price": 3.39,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3917715"
+   },
+   {
+    "item": "Zuiver Zuivel Gouda belegen 50+",
+    "price": 1.69,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3917715"
+   },
+   {
+    "item": "Hooidammer geitenkaas 50+",
+    "price": 3.49,
+    "validFrom": "2026-11-25",
+    "validTo": "2026-12-01",
+    "source": "https://www.folderz.nl/bekijk/aanbiedingen/ekoplaza-folder-3917715"
    }
   ],
   "UK/Tesco": [
    {
-    "item": "Tesco Lamb Shoulder Half (per kg)",
+    "item": "Tesco Lamb Shoulder Half, price per kg (packs 0.65-1.5kg)",
     "price": 7,
     "was": 15,
     "validFrom": "2026-11-02",
     "validTo": "2026-11-25",
     "card": "Tesco Clubcard",
-    "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/fresh/fruit-and-vegetables"
+    "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/fresh"
    },
    {
-    "item": "Tesco Lamb Whole Shoulder Joint (per kg)",
+    "item": "Tesco Lamb Whole Shoulder Joint, price per kg (packs 0.9-2.7kg)",
     "price": 7,
     "was": 14.9,
     "validFrom": "2026-11-02",
     "validTo": "2026-11-25",
     "card": "Tesco Clubcard",
-    "source": "https://www.tesco.com/groceries/en-GB/buylists/clubcard-prices/top-picks"
+    "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/fresh"
    },
    {
-    "item": "Tesco Pork Loin Joint (per kg, half price)",
-    "price": 3.5,
-    "was": 7,
-    "validFrom": "2026-10-28",
-    "validTo": "2026-11-22",
+    "item": "Tesco Persimmons minimum 2 pack",
+    "price": 1,
+    "was": 1.7,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-30",
     "card": "Tesco Clubcard",
-    "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/fresh/fruit-and-vegetables"
+    "source": "https://www.tesco.com/shop/en-GB/buylists/seasonal-fruit-and-vegetables/seasonal-fruit"
    },
    {
-    "item": "Tesco Large Beef Brisket Joint (per kg)",
-    "price": 11.25,
-    "was": 17,
-    "validFrom": "2026-10-06",
-    "validTo": "2026-11-22",
+    "item": "Tesco Ready To Eat Seasonal Pears 4 pack 550g",
+    "price": 1.1,
+    "was": 1.85,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-30",
     "card": "Tesco Clubcard",
-    "source": "https://www.tesco.com/groceries/en-GB/buylists/clubcard-prices/fresh/dairy"
+    "source": "https://www.tesco.com/groceries/en-GB/buylists/fresh-fruit-and-vegetables/top-offers"
    },
    {
-    "item": "Tesco Large Pork Leg Joint (per kg)",
+    "item": "Tesco Gala Apples pack (about 5, £0.22 each)",
+    "price": 1.09,
+    "was": 1.8,
+    "validFrom": "2026-11-03",
+    "validTo": "2026-11-30",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/groceries/en-GB/buylists/seasonal-fruit-and-vegetables/fresh-5/"
+   },
+   {
+    "item": "Tesco Finest Unsmoked Dry Cure Back Bacon 8 pack 240g (any 2 for £5, selected Finest meat)",
+    "price": 5,
+    "was": 8,
+    "validFrom": "2026-11-18",
+    "validTo": "2027-04-08",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/fresh"
+   },
+   {
+    "item": "Tesco Pomegranates each",
+    "price": 1,
+    "was": 1.55,
+    "validFrom": "2026-11-03",
+    "validTo": "2026-11-30",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/shop/en-GB/buylists/seasonal-fruit-and-vegetables/seasonal-fruit"
+   },
+   {
+    "item": "Tesco Conference Pears 610g",
+    "price": 1.1,
+    "was": 1.7,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-30",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/groceries/en-GB/buylists/seasonal-fruit-and-vegetables/fresh-5/"
+   },
+   {
+    "item": "Tesco Large Pork Leg Joint, price per kg (packs 1.75-2.25kg)",
     "price": 4.65,
     "was": 7,
     "validFrom": "2026-10-28",
@@ -3091,13 +3809,67 @@
     "source": "https://www.tesco.com/groceries/en-GB/buylists/meat-fish-poultry/save-25-percent"
    },
    {
+    "item": "Tesco Homebake Part Baked White Baguettes 2 pack (any 2 for £2)",
+    "price": 2,
+    "was": 2.7,
+    "validFrom": "2026-07-21",
+    "validTo": "2027-07-21",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/bakery"
+   },
+   {
+    "item": "Tesco Blueberries 150g",
+    "price": 1.5,
+    "was": 2,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-30",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/groceries/en-GB/buylists/fresh-fruit-and-vegetables/top-offers"
+   },
+   {
+    "item": "Tesco Figs minimum 3 pack",
+    "price": 1.5,
+    "was": 2,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-30",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/shop/en-GB/buylists/seasonal-fruit-and-vegetables/seasonal-fruit"
+   },
+   {
+    "item": "Tesco Finest 6 Cumberland Pork Sausages 400g (any 2 for £5, selected Finest meat)",
+    "price": 5,
+    "was": 6.5,
+    "validFrom": "2026-11-18",
+    "validTo": "2027-04-08",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/fresh"
+   },
+   {
+    "item": "Tesco Pink Lady Apples 5 pack",
+    "price": 2.3,
+    "was": 2.95,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-30",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/groceries/en-GB/buylists/fresh-fruit-and-vegetables/top-offers"
+   },
+   {
     "item": "Tesco Boneless Salmon Half Side 500g",
     "price": 7.5,
     "was": 9.2,
     "validFrom": "2026-10-28",
     "validTo": "2026-11-29",
     "card": "Tesco Clubcard",
-    "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/fresh/fruit-and-vegetables"
+    "source": "https://www.tesco.com/shop/en-GB/buylists/clubcard-prices/fresh"
+   },
+   {
+    "item": "Tesco Red Onions 1kg",
+    "price": 0.8,
+    "was": 0.95,
+    "validFrom": "2026-11-17",
+    "validTo": "2026-11-30",
+    "card": "Tesco Clubcard",
+    "source": "https://www.tesco.com/groceries/en-GB/buylists/fresh-fruit-and-vegetables/top-offers"
    }
   ]
  }
