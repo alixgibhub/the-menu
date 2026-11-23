@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "countries": {
   "BE": {
    "at": "2026-11-22T04:48:23.276Z",
@@ -17,9 +17,9 @@
    "stores": 4
   },
   "MX": {
-   "at": "2026-11-17T03:01:47.732Z",
-   "found": 0,
-   "stores": 3
+   "at": "2026-11-23T18:43:54.674Z",
+   "found": 25,
+   "stores": 1
   },
   "DE": {
    "at": "2026-11-22T04:48:23.276Z",
@@ -28,7 +28,7 @@
   },
   "ES": {
    "at": "2026-11-22T05:59:47.319Z",
-   "found": 26,
+   "found": 16,
    "stores": 4
   },
   "PT": {
@@ -1938,6 +1938,183 @@
     "source": "https://rappn.ch/en/offers/lidl-switzerland/page/2"
    }
   ],
+  "MX/Bodega Aurrera": [
+   {
+    "item": "Plátano Chiapas (kg)",
+    "price": 17,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Zanahoria (kg)",
+    "price": 10.5,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Chile cuaresmeño (kg)",
+    "price": 8,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Aguacate Hass (malla)",
+    "price": 25,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Limón agrio (malla)",
+    "price": 32,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Manzana Chavalinas en bolsa (kg)",
+    "price": 35,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Perón Golden (kg)",
+    "price": 35,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Pierna con muslo de pollo corte americano (500 g)",
+    "price": 16,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Pierna con piel o muslo de pollo (500 g)",
+    "price": 44,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Pechuga de pollo corte americano (500 g)",
+    "price": 44,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Pechuga de pollo sin hueso (500 g)",
+    "price": 86,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Carne molida de res Aurrera 70/30 (500 g)",
+    "price": 56,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Carne molida de res Marketside 80/20 (500 g)",
+    "price": 61,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Pierna de cerdo con hueso (kg)",
+    "price": 57,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Costilla para asar (500 g)",
+    "price": 79,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Mojarra tilapia (500 g)",
+    "price": 40,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Filete de basa blanco (500 g)",
+    "price": 43,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Camarón coctelero (500 g)",
+    "price": 88,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Piña (kg, precio Insurgentes CDMX)",
+    "price": 28,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Sandía (kg, precio Insurgentes CDMX)",
+    "price": 21,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Naranja (kg, precio Insurgentes CDMX)",
+    "price": 29,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Toronja (kg, precio Insurgentes CDMX)",
+    "price": 29,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Cilantro (manojo, precio Insurgentes CDMX)",
+    "price": 10,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Espinaca (manojo, precio Insurgentes CDMX)",
+    "price": 13.9,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   },
+   {
+    "item": "Acelga (manojo, precio Insurgentes CDMX)",
+    "price": 12.9,
+    "validFrom": "2026-11-20",
+    "validTo": "2026-11-26",
+    "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
+   }
+  ],
   "DE/Netto": [
    {
     "item": "Bio Möhren 1 kg",
@@ -2486,88 +2663,6 @@
     "validFrom": "2026-11-19",
     "validTo": "2026-11-30",
     "source": "https://radarsuper.com/folletos/alcampo"
-   }
-  ],
-  "ES/Mercadona": [
-   {
-    "item": "Hígados y corazones de pollo 390 g",
-    "price": 1.2,
-    "was": 1.56,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://radarsuper.com/folletos/mercadona"
-   },
-   {
-    "item": "Manzana roja acidulce (pieza aprox. 270 g)",
-    "price": 0.5,
-    "was": 0.65,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://radarsuper.com/folletos/mercadona"
-   },
-   {
-    "item": "Rama de tomates 740 g",
-    "price": 1.57,
-    "was": 2,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://radarsuper.com/folletos/mercadona"
-   },
-   {
-    "item": "Naranjas malla 3 kg",
-    "price": 4.65,
-    "was": 5.85,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://radarsuper.com/folletos/mercadona"
-   },
-   {
-    "item": "Solomillos de pollo 400 g",
-    "price": 3.36,
-    "was": 4.2,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://radarsuper.com/folletos/mercadona"
-   },
-   {
-    "item": "Bífidus natural Activia 0% pack 8",
-    "price": 3.3,
-    "was": 3.99,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://radarsuper.com/folletos/mercadona"
-   },
-   {
-    "item": "Mandarina malla 1 kg",
-    "price": 1.95,
-    "was": 2.35,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://radarsuper.com/folletos/mercadona"
-   },
-   {
-    "item": "Filetes de pechuga de pollo 590 g",
-    "price": 5,
-    "was": 5.9,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://radarsuper.com/folletos/mercadona"
-   },
-   {
-    "item": "Chuletas de lomo de cerdo finas 530 g",
-    "price": 3.11,
-    "was": 3.66,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://radarsuper.com/folletos/mercadona"
-   },
-   {
-    "item": "Pechugas enteras de pollo 580 g",
-    "price": 3.33,
-    "was": 3.86,
-    "validFrom": "2026-11-16",
-    "validTo": "2026-11-22",
-    "source": "https://radarsuper.com/folletos/mercadona"
    }
   ],
   "PT/Lidl": [
