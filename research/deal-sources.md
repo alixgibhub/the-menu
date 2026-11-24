@@ -152,7 +152,7 @@ Skip AH "Mijn Bonus Box" offers: they are personal.
 
 | Source | What it gives | Status |
 |---|---|---|
-| cazaofertas.com.mx (search "Martes de Frescura Walmart", "Martes y Miércoles del Campo Soriana", "Martimiércoles Chedraui", "Miércoles de Plaza La Comer") | Full fruit and vegetable price lists for each chain's produce days | Works |
+| cazaofertas.com.mx (search "Martes de Frescura Walmart", "Martes y Miércoles del Campo Soriana", "Martimiércoles Chedraui", "Miércoles de Plaza La Comer") | Full fruit and vegetable price lists for each chain's produce days | Works (but the 24 Nov 2026 article pages returned a server error on fetch; fall back to ejecentral.com.mx) |
 | cazaofertas.com.mx (folletos, e.g. Soriana weekend leaflet) | Weekend leaflet prices | Works |
 | cazaofertas.com.mx, cronica.com.mx, milenio.com (search "Alsuper martes y miércoles de frutas y verduras" + the date) | News write-ups of Alsuper's produce prices, when there are any | Not tested yet: try first for Alsuper |
 | ofertomat.mx/alsuper/ and kimbino.mx/alsuper/ | Alsuper leaflet dates and product names; prices are only in the page images | Partial (dates only, 14 Nov). Never take a price you can't read |
@@ -162,13 +162,15 @@ Skip AH "Mijn Bonus Box" offers: they are personal.
 | informabtl.com "Lista completa de descuentos" articles | Prices published Sunday that the articles call estimates | Dead end: estimated prices, never use (16 Nov 2026) |
 | cazaofertas.com.mx "Bodega Aurrera Tianguis de frutas y verduras Precio Bodega al <date>" | Bodega Aurrera fruit, veg, meat and fish prices in the page text (no regular prices), weekly Friday–Thursday; a second block is priced for Insurgentes CDMX only | Works (new, 23 Nov 2026) |
 | cazaofertas.com.mx folletos for HEB weekly, La Comer Navifans, Sam's Club cuponera, Soriana Híper weekly | Dates only; food prices are only in the leaflet images | Partial (dates only, 23 Nov 2026) |
+| ejecentral.com.mx (search "Martes y Miércoles del Campo Soriana" / "Martimiércoles Chedraui" / "Martes de Frescura Walmart" + the date) | Full Soriana list with "antes" prices; Chedraui and Walmart lists without regular prices, published Monday ~12:00–14:00 CDMX. Chedraui/Walmart pages had some garbled units and duplicate items: skip those | Works (new, 24 Nov 2026) |
+| ambito.com/mexico (search "Las ofertas del Martes de Frescura" / "Martes y Miércoles del Campo") | First 5–6 items only, rest behind a paywall | Partial (24 Nov 2026) |
 | informador.mx "Frescura en Walmart: Ofertas del …" | Weekly Walmart Frescura list with prices, no regular prices; AI-written with inconsistent dates | Partial: cross-check only (23 Nov 2026) |
 
 Timing: produce promotions run only on Tuesday and/or Wednesday and are posted
 the day before (Monday evening; on a holiday Monday cazaofertas was still
-empty at noon and only partial at 21:00), so a Sunday pull finds last week's. At 12:45 Mexico City time on Monday 23 Nov 2026 none of the
-Tuesday/Wednesday lists were out yet (cazaofertas, cronica, razon all empty), so
-run after about 19:00 Mexico City time. Since Aug 2026 Walmart is moving from
+empty at noon and only partial at 21:00), so a Sunday pull finds last week's. At 12:45 Mexico City time on Monday 23 Nov 2026 search didn't find any of the
+Tuesday/Wednesday lists yet, though ejecentral had posted them at 12:00–14:00,
+so run after about 15:00 Mexico City time. No La Comer Miércoles de Plaza list was found by 20:00. Since Aug 2026 Walmart is moving from
 Martes de Frescura to "Frescura todos los días" (merca20, 4 Aug 2026); write-ups
 now present it as a 7-day Tuesday–Monday list. Prices are per kg or per
 piece; the deal's dates are those two days. Soriana deals marked "con puntos

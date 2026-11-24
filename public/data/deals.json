@@ -1,14 +1,14 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "countries": {
   "BE": {
    "at": "2026-11-22T04:48:23.276Z",
-   "found": 102,
+   "found": 97,
    "stores": 9
   },
   "FR": {
    "at": "2026-11-22T04:48:23.276Z",
-   "found": 72,
+   "found": 63,
    "stores": 7
   },
   "CH": {
@@ -17,9 +17,9 @@
    "stores": 4
   },
   "MX": {
-   "at": "2026-11-23T18:43:54.674Z",
-   "found": 25,
-   "stores": 1
+   "at": "2026-11-24T02:02:44.487Z",
+   "found": 93,
+   "stores": 4
   },
   "DE": {
    "at": "2026-11-22T04:48:23.276Z",
@@ -33,7 +33,7 @@
   },
   "PT": {
    "at": "2026-11-22T05:59:47.319Z",
-   "found": 31,
+   "found": 13,
    "stores": 5
   },
   "NL": {
@@ -400,41 +400,6 @@
     "validFrom": "2026-11-18",
     "validTo": "2026-11-24",
     "source": "https://www.promotiez.be/bekijk/aanbiedingen/carrefour-market-folder-3904354"
-   },
-   {
-    "item": "Kipfilet natuur",
-    "price": 3.74,
-    "validFrom": "2026-11-11",
-    "validTo": "2026-11-23",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/carrefour-folder-3891830"
-   },
-   {
-    "item": "Kabeljauwfilet Carrefour",
-    "price": 2.2,
-    "validFrom": "2026-11-11",
-    "validTo": "2026-11-23",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/carrefour-folder-3891830"
-   },
-   {
-    "item": "Aardappelen Bintje De Belgen",
-    "price": 4.99,
-    "validFrom": "2026-11-11",
-    "validTo": "2026-11-23",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/carrefour-folder-3891830"
-   },
-   {
-    "item": "Eetsinaasappels",
-    "price": 1.59,
-    "validFrom": "2026-11-11",
-    "validTo": "2026-11-23",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/carrefour-folder-3891830"
-   },
-   {
-    "item": "Zuurdesembrood",
-    "price": 2.63,
-    "validFrom": "2026-11-11",
-    "validTo": "2026-11-23",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/carrefour-folder-3891830"
    }
   ],
   "BE/Albert Heijn": [
@@ -979,48 +944,6 @@
     "validFrom": "2026-11-24",
     "validTo": "2026-11-30",
     "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3907836"
-   },
-   {
-    "item": "Golden Seafood filet de saumon",
-    "price": 8.59,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3896583"
-   },
-   {
-    "item": "St-Clément Le Volailler escalopes de dinde",
-    "price": 9.99,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3896583"
-   },
-   {
-    "item": "Golden Seafood crevettes entières cuites",
-    "price": 7.75,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3896583"
-   },
-   {
-    "item": "Golden Seafood Saumon fumé Norvège",
-    "price": 4.49,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3896583"
-   },
-   {
-    "item": "Petite France Crème fraîche épaisse",
-    "price": 1.89,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3896583"
-   },
-   {
-    "item": "Le Hameau Beurre doux",
-    "price": 6.49,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.promocatalogues.fr/regardez/offres/catalogue-aldi-3896583"
    }
   ],
   "FR/Carrefour": [
@@ -1047,14 +970,6 @@
     "validFrom": "2026-11-17",
     "validTo": "2026-11-30",
     "source": "https://www.promocatalogues.fr/offres/poulet/carrefour"
-   },
-   {
-    "item": "Filière Qualité Carrefour filet de saumon Atlantique ASC 1 kg",
-    "price": 13.59,
-    "was": 15.99,
-    "validFrom": "2026-11-10",
-    "validTo": "2026-11-23",
-    "source": "https://www.promocatalogues.fr/magasins/carrefour/offres/filiere-qualite-carrefour-filet-de-saumon-atlantique-asc-offre-70344768/"
    },
    {
     "item": "Saumon entier ASC 1 à 3 kg",
@@ -1099,20 +1014,6 @@
     "validFrom": "2026-11-24",
     "validTo": "2026-12-07",
     "source": "https://www.promocatalogues.fr/offres/poulet/carrefour"
-   },
-   {
-    "item": "Hauts de cuisses de poulet blanc ou jaune origine France 1 kg",
-    "price": 3.8,
-    "validFrom": "2026-11-10",
-    "validTo": "2026-11-23",
-    "source": "https://www.promocatalogues.fr/magasins/carrefour/offres/d-origine-france-hauts-de-cuisses-de-poulet-blanc-ou-jaune-offre-70343765/"
-   },
-   {
-    "item": "Le Poulet de mon enfance 1,4 kg",
-    "price": 5.1,
-    "validFrom": "2026-11-10",
-    "validTo": "2026-11-23",
-    "source": "https://www.promocatalogues.fr/magasins/carrefour/offres/le-poulet-de-mon-enfance-offre-70290661/"
    },
    {
     "item": "Carotte Filière Qualité Carrefour",
@@ -2115,6 +2016,510 @@
     "source": "https://cazaofertas.com.mx/abarrotes/bodega-aurrera-tianguis-de-frutas-y-verduras-precio-bodega-al-26-de-noviembre-2026/"
    }
   ],
+  "MX/Soriana": [
+   {
+    "item": "Pulpa en trocitos de espaldilla de cerdo (kg)",
+    "price": 84,
+    "was": 126,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Limón sin semilla (kg)",
+    "price": 26.5,
+    "was": 39,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Aguacate Hass en malla (pieza)",
+    "price": 27.8,
+    "was": 39.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Molida de res comercial (kg)",
+    "price": 123.9,
+    "was": 169,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Filete de mojarra de granja (kg)",
+    "price": 93.9,
+    "was": 118.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Carne de res para asar (kg)",
+    "price": 198.9,
+    "was": 249,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Molida de res especial 80/20 (kg)",
+    "price": 108.9,
+    "was": 135.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Pollo entero con vísceras Bachoco (kg)",
+    "price": 44.8,
+    "was": 55.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Milanesa de cerdo fresca (kg)",
+    "price": 103.9,
+    "was": 129,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Cebolla blanca (kg)",
+    "price": 43.9,
+    "was": 54.3,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Pulpa molida de cerdo 90/10 (kg)",
+    "price": 99,
+    "was": 122,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Fajita de pollo (kg)",
+    "price": 99,
+    "was": 121,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Pierna de pollo con muslo (kg)",
+    "price": 31.9,
+    "was": 38.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Chile serrano (kg)",
+    "price": 49.8,
+    "was": 58.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Filete de pechuga de pollo Bachoco (kg)",
+    "price": 159.9,
+    "was": 189,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Milanesa de pechuga de pollo Bachoco (kg)",
+    "price": 178.9,
+    "was": 208.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Pechuga de pollo sin hueso congelada (kg)",
+    "price": 99,
+    "was": 111,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Pepino verde (kg)",
+    "price": 26.8,
+    "was": 29.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Melón chino (kg)",
+    "price": 29.8,
+    "was": 32.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Molida de res 90/10 (kg)",
+    "price": 215,
+    "was": 236.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Papa blanca (kg)",
+    "price": 42.8,
+    "was": 46.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Zanahoria (kg)",
+    "price": 14.5,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Plátano (kg)",
+    "price": 19.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Papa morena (kg)",
+    "price": 21.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Piña Gota Miel (kg)",
+    "price": 23.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-y-miercoles-del-campo-soriana-zanahoria-a-14-50-pesos-y-platano-a-19-90-pesos-el-kilo-este-24-y-25-de-noviembre"
+   }
+  ],
+  "MX/Chedraui": [
+   {
+    "item": "Tomate saladet (kg)",
+    "price": 50,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Plátano Chiapas (kg)",
+    "price": 21.1,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Aguacate Hass (kg)",
+    "price": 42.6,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Zanahoria (kg)",
+    "price": 14.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Cebolla blanca (kg)",
+    "price": 49.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Limón sin semilla (kg)",
+    "price": 36.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Papa blanca (kg)",
+    "price": 46.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Calabaza italiana (kg)",
+    "price": 34.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Pepino verde (kg)",
+    "price": 29.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Cilantro (rollo)",
+    "price": 9.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Chayote (kg)",
+    "price": 29.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Papaya (kg)",
+    "price": 41.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Tomate verde (kg)",
+    "price": 88.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Nopal (kg)",
+    "price": 44.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Chile serrano (kg)",
+    "price": 63.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Espinacas (rollo)",
+    "price": 10.4,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Piña gota miel (kg)",
+    "price": 22.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Melón (kg)",
+    "price": 34.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Lechuga romana (kg)",
+    "price": 24.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Arrachera de pollo (kg)",
+    "price": 87.2,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Pollo entero (kg)",
+    "price": 56,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Pechuga de pollo corte americano (kg)",
+    "price": 84.9,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Molida de res (kg)",
+    "price": 135,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   },
+   {
+    "item": "Pechuga de pollo sin hueso (kg)",
+    "price": 172,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-25",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
+   }
+  ],
+  "MX/Walmart": [
+   {
+    "item": "Melón chino (kg)",
+    "price": 29,
+    "was": 35,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
+   },
+   {
+    "item": "Jitomate (kg)",
+    "price": 43,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ambito.com/mexico/economia/las-ofertas-del-martes-frescura-walmart-del-24-noviembre-2026-n6348362"
+   },
+   {
+    "item": "Plátano (kg)",
+    "price": 17,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ambito.com/mexico/economia/las-ofertas-del-martes-frescura-walmart-del-24-noviembre-2026-n6348362"
+   },
+   {
+    "item": "Cebolla (kg)",
+    "price": 62,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ambito.com/mexico/economia/las-ofertas-del-martes-frescura-walmart-del-24-noviembre-2026-n6348362"
+   },
+   {
+    "item": "Aguacate (kg)",
+    "price": 40,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ambito.com/mexico/economia/las-ofertas-del-martes-frescura-walmart-del-24-noviembre-2026-n6348362"
+   },
+   {
+    "item": "Pollo entero fresco (kg)",
+    "price": 39,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ambito.com/mexico/economia/las-ofertas-del-martes-frescura-walmart-del-24-noviembre-2026-n6348362"
+   },
+   {
+    "item": "Zanahoria (kg)",
+    "price": 15,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
+   },
+   {
+    "item": "Sandía roja (kg)",
+    "price": 22,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
+   },
+   {
+    "item": "Piña miel (kg)",
+    "price": 30,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
+   },
+   {
+    "item": "Naranja (kg)",
+    "price": 30,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
+   },
+   {
+    "item": "Papaya Maradol (kg)",
+    "price": 44,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
+   },
+   {
+    "item": "Pera (kg)",
+    "price": 45,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
+   },
+   {
+    "item": "Calabaza (kg)",
+    "price": 39,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
+   },
+   {
+    "item": "Papa blanca (kg)",
+    "price": 47,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
+   },
+   {
+    "item": "Ejote fresco (kg)",
+    "price": 69,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
+   },
+   {
+    "item": "Guayaba (kg)",
+    "price": 62,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
+   },
+   {
+    "item": "Cilantro (pieza)",
+    "price": 11,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
+   },
+   {
+    "item": "Filete de tilapia (charola 800–900 g)",
+    "price": 103,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
+   },
+   {
+    "item": "Chuleta de cerdo (charola 700–800 g)",
+    "price": 97,
+    "validFrom": "2026-11-24",
+    "validTo": "2026-11-24",
+    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
+   }
+  ],
   "DE/Netto": [
    {
     "item": "Bio Möhren 1 kg",
@@ -2760,148 +3165,6 @@
     "validFrom": "2026-11-23",
     "validTo": "2026-11-29",
     "source": "https://www.folhetos.pt/aldi/antevisao-folheto-aldi-promocoes-de-23-a-29-novembro-6982"
-   }
-  ],
-  "PT/Continente": [
-   {
-    "item": "Camarão 30/50 cozido (preço/kg)",
-    "price": 9.99,
-    "was": 14.99,
-    "validFrom": "2026-11-20",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-fim-de-semana-promocoes-de-20-a-23-novembro-7014"
-   },
-   {
-    "item": "Curgete verde (preço/kg)",
-    "price": 1.19,
-    "was": 1.69,
-    "validFrom": "2026-11-20",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-fim-de-semana-promocoes-de-20-a-23-novembro-7014"
-   },
-   {
-    "item": "Polvo Continente congelado 800 g–1,5 kg (preço/kg)",
-    "price": 11.99,
-    "was": 14.99,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-17-a-23-novembro-6985"
-   },
-   {
-    "item": "Abacaxi super sweet inteiro (preço/kg)",
-    "price": 1.69,
-    "was": 1.99,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-17-a-23-novembro-6985"
-   },
-   {
-    "item": "Pá de porco com osso Continente (preço/kg)",
-    "price": 3.99,
-    "was": 4.49,
-    "validFrom": "2026-11-20",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-fim-de-semana-promocoes-de-20-a-23-novembro-7014"
-   },
-   {
-    "item": "Frango do campo inteiro com miúdos Continente Seleção (preço/kg)",
-    "price": 3.99,
-    "was": 4.49,
-    "validFrom": "2026-11-20",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-fim-de-semana-promocoes-de-20-a-23-novembro-7014"
-   },
-   {
-    "item": "Bifanas de porco Continente (preço/kg)",
-    "price": 4.49,
-    "was": 4.99,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-17-a-23-novembro-6985"
-   },
-   {
-    "item": "Costeletas de vitelão, balcão (preço/kg)",
-    "price": 13.49,
-    "was": 14.99,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-17-a-23-novembro-6985"
-   },
-   {
-    "item": "Bife pá e acém de vitelão, balcão (preço/kg)",
-    "price": 12.99,
-    "was": 13.99,
-    "validFrom": "2026-11-20",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-fim-de-semana-promocoes-de-20-a-23-novembro-7014"
-   },
-   {
-    "item": "Dourada média fresca 200–600 g (preço/kg)",
-    "price": 6.99,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-17-a-23-novembro-6985"
-   },
-   {
-    "item": "Salmão inteiro pequeno fresco 1–3 kg (preço/kg)",
-    "price": 8.99,
-    "validFrom": "2026-11-20",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-fim-de-semana-promocoes-de-20-a-23-novembro-7014"
-   },
-   {
-    "item": "Peito de peru Continente, balcão (preço/kg)",
-    "price": 7.99,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-17-a-23-novembro-6985"
-   },
-   {
-    "item": "Maçã Golden (preço/kg)",
-    "price": 1.69,
-    "validFrom": "2026-11-20",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-fim-de-semana-promocoes-de-20-a-23-novembro-7014"
-   },
-   {
-    "item": "Bacalhau graúdo de 1.ª da Islândia Continente Seleção, salgado seco inteiro (preço/kg)",
-    "price": 23.99,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/continente/antevisao-folheto-continente-modelo-promocoes-de-17-a-23-novembro-6985"
-   }
-  ],
-  "PT/Pingo Doce": [
-   {
-    "item": "Laranja a granel (preço/kg)",
-    "price": 1.19,
-    "was": 1.69,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/pingo-doce/antevisao-folheto-pingo-doce-lojas-grandes-promocoes-de-17-a-23-novembro-6986"
-   },
-   {
-    "item": "Frango do campo nacional a granel (preço/kg)",
-    "price": 3.99,
-    "was": 4.49,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/pingo-doce/antevisao-folheto-pingo-doce-lojas-grandes-promocoes-de-17-a-23-novembro-6986"
-   },
-   {
-    "item": "Dourada nacional fresca até 600 g (preço/kg)",
-    "price": 8.99,
-    "was": 9.99,
-    "validFrom": "2026-11-17",
-    "validTo": "2026-11-23",
-    "source": "https://www.folhetos.pt/pingo-doce/antevisao-folheto-pingo-doce-lojas-grandes-promocoes-de-17-a-23-novembro-6986"
-   },
-   {
-    "item": "Salmão inteiro (preço/kg)",
-    "price": 8.99,
-    "validFrom": "2026-11-20",
-    "validTo": "2026-11-23",
-    "source": "https://www.ocacapromocoes.pt/folheto-pingo-doce-fim-de-semana-antevisao-promocoes-20-a-23-de-novembro/"
    }
   ],
   "PT/Auchan": [
