@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "countries": {
   "BE": {
-   "at": "2026-11-22T04:48:23.276Z",
-   "found": 97,
+   "at": "2026-11-25T11:28:26.458Z",
+   "found": 96,
    "stores": 9
   },
   "FR": {
@@ -18,7 +18,7 @@
   },
   "MX": {
    "at": "2026-11-24T02:02:44.487Z",
-   "found": 93,
+   "found": 74,
    "stores": 4
   },
   "DE": {
@@ -28,7 +28,7 @@
   },
   "ES": {
    "at": "2026-11-22T05:59:47.319Z",
-   "found": 16,
+   "found": 11,
    "stores": 4
   },
   "PT": {
@@ -48,6 +48,151 @@
   }
  },
  "stores": {
+  "BE/Delhaize": [
+   {
+    "item": "Delhaize Oudendijk (-50%)",
+    "price": 4.49,
+    "was": 8.98,
+    "validFrom": "2026-11-26",
+    "validTo": "2026-12-02",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3922593"
+   },
+   {
+    "item": "La Molisana pasta",
+    "price": 2.15,
+    "was": 4.3,
+    "validFrom": "2026-11-26",
+    "validTo": "2026-12-02",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/promoties/pasta/delhaize"
+   },
+   {
+    "item": "Avocado",
+    "price": 3,
+    "was": 4.35,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/promoties/avocado"
+   },
+   {
+    "item": "Gevulde pasta 250 g (-30%)",
+    "price": 2.79,
+    "was": 3.99,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/promoties/pasta/delhaize"
+   },
+   {
+    "item": "Kaas of fijne vleeswaren",
+    "price": 7.47,
+    "was": 9.96,
+    "validFrom": "2026-11-26",
+    "validTo": "2026-12-02",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3922593"
+   },
+   {
+    "item": "Varkenshaasje (-20%)",
+    "price": 10.39,
+    "was": 12.99,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/promoties/varkenshaasje"
+   },
+   {
+    "item": "Kalfsvlees (-20%)",
+    "price": 20.79,
+    "was": 25.99,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/promoties/kalfsvlees/delhaize"
+   },
+   {
+    "item": "Chiquita bananen",
+    "price": 2.07,
+    "validFrom": "2026-11-26",
+    "validTo": "2026-12-02",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3922593"
+   },
+   {
+    "item": "Kabeljauwhaasje",
+    "price": 31.99,
+    "validFrom": "2026-11-26",
+    "validTo": "2026-12-02",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3922593"
+   },
+   {
+    "item": "Varkenshaasje met zwarte peper",
+    "price": 14.79,
+    "validFrom": "2026-11-26",
+    "validTo": "2026-12-02",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3922593"
+   },
+   {
+    "item": "Boeren- of varken-kalfsworst",
+    "price": 5.63,
+    "validFrom": "2026-11-26",
+    "validTo": "2026-12-02",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3922593"
+   },
+   {
+    "item": "Campina melk extra eiwitten",
+    "price": 1.89,
+    "validFrom": "2026-11-26",
+    "validTo": "2026-12-02",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3922593"
+   },
+   {
+    "item": "Bereide spinazie",
+    "price": 3.99,
+    "validFrom": "2026-11-26",
+    "validTo": "2026-12-02",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3922593"
+   },
+   {
+    "item": "Rio Mare tonijn in blik",
+    "price": 5.84,
+    "validFrom": "2026-11-26",
+    "validTo": "2026-12-02",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3922593"
+   },
+   {
+    "item": "Tanoshi udon noodles",
+    "price": 3.99,
+    "validFrom": "2026-11-26",
+    "validTo": "2026-12-02",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3922593"
+   },
+   {
+    "item": "Kippenborstfilet of -onderbouten",
+    "price": 2.75,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3908226"
+   },
+   {
+    "item": "Leerdammer kaas",
+    "price": 5.1,
+    "validFrom": "2026-11-19",
+    "validTo": "2026-11-25",
+    "card": "Delhaize SuperPlus",
+    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3908226"
+   }
+  ],
   "BE/Lidl": [
    {
     "item": "Kippenborstfilet à la minute XXL 1 kg",
@@ -372,34 +517,6 @@
     "validFrom": "2026-11-25",
     "validTo": "2026-12-01",
     "source": "https://www.promotiez.be/bekijk/aanbiedingen/carrefour-market-folder-3918058"
-   },
-   {
-    "item": "Gekuiste tongen (Carrefour Market)",
-    "price": 4.05,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/carrefour-market-folder-3904354"
-   },
-   {
-    "item": "Portie kabeljauw (Carrefour Market)",
-    "price": 10.5,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/carrefour-market-folder-3904354"
-   },
-   {
-    "item": "Citroenen Carrefour (Carrefour Market)",
-    "price": 2.4,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/carrefour-market-folder-3904354"
-   },
-   {
-    "item": "Wit stokbrood (Carrefour Market)",
-    "price": 0.99,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/carrefour-market-folder-3904354"
    }
   ],
   "BE/Albert Heijn": [
@@ -502,34 +619,6 @@
     "validFrom": "2026-11-25",
     "validTo": "2026-12-01",
     "source": "https://www.promotiez.be/bekijk/aanbiedingen/jumbo-folder-3918909"
-   },
-   {
-    "item": "Jumbo gele ajuinen",
-    "price": 1,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/jumbo-folder-3905898"
-   },
-   {
-    "item": "Jumbo baby spinazie",
-    "price": 1,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/jumbo-folder-3905898"
-   },
-   {
-    "item": "Jumbo ijsbergsla gemengd",
-    "price": 1,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/jumbo-folder-3905898"
-   },
-   {
-    "item": "Jumbo tofu en tempeh naturel",
-    "price": 1,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/jumbo-folder-3905898"
    }
   ],
   "BE/Spar": [
@@ -689,93 +778,6 @@
     "validFrom": "2026-11-18",
     "validTo": "2026-12-01",
     "source": "https://www.promotiez.be/bekijk/aanbiedingen/colruyt-folder-3913689"
-   }
-  ],
-  "BE/Delhaize": [
-   {
-    "item": "Avocado",
-    "price": 3,
-    "was": 4.35,
-    "validFrom": "2026-11-19",
-    "validTo": "2026-11-25",
-    "card": "Delhaize SuperPlus",
-    "source": "https://www.promotiez.be/promoties/avocado"
-   },
-   {
-    "item": "Gevulde pasta 250 g (-30%)",
-    "price": 2.79,
-    "was": 3.99,
-    "validFrom": "2026-11-19",
-    "validTo": "2026-11-25",
-    "card": "Delhaize SuperPlus",
-    "source": "https://www.promotiez.be/promoties/pasta/delhaize"
-   },
-   {
-    "item": "Varkenshaasje (-20%)",
-    "price": 10.39,
-    "was": 12.99,
-    "validFrom": "2026-11-19",
-    "validTo": "2026-11-25",
-    "card": "Delhaize SuperPlus",
-    "source": "https://www.promotiez.be/promoties/varkenshaasje"
-   },
-   {
-    "item": "Kalfsvlees (-20%)",
-    "price": 20.79,
-    "was": 25.99,
-    "validFrom": "2026-11-19",
-    "validTo": "2026-11-25",
-    "card": "Delhaize SuperPlus",
-    "source": "https://www.promotiez.be/promoties/kalfsvlees/delhaize"
-   },
-   {
-    "item": "Rozet van konijn (-20%)",
-    "price": 23.99,
-    "was": 29.99,
-    "validFrom": "2026-11-19",
-    "validTo": "2026-11-25",
-    "card": "Delhaize SuperPlus",
-    "source": "https://www.promotiez.be/winkels/delhaize/promoties"
-   },
-   {
-    "item": "Leerdammer kaas",
-    "price": 5.1,
-    "validFrom": "2026-11-19",
-    "validTo": "2026-11-25",
-    "card": "Delhaize SuperPlus",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3908226"
-   },
-   {
-    "item": "De Cecco pasta",
-    "price": 8.36,
-    "validFrom": "2026-11-19",
-    "validTo": "2026-11-25",
-    "card": "Delhaize SuperPlus",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3908226"
-   },
-   {
-    "item": "Herfstvarkensgebraad op Provençaalse wijze",
-    "price": 11.99,
-    "validFrom": "2026-11-19",
-    "validTo": "2026-11-25",
-    "card": "Delhaize SuperPlus",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3908226"
-   },
-   {
-    "item": "Hazenrug",
-    "price": 31.99,
-    "validFrom": "2026-11-19",
-    "validTo": "2026-11-25",
-    "card": "Delhaize SuperPlus",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3908226"
-   },
-   {
-    "item": "Delhaize garnaalstaarten",
-    "price": 26.99,
-    "validFrom": "2026-11-19",
-    "validTo": "2026-11-25",
-    "card": "Delhaize SuperPlus",
-    "source": "https://www.promotiez.be/bekijk/aanbiedingen/delhaize-folder-3908226"
    }
   ],
   "FR/Lidl": [
@@ -2384,142 +2386,6 @@
     "source": "https://www.ejecentral.com.mx/nuestro-eje/martimiercoles-chedraui-pina-a-22-90-pesos-y-pierna-de-pollo-desde-32-pesos-todas-las-ofertas-este-24-y-25-de-noviembre"
    }
   ],
-  "MX/Walmart": [
-   {
-    "item": "Melón chino (kg)",
-    "price": 29,
-    "was": 35,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
-   },
-   {
-    "item": "Jitomate (kg)",
-    "price": 43,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ambito.com/mexico/economia/las-ofertas-del-martes-frescura-walmart-del-24-noviembre-2026-n6348362"
-   },
-   {
-    "item": "Plátano (kg)",
-    "price": 17,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ambito.com/mexico/economia/las-ofertas-del-martes-frescura-walmart-del-24-noviembre-2026-n6348362"
-   },
-   {
-    "item": "Cebolla (kg)",
-    "price": 62,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ambito.com/mexico/economia/las-ofertas-del-martes-frescura-walmart-del-24-noviembre-2026-n6348362"
-   },
-   {
-    "item": "Aguacate (kg)",
-    "price": 40,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ambito.com/mexico/economia/las-ofertas-del-martes-frescura-walmart-del-24-noviembre-2026-n6348362"
-   },
-   {
-    "item": "Pollo entero fresco (kg)",
-    "price": 39,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ambito.com/mexico/economia/las-ofertas-del-martes-frescura-walmart-del-24-noviembre-2026-n6348362"
-   },
-   {
-    "item": "Zanahoria (kg)",
-    "price": 15,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
-   },
-   {
-    "item": "Sandía roja (kg)",
-    "price": 22,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
-   },
-   {
-    "item": "Piña miel (kg)",
-    "price": 30,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
-   },
-   {
-    "item": "Naranja (kg)",
-    "price": 30,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
-   },
-   {
-    "item": "Papaya Maradol (kg)",
-    "price": 44,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
-   },
-   {
-    "item": "Pera (kg)",
-    "price": 45,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
-   },
-   {
-    "item": "Calabaza (kg)",
-    "price": 39,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
-   },
-   {
-    "item": "Papa blanca (kg)",
-    "price": 47,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
-   },
-   {
-    "item": "Ejote fresco (kg)",
-    "price": 69,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
-   },
-   {
-    "item": "Guayaba (kg)",
-    "price": 62,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
-   },
-   {
-    "item": "Cilantro (pieza)",
-    "price": 11,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
-   },
-   {
-    "item": "Filete de tilapia (charola 800–900 g)",
-    "price": 103,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
-   },
-   {
-    "item": "Chuleta de cerdo (charola 700–800 g)",
-    "price": 97,
-    "validFrom": "2026-11-24",
-    "validTo": "2026-11-24",
-    "source": "https://www.ejecentral.com.mx/nuestro-eje/martes-de-frescura-walmart-pollo-a-40-pesos-zanahoria-a-15-pesos-frutas-baratas-y-mejores-ofertas-hoy-24-de-noviembre"
-   }
-  ],
   "DE/Netto": [
    {
     "item": "Bio Möhren 1 kg",
@@ -2934,48 +2800,6 @@
     "validFrom": "2026-11-18",
     "validTo": "2026-12-01",
     "source": "https://www.prospektangebote.de/angebote/brokkoli"
-   }
-  ],
-  "ES/Dia": [
-   {
-    "item": "Gallo plumas altas en proteínas 400 g",
-    "price": 1,
-    "was": 1.77,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://radarsuper.com/folletos/dia"
-   },
-   {
-    "item": "Mandarina malla 1 kg",
-    "price": 1.59,
-    "was": 2.5,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://radarsuper.com/folletos/dia"
-   },
-   {
-    "item": "Banana a granel ~900 g",
-    "price": 1.04,
-    "was": 1.4,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://radarsuper.com/folletos/dia"
-   },
-   {
-    "item": "Tomates cherry Tomati&co 200 g",
-    "price": 1.49,
-    "was": 1.99,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://radarsuper.com/folletos/dia"
-   },
-   {
-    "item": "Tomate en rama a granel ~1 kg",
-    "price": 2.99,
-    "was": 3.99,
-    "validFrom": "2026-11-18",
-    "validTo": "2026-11-24",
-    "source": "https://radarsuper.com/folletos/dia"
    }
   ],
   "ES/Carrefour": [

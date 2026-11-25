@@ -37,7 +37,10 @@ Store slugs: lidl, aldi, delhaize, colruyt, carrefour, albert-heijn. Aldi folder
 /bekijk/aanbiedingen/aldi-folder-week-<n>-<id>. Folder pages give no pack sizes and rarely a
 regular price. Delhaize's next folder can show captions without prices on Sunday: use the current one.
 Timing: Lidl and Aldi run Monday–Saturday; Delhaize Thursday–Wednesday; Colruyt
-two weeks from Wednesday. Colruyt's and Delhaize's next folders usually aren't online
+two weeks from Wednesday. Colruyt's folders don't start every Wednesday: on 25 Nov 2026 the 18 Nov–1 Dec
+folder was still current and no new one was online (next expected 2 Dec). Delhaize's next folder
+(delhaize-folder-<id>, "Bijna geldig") was online on Wednesday with prices in its captions; its keyword
+pages showed the new rows only as "Vanaf morgen geldig" cards (25 Nov 2026). Colruyt's and Delhaize's next folders usually aren't online
 on Sunday, so a Wednesday task tops up those two stores. Lidl only shows next week's fresh-food deals from
 Sunday. Every Delhaize promotion needs the SuperPlus card.
 
